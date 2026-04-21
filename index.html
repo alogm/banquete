@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moonlight Banquetes | Alta Cocina y Eventos</title>
+    <meta name="description" content="Servicio integral de banquetes, decoración y organización de eventos con la más alta elegancia y profesionalismo.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Playfair Display (Elegante) e Inter (Moderna y legible) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Configuración de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#AA8C2C',
+                        },
+                        charcoal: {
+                            DEFAULT: '#1A1A1A',
+                            light: '#2A2A2A',
+                            dark: '#0F0F0F'
+                        },
+                        cream: '#FDFBF7'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos personalizados para un toque más serio */
+        .glass-nav {
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        
+        .card-hover {
+            transition: all 0.4s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
+            border-color: #D4AF37;
+        }
+
+        /* Gradiente dorado sobrio */
+        .text-gradient-gold {
+            background: linear-gradient(to right, #D4AF37, #F3E5AB, #AA8C2C);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="font-sans bg-cream text-charcoal antialiased selection:bg-gold selection:text-charcoal-dark">
+
+    <!-- NAVEGACIÓN -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 text-white bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-4 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    <div class="w-12 h-12 rounded-full overflow-hidden border border-gold/50 bg-black shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+                        <img src="/img/logo6.png" alt="Logo Moonlight" class="w-full h-full object-cover scale-[1.2]">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-2xl font-bold tracking-widest text-white uppercase leading-none">Moonlight</span>
+                        <span class="text-gold text-[0.65rem] tracking-[0.4em] uppercase mt-1">Banquetes</span>
+                    </div>
+                </div>
+                
+                <!-- Menú Desktop -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#nosotros" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300">Filosofía</a>
+                    <a href="#servicios" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300">Servicios</a>
+                    <a href="#gastronomia" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300">Gastronomía</a>
+                    <a href="#espacios" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300">Espacios</a>
+                    <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20asesoría%20para%20un%20evento." target="_blank" class="border border-gold text-gold hover:bg-gold hover:text-charcoal-dark px-6 py-2 transition duration-300 text-xs uppercase tracking-widest font-semibold flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Cotizar
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-gold focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-charcoal text-white absolute w-full shadow-2xl border-t border-gold/20">
+            <div class="px-6 py-6 space-y-4 flex flex-col">
+                <a href="#nosotros" class="text-lg font-serif tracking-wide hover:text-gold transition-colors border-b border-gray-800 pb-2">Nuestra Filosofía</a>
+                <a href="#servicios" class="text-lg font-serif tracking-wide hover:text-gold transition-colors border-b border-gray-800 pb-2">Servicios Integrales</a>
+                <a href="#gastronomia" class="text-lg font-serif tracking-wide hover:text-gold transition-colors border-b border-gray-800 pb-2">Alta Gastronomía</a>
+                <a href="#espacios" class="text-lg font-serif tracking-wide hover:text-gold transition-colors border-b border-gray-800 pb-2">Espacios y Locaciones</a>
+                <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20cotizar%20un%20evento." target="_blank" class="bg-gold text-charcoal-dark text-center py-3 font-bold uppercase tracking-widest text-sm mt-4 flex justify-center items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Cotizar Ahora
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="inicio" class="relative h-screen flex items-center justify-center">
+        <!-- Fondo oscuro elegante -->
+        <div class="absolute inset-0 z-0">
+            <img src="/img/demo/pexels-bertellifotografia-16985181.jpg" alt="Salón elegante" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-b from-charcoal-dark/90 via-charcoal-dark/70 to-charcoal-dark"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
+            <div class="flex items-center justify-center gap-4 mb-6">
+                <div class="h-px w-12 bg-gold"></div>
+                <span class="text-gold font-sans tracking-[0.3em] uppercase text-xs font-semibold">Exclusividad & Perfección</span>
+                <div class="h-px w-12 bg-gold"></div>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-serif text-white font-bold mb-8 leading-tight">
+                El Arte de Celebrar <br>
+                <span class="text-gradient-gold italic font-normal">con Elegancia</span>
+            </h1>
+            
+            <p class="text-lg text-gray-300 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
+                Servicio integral de banquetes, diseño de espacios y producción de eventos de alto nivel. Profesionalismo absoluto para que usted solo se dedique a disfrutar.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="#servicios" class="bg-gold hover:bg-gold-light text-charcoal-dark px-8 py-4 transition duration-300 uppercase tracking-widest text-xs font-bold">
+                    Explorar Servicios
+                </a>
+                <a href="#gastronomia" class="bg-transparent border border-gray-400 hover:border-gold hover:text-gold text-white px-8 py-4 transition duration-300 uppercase tracking-widest text-xs font-bold">
+                    Ver Gastronomía
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- NOSOTROS / FILOSOFÍA (Inspirado en Prop 4) -->
+    <section id="nosotros" class="py-24 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <img src="/img/demo/pexels-kampus-8629106.jpg" alt="Chef preparando banquete" class="rounded-sm shadow-2xl relative z-10 w-full h-[500px] object-cover grayscale-[20%]">
+                    <!-- Borde decorativo serio -->
+                    <div class="absolute -bottom-6 -right-6 w-full h-full border border-gold z-0 hidden md:block"></div>
+                </div>
+                <div>
+                    <span class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-bold">Nuestra Filosofía</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-charcoal-dark mt-4 mb-6">Compromiso con la <span class="italic text-gold-dark">Excelencia</span></h2>
+                    
+                    <p class="text-gray-600 mb-6 leading-relaxed font-light text-lg">
+                        En <strong>Moonlight Banquetes</strong>, entendemos que cada evento es un momento irrepetible. Nuestra misión es llevar la alta cocina y una logística impecable al lugar que usted elija, operando con los más altos estándares de calidad.
+                    </p>
+                    <p class="text-gray-600 mb-10 leading-relaxed font-light text-lg">
+                        Ya sea un evento corporativo de gran magnitud, una boda en un jardín exclusivo o una íntima reunión en la comodidad de su residencia, nuestro equipo de expertos asegura un resultado impecable.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 border-t border-gray-200 pt-8">
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-gold text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-charcoal">Puntualidad</h4>
+                                <p class="text-sm text-gray-500 mt-1">Logística cronometrada.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-gold text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-charcoal">Higiene Absoluta</h4>
+                                <p class="text-sm text-gray-500 mt-1">Estándares premium.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-gold text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-charcoal">Trato Discreto</h4>
+                                <p class="text-sm text-gray-500 mt-1">Personal capacitado.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-gold text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-charcoal">Asesoría Integral</h4>
+                                <p class="text-sm text-gray-500 mt-1">Acompañamiento total.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS INTEGRALES (Estructura Prop 6, Estilo sobrio) -->
+    <section id="servicios" class="py-24 bg-charcoal-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <span class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-bold">Organización Integral</span>
+                <h2 class="text-4xl md:text-5xl font-serif mt-4 mb-6">Detalles Técnicos y de Servicio</h2>
+                <div class="w-16 h-[2px] bg-gold mx-auto"></div>
+                <p class="mt-6 text-gray-400 max-w-2xl mx-auto font-light text-lg">
+                    Proveemos todo lo necesario para la ejecución perfecta de su evento. Infraestructura, ambientación y servicio de primer nivel.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Servicio 1 -->
+                <div class="card-hover bg-charcoal p-8 border border-gray-800 text-center">
+                    <i class="fa-solid fa-couch text-gold text-4xl mb-6"></i>
+                    <h3 class="text-xl font-serif font-bold text-white mb-4">Mobiliario de Lujo</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Mesas imperiales, sillas avant garde o tiffany, salas lounge y estructuras. Mantelería de importación y cristalería impecable.
+                    </p>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="card-hover bg-charcoal p-8 border border-gray-800 text-center">
+                    <i class="fa-solid fa-holly-berry text-gold text-4xl mb-6"></i>
+                    <h3 class="text-xl font-serif font-bold text-white mb-4">Diseño Floral y Deco</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Centros de mesa vanguardistas, arreglos florales monumentales, iluminación arquitectónica y escenografía a medida.
+                    </p>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="card-hover bg-charcoal p-8 border border-gray-800 text-center">
+                    <i class="fa-solid fa-wine-glass text-gold text-4xl mb-6"></i>
+                    <h3 class="text-xl font-serif font-bold text-white mb-4">Bebidas y Mixología</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Barras de servicio elegantes, coctelería de autor, servicio de descorche, y provisión de hielo y mezcladores ilimitados.
+                    </p>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="card-hover bg-charcoal p-8 border border-gray-800 text-center">
+                    <i class="fa-solid fa-music text-gold text-4xl mb-6"></i>
+                    <h3 class="text-xl font-serif font-bold text-white mb-4">Complementos</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Desde inflables y brincolines elegantes para los más pequeños, hasta pistas de baile iluminadas y personal de coordinación.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GASTRONOMÍA (Diseño detallado tipo Prop 5) -->
+    <section id="gastronomia" class="py-24 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <span class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-bold">Deleite Culinario</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-charcoal-dark mt-4 mb-6">Propuestas Gastronómicas</h2>
+                <div class="w-16 h-[2px] bg-gold mx-auto"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto font-light text-lg">
+                    Nuestros chefs ejecutivos diseñan menús que se adaptan al protocolo y tono de su evento, garantizando frescura y presentación excepcional.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                
+                <!-- Menú 1 -->
+                <div class="flex flex-col sm:flex-row bg-white border border-gray-200 hover:border-gold/50 transition-colors shadow-sm">
+                    <div class="sm:w-2/5">
+                        <img src="/img/demo/pexels-andrey-castillejos-355270984-15782638.jpg" alt="Banquete de Gala" class="w-full h-64 sm:h-full object-cover">
+                    </div>
+                    <div class="p-8 sm:w-3/5 flex flex-col justify-center">
+                        <h3 class="text-2xl font-serif font-bold text-charcoal mb-2">Banquete a 3 Tiempos</h3>
+                        <p class="text-gold text-sm font-semibold tracking-wider uppercase mb-4">Formal & Etiqueta</p>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed mb-6">
+                            La opción por excelencia para bodas, graduaciones y galas. Incluye crema o bisque, pasta artesanal y un plato fuerte selecto (filete, salmón o ave) con guarniciones de autor.
+                        </p>
+                        <a href="https://wa.me/521234567890?text=Hola,%20me%20interesa%20el%20Banquete%20a%203%20tiempos." target="_blank" class="text-charcoal hover:text-gold font-bold text-sm tracking-widest uppercase inline-flex items-center gap-2 transition-colors">
+                            Cotizar Menú <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menú 2 -->
+                <div class="flex flex-col sm:flex-row bg-white border border-gray-200 hover:border-gold/50 transition-colors shadow-sm">
+                    <div class="sm:w-2/5">
+                        <img src="/img/demo/pexels-israwmx-24245996.jpg" alt="Taquiza Gourmet" class="w-full h-64 sm:h-full object-cover">
+                    </div>
+                    <div class="p-8 sm:w-3/5 flex flex-col justify-center">
+                        <h3 class="text-2xl font-serif font-bold text-charcoal mb-2">Taquizas de Autor</h3>
+                        <p class="text-gold text-sm font-semibold tracking-wider uppercase mb-4">Tradición & Estilo</p>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed mb-6">
+                            Ideal para bautizos o eventos semi-formales. Presentación impecable en cazuelas, tortillas hechas a mano en el lugar y una barra de salsas y complementos frescos.
+                        </p>
+                        <a href="https://wa.me/521234567890?text=Hola,%20me%20interesa%20el%20servicio%20de%20Taquizas." target="_blank" class="text-charcoal hover:text-gold font-bold text-sm tracking-widest uppercase inline-flex items-center gap-2 transition-colors">
+                            Cotizar Menú <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menú 3 -->
+                <div class="flex flex-col sm:flex-row bg-white border border-gray-200 hover:border-gold/50 transition-colors shadow-sm">
+                    <div class="sm:w-2/5">
+                        <img src="/img/demo/pexels-gabriel-zachi-2151036855-36859450.jpg" alt="Parrillada Premium" class="w-full h-64 sm:h-full object-cover">
+                    </div>
+                    <div class="p-8 sm:w-3/5 flex flex-col justify-center">
+                        <h3 class="text-2xl font-serif font-bold text-charcoal mb-2">Parrilladas Premium</h3>
+                        <p class="text-gold text-sm font-semibold tracking-wider uppercase mb-4">Jardines & Exteriores</p>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed mb-6">
+                            Cortes finos asados al momento, embutidos artesanales y vegetales al grill. Una experiencia interactiva perfecta para eventos de día al aire libre.
+                        </p>
+                        <a href="https://wa.me/521234567890?text=Hola,%20me%20interesa%20una%20Parrillada." target="_blank" class="text-charcoal hover:text-gold font-bold text-sm tracking-widest uppercase inline-flex items-center gap-2 transition-colors">
+                            Cotizar Menú <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menú 4 -->
+                <div class="flex flex-col sm:flex-row bg-white border border-gray-200 hover:border-gold/50 transition-colors shadow-sm">
+                    <div class="sm:w-2/5">
+                        <img src="/img/demo/pexels-bertellifotografia-9702314.jpg" alt="Desayunos Especiales" class="w-full h-64 sm:h-full object-cover">
+                    </div>
+                    <div class="p-8 sm:w-3/5 flex flex-col justify-center">
+                        <h3 class="text-2xl font-serif font-bold text-charcoal mb-2">Desayunos & Brunch</h3>
+                        <p class="text-gold text-sm font-semibold tracking-wider uppercase mb-4">Matutino & Negocios</p>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed mb-6">
+                            Opciones emplatadas o en estación tipo buffet. Incluye panadería dulce horneada en casa, fruta de temporada seleccionada, jugos naturales y café de especialidad.
+                        </p>
+                        <a href="https://wa.me/521234567890?text=Hola,%20me%20interesa%20cotizar%20Desayunos." target="_blank" class="text-charcoal hover:text-gold font-bold text-sm tracking-widest uppercase inline-flex items-center gap-2 transition-colors">
+                            Cotizar Menú <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ESPACIOS Y LOCACIONES (Imágenes con overlay oscuro, muy serio) -->
+    <section id="espacios" class="py-24 bg-charcoal-light text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 items-center mb-16">
+                <div class="lg:w-1/3">
+                    <h2 class="text-4xl md:text-5xl font-serif mb-6">Cobertura <br><span class="text-gold italic font-normal">Absoluta</span></h2>
+                    <p class="text-gray-400 font-light leading-relaxed">
+                        Nuestra logística nos permite transformar cualquier espacio en el escenario perfecto para su celebración. Mantenemos el mismo estándar de calidad sin importar la locación.
+                    </p>
+                </div>
+                <div class="lg:w-2/3 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    
+                    <div class="relative group overflow-hidden h-80">
+                        <img src="/img/demo/pexels-bertellifotografia-16985181.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="Salones">
+                        <div class="absolute inset-0 bg-charcoal-dark/60 group-hover:bg-charcoal-dark/40 transition duration-500"></div>
+                        <div class="absolute bottom-6 left-6 z-10">
+                            <h3 class="text-xl font-serif font-bold mb-1">Salones</h3>
+                            <p class="text-gold text-xs uppercase tracking-widest">Protocolo Formal</p>
+                        </div>
+                    </div>
+
+                    <div class="relative group overflow-hidden h-80">
+                        <img src="/img/demo/pexels-bertellifotografia-17294699.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="Jardines">
+                        <div class="absolute inset-0 bg-charcoal-dark/60 group-hover:bg-charcoal-dark/40 transition duration-500"></div>
+                        <div class="absolute bottom-6 left-6 z-10">
+                            <h3 class="text-xl font-serif font-bold mb-1">Jardines</h3>
+                            <p class="text-gold text-xs uppercase tracking-widest">Eventos de Día</p>
+                        </div>
+                    </div>
+
+                    <div class="relative group overflow-hidden h-80">
+                        <img src="/img/demo/pexels-pauline-raw-131148428-10488748.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="Casas">
+                        <div class="absolute inset-0 bg-charcoal-dark/60 group-hover:bg-charcoal-dark/40 transition duration-500"></div>
+                        <div class="absolute bottom-6 left-6 z-10">
+                            <h3 class="text-xl font-serif font-bold mb-1">A Domicilio</h3>
+                            <p class="text-gold text-xs uppercase tracking-widest">Privacidad Total</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO RÁPIDO WHATSAPP -->
+    <section class="py-20 bg-cream border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-serif text-3xl md:text-4xl text-charcoal-dark mb-6">Inicie la Planificación de su Evento</h2>
+            <p class="text-gray-600 mb-10 font-light text-lg">Nuestro equipo de asesores está listo para brindarle una cotización detallada y personalizada. Atención directa, sin intermediarios.</p>
+            
+            <a href="https://wa.me/521234567890?text=Hola,%20deseo%20iniciar%20la%20cotización%20de%20mi%20evento." target="_blank" class="inline-flex items-center justify-center gap-3 bg-charcoal-dark text-white hover:bg-gold hover:text-charcoal-dark px-10 py-4 uppercase tracking-widest text-sm font-bold transition-all duration-300">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                Contactar a un Asesor
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER SOBRIO -->
+    <footer class="bg-charcoal-dark pt-16 pb-8 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Marca -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full overflow-hidden border border-gold/50 bg-black">
+                            <img src="/img/logo6.png" alt="Logo Moonlight" class="w-full h-full object-cover scale-[1.2]">
+                        </div>
+                        <span class="font-serif text-xl tracking-widest text-white uppercase">Moonlight</span>
+                    </div>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed">
+                        Alta dirección en banquetes y eventos. Diseñando momentos memorables con exigencia y pasión.
+                    </p>
+                </div>
+                
+                <!-- Enlaces -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Explorar</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#nosotros" class="text-gray-500 hover:text-gold text-sm transition-colors">Nuestra Filosofía</a></li>
+                        <li><a href="#servicios" class="text-gray-500 hover:text-gold text-sm transition-colors">Servicios</a></li>
+                        <li><a href="#gastronomia" class="text-gray-500 hover:text-gold text-sm transition-colors">Menús</a></li>
+                        <li><a href="#espacios" class="text-gray-500 hover:text-gold text-sm transition-colors">Locaciones</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacto -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Atención al Cliente</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><i class="fa-solid fa-phone text-gold w-5"></i> +52 (55) 1234 5678</li>
+                        <li><i class="fa-solid fa-envelope text-gold w-5"></i> eventos@moonlight.com</li>
+                        <li><i class="fa-solid fa-location-dot text-gold w-5"></i> Servicio a Domicilio y Salones Aliados</li>
+                    </ul>
+                </div>
+
+                <!-- Redes -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Social</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:border-gold hover:text-gold transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:border-gold hover:text-gold transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 font-light tracking-wide">
+                <p>&copy; <span id="year"></span> Moonlight Banquetes. Todos los derechos reservados.</p>
+                <p class="mt-2 md:mt-0">Elegancia y Protocolo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/521234567890?text=Hola,%20visito%20su%20página%20y%20deseo%20información." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1DA851] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_10px_25px_rgba(37,211,102,0.4)] z-50 transition-transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Año actual footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Efecto Navbar al hacer scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-nav');
+                navbar.classList.remove('bg-transparent', 'py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('glass-nav', 'py-2');
+                navbar.classList.add('bg-transparent', 'py-4');
+            }
+        });
+
+        // Toggle menú móvil
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú al dar click en enlace
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
