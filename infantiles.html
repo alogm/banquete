@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infantiles y Baby Showers | Moonstone Banquetes</title>
+    <meta name="description" content="Organización premium de Baby Showers, Bautizos y Fiestas Infantiles. Diversión, estilo y alta cocina para chicos y grandes con Moonstone.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#AA8C2C',
+                        },
+                        charcoal: {
+                            DEFAULT: '#1A1A1A',
+                            light: '#2A2A2A',
+                            dark: '#0F0F0F'
+                        },
+                        cream: '#FDFBF7',
+                        /* Tonos de ternura/fiesta infantil que combinan con lo elegante */
+                        baby: {
+                            pink: '#FFE4E6', /* rose-100 */
+                            pinkDark: '#E11D48', /* rose-600 */
+                            blue: '#E0F2FE', /* sky-100 */
+                            blueDark: '#0284C7' /* sky-600 */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(26, 26, 26, 0.98);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+        }
+
+        .text-gradient-gold {
+            background: linear-gradient(to right, #D4AF37, #F3E5AB, #AA8C2C);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Gradiente especial para el Hero Infantil */
+        .text-gradient-baby {
+            background: linear-gradient(to right, #F3E5AB, #f472b6, #38bdf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .dropdown-menu { display: none; opacity: 0; transition: opacity 0.3s ease; }
+        .has-dropdown:hover .dropdown-menu { display: block; opacity: 1; animation: fadeIn 0.2s ease-in-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="font-sans bg-cream text-charcoal antialiased selection:bg-gold selection:text-white">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 text-white bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-4 cursor-pointer">
+                    <div class="w-12 h-12 rounded-full overflow-hidden border border-gold/50 bg-black shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+                        <img src="img/logo6.png" alt="Logo Moonstone" class="w-full h-full object-cover scale-[1.2]">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-2xl font-bold tracking-widest text-white uppercase leading-none">Moonstone</span>
+                        <span class="text-gold text-[0.65rem] tracking-[0.4em] uppercase mt-1">Banquetes</span>
+                    </div>
+                </a>
+                
+                <div class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html" class="text-gold transition-colors text-xs uppercase tracking-widest font-bold border-b border-gold pb-1">Inicio</a>
+                    
+                    <div class="relative has-dropdown py-6">
+                        <a href="servicios.html" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300 flex items-center gap-1">
+                            Servicios <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-[60px] left-0 w-56 bg-charcoal border-t-2 border-gold shadow-xl py-2 z-50">
+                            <a href="paquetes.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Paquetes Integrales</a>
+                            <a href="inflables.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Inflables y Entretenimiento</a>
+                            <a href="mobiliario.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Mobiliario y Decoración</a>
+                        </div>
+                    </div>
+
+                    <div class="relative has-dropdown py-6">
+                        <a href="gastronomia.html" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300 flex items-center gap-1">
+                            Gastronomía <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-[60px] left-0 w-56 bg-charcoal border-t-2 border-gold shadow-xl py-2 z-50">
+                            <a href="banquetes.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Banquetes 3 Tiempos</a>
+                            <a href="taquizas.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Taquizas de Autor</a>
+                            <a href="parrilladas.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Parrilladas Premium</a>
+                            <a href="desayunos.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Desayunos y Brunch</a>
+                            <a href="bebidas.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Bebidas</a>
+                            <a href="tornafiesta.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Tornafiesta (Madrugada)</a>
+                        </div>
+                    </div>
+
+                    <div class="relative has-dropdown py-6">
+                        <a href="eventos.html" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300 flex items-center gap-1">
+                            Eventos <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-[60px] left-0 w-64 bg-charcoal border-t-2 border-gold shadow-xl py-2 z-50">
+                            <a href="bodas.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Bodas y Graduaciones</a>
+                            <a href="infantiles.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Infantiles y Baby Showers</a>
+                            <a href="empresariales.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Eventos Empresariales</a>
+                        </div>
+                    </div>
+
+                    <div class="relative has-dropdown py-6">
+                        <a href="locaciones.html" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300 flex items-center gap-1">
+                            Locaciones <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-[60px] left-0 w-56 bg-charcoal border-t-2 border-gold shadow-xl py-2 z-50">
+                            <a href="salones.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Salones e Instalaciones</a>
+                            <a href="jardines.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Jardines Exclusivos</a>
+                            <a href="domicilio.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">En tu Casa (A Domicilio)</a>
+                        </div>
+                    </div>
+
+                    <a href="faq.html" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300">FAQ</a>
+                    
+                    <a href="contacto.html" class="border border-gold text-gold hover:bg-gold hover:text-charcoal-dark px-5 py-2 transition duration-300 text-xs uppercase tracking-widest font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-lg"></i> Contacto
+                    </a>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-gold focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-charcoal text-white absolute w-full shadow-2xl border-t border-gold/20 h-[85vh] overflow-y-auto pb-10">
+            <div class="px-6 py-6 flex flex-col gap-2">
+                <a href="index.html" class="text-lg font-serif tracking-wide text-gold py-2 border-b border-gray-800">Inicio</a>
+                
+                <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">Servicios</p>
+                <a href="paquetes.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Paquetes Integrales</a>
+                <a href="inflables.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Inflables y Entretenimiento</a>
+                
+                <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">Gastronomía</p>
+                <a href="banquetes.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Banquetes 3 Tiempos</a>
+                <a href="taquizas.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Taquizas y Parrilladas</a>
+                <a href="desayunos.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Desayunos</a>
+                <a href="bebidas.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Bebidas</a>
+                <a href="tornafiesta.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Tornafiesta (Madrugada)</a>
+
+                <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">Eventos</p>
+                <a href="bodas.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Bodas y Graduaciones</a>
+                <a href="infantiles.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Infantiles y Baby Showers</a>
+                <a href="empresariales.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Empresariales</a>
+                
+                <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">Espacios</p>
+                <a href="salones.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Salones e Instalaciones</a>
+                <a href="domicilio.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">A Domicilio (Tu Casa)</a>
+                
+                <a href="faq.html" class="text-lg font-serif tracking-wide text-gray-300 hover:text-gold py-2 mt-4 border-b border-gray-800">Preguntas Frecuentes</a>
+
+                <a href="contacto.html" class="bg-gold text-charcoal-dark text-center py-4 font-bold uppercase tracking-widest text-sm mt-8 flex justify-center items-center gap-2">
+                    <i class="fa-solid fa-envelope text-xl"></i> Contacto
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center justify-center min-h-[85vh]">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&q=80&w=1920" alt="Mesa de postres infantil elegante" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-br from-charcoal-dark/90 via-charcoal-dark/70 to-rose-900/60"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-10">
+            <div class="flex items-center justify-center gap-4 mb-6">
+                <i class="fa-solid fa-star text-baby-pinkDark text-sm"></i>
+                <span class="text-white font-sans tracking-[0.3em] uppercase text-xs md:text-sm font-bold drop-shadow-md">Magia, Ternura y Buen Gusto</span>
+                <i class="fa-solid fa-star text-baby-blueDark text-sm"></i>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-serif text-white font-bold mb-6 leading-tight drop-shadow-2xl">
+                Infantiles & <br>
+                <span class="text-gradient-baby italic font-normal">Baby Showers</span>
+            </h1>
+            
+            <p class="text-base md:text-xl text-gray-200 mb-12 font-light max-w-3xl mx-auto leading-relaxed drop-shadow-md">
+                Celebramos la vida con el estándar Moonstone. Fiestas infantiles y eventos familiares donde los niños se divierten al máximo y los adultos disfrutan de la más alta gastronomía y elegancia.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="#servicios" class="bg-baby-pinkDark hover:bg-rose-500 text-white px-8 py-4 transition duration-300 uppercase tracking-widest text-xs font-bold shadow-[0_0_20px_rgba(225,29,72,0.4)] rounded-full">
+                    Descubrir Opciones
+                </a>
+                <a href="https://wa.me/521234567890?text=Hola,%20quiero%20cotizar%20un%20evento%20infantil/Baby%20Shower." target="_blank" class="bg-white/10 border border-baby-blueDark text-white hover:bg-baby-blueDark hover:border-transparent px-8 py-4 transition duration-300 uppercase tracking-widest text-xs font-bold flex justify-center items-center gap-2 backdrop-blur-sm rounded-full">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Asesoría Rápida
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="servicios" class="py-24 bg-cream border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-serif text-charcoal-dark mb-6">Momentos Inolvidables en Familia</h2>
+                <div class="w-20 h-[2px] bg-gold mx-auto mb-8"></div>
+                <p class="text-gray-600 font-light text-lg max-w-2xl mx-auto">Diseñamos la atmósfera perfecta para cada etapa de celebración, cuidando la estética, el menú y la diversión.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                
+                <div class="bg-white border border-rose-100 p-8 rounded-2xl card-hover relative overflow-hidden group shadow-lg">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-baby-pinkDark"></div>
+                    <div class="w-16 h-16 rounded-full bg-baby-pink flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-baby-carriage text-3xl text-baby-pinkDark"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-charcoal-dark mb-3">Baby Showers & Revelación de Género</h3>
+                    <p class="text-gray-600 text-sm font-light leading-relaxed mb-6">
+                        Ambientes íntimos y delicados. La opción favorita de nuestros clientes son las estaciones de <a href="desayunos.html" class="text-baby-pinkDark font-semibold hover:underline">Brunch Buffet</a> acompañadas de una elegante barra de mimosas, bocadillos dulces y centros de mesa florales en tonos pastel.
+                    </p>
+                    <ul class="text-xs text-gray-500 space-y-2 mb-6">
+                        <li><i class="fa-solid fa-check text-gold mr-2"></i> Mantelería fina en tonos suaves.</li>
+                        <li><i class="fa-solid fa-check text-gold mr-2"></i> Mesa de postres temática.</li>
+                        <li><i class="fa-solid fa-check text-gold mr-2"></i> Montaje en jardines o terrazas.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white border border-amber-100 p-8 rounded-2xl card-hover relative overflow-hidden group shadow-lg">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gold"></div>
+                    <div class="w-16 h-16 rounded-full bg-amber-50 flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-church text-3xl text-gold-dark"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-charcoal-dark mb-3">Bautizos y Primeras Comuniones</h3>
+                    <p class="text-gray-600 text-sm font-light leading-relaxed mb-6">
+                        Celebraciones diurnas llenas de luz. Sugerimos nuestras tradicionales <a href="taquizas.html" class="text-gold-dark font-semibold hover:underline">Taquizas de Autor</a> o Parrilladas, combinando mesas imperiales para los adultos y áreas de juego seguras para los más pequeños.
+                    </p>
+                    <ul class="text-xs text-gray-500 space-y-2 mb-6">
+                        <li><i class="fa-solid fa-check text-gold mr-2"></i> Mobiliario vintage o avant garde.</li>
+                        <li><i class="fa-solid fa-check text-gold mr-2"></i> Menú dividido (Adultos / Niños).</li>
+                        <li><i class="fa-solid fa-check text-gold mr-2"></i> Integración de inflables estéticos.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white border border-sky-100 p-8 rounded-2xl card-hover relative overflow-hidden group shadow-lg">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-baby-blueDark"></div>
+                    <div class="w-16 h-16 rounded-full bg-baby-blue flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-cake-candles text-3xl text-baby-blueDark"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-charcoal-dark mb-3">Fiestas Infantiles Premium</h3>
+                    <p class="text-gray-600 text-sm font-light leading-relaxed mb-6">
+                        La diversión no tiene que sacrificar la estética. Montamos tu evento a domicilio o en jardín con mobiliario mini, carritos de snacks, y la mejor selección de <a href="inflables.html" class="text-baby-blueDark font-semibold hover:underline">Juegos e Inflables</a> limpios y seguros.
+                    </p>
+                    <ul class="text-xs text-gray-500 space-y-2 mb-6">
+                        <li><i class="fa-solid fa-check text-gold mr-2"></i> Carritos de algodones y palomitas.</li>
+                        <li><i class="fa-solid fa-check text-gold mr-2"></i> Sillas y mesas a escala infantil.</li>
+                        <li><i class="fa-solid fa-check text-gold mr-2"></i> Personal de apoyo y supervisión.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2 relative group">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-baby-pink rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+                    <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-baby-blue rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+                    
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80" alt="Snacks infantiles y postres" class="relative z-10 w-full h-[500px] object-cover rounded-3xl shadow-xl">
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h3 class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-bold mb-2">Un menú para todos</h3>
+                    <h2 class="text-4xl md:text-5xl font-serif text-charcoal-dark mb-6">Catering Dual</h2>
+                    <p class="text-gray-600 font-light text-lg mb-6 leading-relaxed">
+                        El secreto del éxito en eventos familiares es consentir a los invitados de todas las edades. En Moonstone diseñamos servicios duales: alta cocina para los adultos y estaciones divertidas (pero gourmet) para los niños.
+                    </p>
+                    
+                    <div class="grid gap-6">
+                        <div class="bg-cream p-6 rounded-2xl border border-gray-100">
+                            <h4 class="font-bold text-charcoal flex items-center gap-2 mb-2"><i class="fa-solid fa-martini-glass text-gold"></i> Para los Adultos</h4>
+                            <p class="text-sm text-gray-500">Taquizas de guisados, parrilladas al carbón, brunch con mimosas o menú emplatado a 3 tiempos.</p>
+                        </div>
+                        
+                        <div class="bg-baby-blue/30 p-6 rounded-2xl border border-sky-100">
+                            <h4 class="font-bold text-baby-blueDark flex items-center gap-2 mb-2"><i class="fa-solid fa-hotdog"></i> Para los Niños</h4>
+                            <p class="text-sm text-gray-600">Estaciones de mini hamburguesas (sliders), banderillas, nuggets premium, mac & cheese y papas a la francesa.</p>
+                        </div>
+
+                        <div class="bg-baby-pink/40 p-6 rounded-2xl border border-rose-100">
+                            <h4 class="font-bold text-baby-pinkDark flex items-center gap-2 mb-2"><i class="fa-solid fa-ice-cream"></i> Mesas de Dulces y Snacks</h4>
+                            <p class="text-sm text-gray-600">Pastelería de diseño, cupcakes temáticos, carritos de palomitas, algodones de azúcar, elotes y fuentes de chocolate.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-charcoal-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+        <div class="absolute -right-20 top-20 text-gold opacity-5 rotate-12">
+            <i class="fa-solid fa-shapes text-[300px]"></i>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-serif mb-6">Diversión que no rompe la estética</h2>
+            <div class="w-16 h-[2px] bg-gold mx-auto mb-8"></div>
+            <p class="text-gray-400 font-light text-lg max-w-3xl mx-auto mb-12">
+                Entendemos que usted invirtió en una decoración hermosa. Por eso, nuestro catálogo de inflables incluye los aclamados <strong>"White Castles"</strong> (Castillos Blancos) y juegos en colores pastel, que lucen espectaculares en las fotografías y mantienen seguros a los más pequeños.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="inflables.html" class="inline-flex items-center justify-center gap-3 bg-white text-charcoal-dark hover:bg-gold px-10 py-4 rounded-full uppercase tracking-widest text-sm font-bold transition-all duration-300 shadow-xl">
+                    <i class="fa-solid fa-image"></i>
+                    Ver Catálogo de Inflables
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-cream text-center border-t border-gold/30">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="font-serif text-4xl text-charcoal-dark mb-6">Haga Sonreír a Toda la Familia</h2>
+            <p class="text-gray-600 font-light mb-10 text-lg">Permítanos organizar ese Baby Shower inolvidable o la fiesta infantil más espectacular. Atendemos en jardines, salones y a domicilio.</p>
+            
+            <a href="https://wa.me/521234567890?text=Hola,%20deseo%20cotizar%20un%20paquete%20para%20Bautizo/BabyShower/Infantil." target="_blank" class="inline-flex items-center justify-center gap-3 bg-baby-pinkDark hover:bg-rose-500 text-white px-10 py-5 rounded-full uppercase tracking-widest text-sm font-bold transition-all duration-300 shadow-[0_10px_20px_rgba(225,29,72,0.3)]">
+                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                Cotizar Vía WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-black pt-16 pb-8 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-1">
+                    <a href="index.html" class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full overflow-hidden border border-gold/50 bg-black">
+                            <img src="img/logo6.png" alt="Logo Moonstone" class="w-full h-full object-cover scale-[1.2]">
+                        </div>
+                        <span class="font-serif text-xl tracking-widest text-white uppercase">Moonstone</span>
+                    </a>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed">
+                        Alta dirección en banquetes y organización de eventos. Diseñando momentos memorables con exigencia y pasión desde eventos corporativos hasta fiestas infantiles.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Servicios Principales</h4>
+                    <ul class="space-y-3">
+                        <li><a href="banquetes.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Banquetes a 3 Tiempos</a></li>
+                        <li><a href="taquizas.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Taquizas y Parrilladas</a></li>
+                        <li><a href="mobiliario.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Montaje y Decoración</a></li>
+                        <li><a href="inflables.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Renta de Inflables</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Tipos de Eventos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="bodas.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Bodas y Graduaciones</a></li>
+                        <li><a href="infantiles.html" class="text-gold text-sm transition-colors">Infantiles y Baby Showers</a></li>
+                        <li><a href="empresariales.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Eventos Empresariales</a></li>
+                        <li><a href="faq.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Preguntas Frecuentes (FAQ)</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Contacto</h4>
+                    <ul class="space-y-3 text-sm text-gray-500 mb-6">
+                        <li><i class="fa-solid fa-phone text-gold w-5"></i> +52 (55) 1234 5678</li>
+                        <li><i class="fa-solid fa-envelope text-gold w-5"></i> eventos@moonstone.com</li>
+                        <li><i class="fa-solid fa-location-dot text-gold w-5"></i> Servicio a Domicilio y Salones</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 font-light tracking-wide">
+                <p>&copy; <span id="year"></span> Banquetes Moonstone. Todos los derechos reservados.</p>
+                <p class="mt-2 md:mt-0">Elegancia, Sabor y Diversión.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/521234567890?text=Hola,%20deseo%20información%20para%20un%20evento%20infantil/familiar." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1DA851] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_10px_25px_rgba(37,211,102,0.4)] z-50 transition-transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-nav');
+                navbar.classList.remove('bg-transparent', 'py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('glass-nav', 'py-2');
+                navbar.classList.add('bg-transparent', 'py-4');
+            }
+        });
+
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

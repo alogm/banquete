@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banquetes Moonstone | Bodas, Eventos Infantiles y Corporativos</title>
-    <meta name="description" content="Servicio integral de banquetes, decoración, inflables y organización de eventos en salones, jardines y a domicilio.">
+    <title>Bodas y Graduaciones | Moonstone Banquetes</title>
+    <meta name="description" content="Organización premium de bodas y graduaciones. Protocolo elegante, banquetes de gala y la mejor producción para una fiesta inolvidable.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -29,7 +29,12 @@
                             light: '#2A2A2A',
                             dark: '#0F0F0F'
                         },
-                        cream: '#FDFBF7'
+                        cream: '#FDFBF7',
+                        /* Colores Fiesteros/Elegantes (Luces de noche) */
+                        party: {
+                            purple: '#4C1D95', /* Púrpura profundo */
+                            magenta: '#9D174D', /* Magenta elegante */
+                        }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -41,7 +46,6 @@
     </script>
 
     <style>
-        /* Estilos de navegación y efectos */
         .glass-nav {
             background: rgba(26, 26, 26, 0.98);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -53,7 +57,8 @@
         }
         .card-hover:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            /* Sombra que combina dorado y tonos de fiesta */
+            box-shadow: 0 20px 30px -5px rgba(212, 175, 55, 0.2);
             border-color: #D4AF37;
         }
 
@@ -63,25 +68,32 @@
             background-clip: text;
             color: transparent;
         }
+        
+        .text-gradient-party {
+            background: linear-gradient(to right, #F3E5AB, #D4AF37, #f472b6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
 
-        /* Submenús desplegables en Desktop */
-        .dropdown-menu {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+        .dropdown-menu { display: none; opacity: 0; transition: opacity 0.3s ease; }
+        .has-dropdown:hover .dropdown-menu { display: block; opacity: 1; animation: fadeIn 0.2s ease-in-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Gradiente animado para la sección de fiesta */
+        .bg-party-gradient {
+            background: linear-gradient(-45deg, #0F0F0F, #2A2A2A, #4C1D95, #1A1A1A);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
         }
-        .has-dropdown:hover .dropdown-menu {
-            display: block;
-            opacity: 1;
-            animation: fadeIn 0.2s ease-in-out forwards;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
 </head>
-<body class="font-sans bg-cream text-charcoal antialiased selection:bg-gold selection:text-charcoal-dark">
+<body class="font-sans bg-charcoal text-white antialiased selection:bg-gold selection:text-charcoal-dark">
 
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 text-white bg-transparent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -195,212 +207,180 @@
         </div>
     </nav>
 
-    <header class="relative h-screen flex items-center justify-center">
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center justify-center min-h-[85vh] bg-party-gradient">
         <div class="absolute inset-0 z-0">
-            <img src="img/demo/pexels-bertellifotografia-16985181.jpg" alt="Salón elegante para eventos" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-b from-charcoal-dark/80 via-charcoal-dark/60 to-charcoal-dark/95"></div>
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1920" alt="Fiesta elegante" class="w-full h-full object-cover opacity-40 mix-blend-overlay" />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-dark via-transparent to-charcoal-dark"></div>
         </div>
 
-        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-20">
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-10">
             <div class="flex items-center justify-center gap-4 mb-6">
-                <div class="h-px w-12 bg-gold"></div>
-                <span class="text-gold font-sans tracking-[0.2em] uppercase text-xs md:text-sm font-semibold">Organización Integral</span>
-                <div class="h-px w-12 bg-gold"></div>
+                <i class="fa-solid fa-champagne-glasses text-gold text-lg"></i>
+                <span class="text-white font-sans tracking-[0.3em] uppercase text-xs md:text-sm font-bold drop-shadow-md">La Noche de tus Sueños</span>
+                <i class="fa-solid fa-champagne-glasses text-gold text-lg"></i>
             </div>
             
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-white font-bold mb-8 leading-tight drop-shadow-lg">
-                Creamos la Celebración <br>
-                <span class="text-gradient-gold italic font-normal">que siempre imaginaste</span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white font-bold mb-6 leading-tight drop-shadow-2xl">
+                Bodas & <br>
+                <span class="text-gradient-party italic font-normal">Graduaciones</span>
             </h1>
             
             <p class="text-base md:text-xl text-gray-300 mb-12 font-light max-w-3xl mx-auto leading-relaxed drop-shadow-md">
-                Deleite culinario, ambientación sofisticada y logística impecable. Desde bodas majestuosas hasta fiestas infantiles de primer nivel en la comodidad de su hogar.
+                El balance perfecto: Un protocolo y banquete de rigurosa etiqueta, seguido de una producción y fiesta espectacular que nadie olvidará.
             </p>
             
             <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="#experiencias" class="bg-gold hover:bg-gold-light text-charcoal-dark px-8 py-4 transition duration-300 uppercase tracking-widest text-xs font-bold shadow-lg shadow-gold/20">
-                    Descubrir Eventos
+                <a href="#experiencia" class="bg-gold hover:bg-gold-light text-charcoal-dark px-8 py-4 transition duration-300 uppercase tracking-widest text-xs font-bold shadow-[0_0_20px_rgba(212,175,55,0.5)]">
+                    Descubrir la Experiencia
                 </a>
-                <a href="https://wa.me/521234567890?text=Hola,%20quiero%20iniciar%20la%20planeación%20de%20mi%20evento." target="_blank" class="bg-transparent border border-white hover:border-gold hover:text-gold text-white px-8 py-4 transition duration-300 uppercase tracking-widest text-xs font-bold flex justify-center items-center gap-2 backdrop-blur-sm">
-                    <i class="fa-brands fa-whatsapp text-lg"></i> Asesoría Inmediata
+                <a href="https://wa.me/521234567890?text=Hola,%20me%20caso/me%20gradúo%20y%20quiero%20cotizar%20mi%20evento." target="_blank" class="bg-transparent border border-white hover:border-gold hover:text-gold text-white px-8 py-4 transition duration-300 uppercase tracking-widest text-xs font-bold flex justify-center items-center gap-2 backdrop-blur-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Apartar Fecha
                 </a>
             </div>
         </div>
     </header>
 
-    <section class="py-20 bg-cream">
+    <section id="experiencia" class="py-24 bg-charcoal-dark border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <span class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-bold">Moonstone Banquetes</span>
-                    <h2 class="text-3xl md:text-4xl font-serif text-charcoal-dark mt-2 mb-6">El Arte del Buen Servicio</h2>
-                    <p class="text-gray-600 font-light text-lg leading-relaxed mb-6">
-                        Nos dedicamos a transformar cualquier espacio en el escenario perfecto. Nuestra infraestructura nos permite llevar la más alta calidad gastronómica, diseño de mobiliario y entretenimiento (incluyendo opciones estéticas y seguras para los más pequeños) a salones, jardines o directamente a su casa.
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-5xl font-serif text-white mb-6">La Coreografía <span class="text-gold italic">Perfecta</span></h2>
+                <div class="w-20 h-[2px] bg-gold mx-auto mb-8"></div>
+                <p class="text-gray-400 font-light text-lg max-w-2xl mx-auto">Diseñamos la estructura de su evento para llevar a sus invitados en un viaje: desde la sofisticación del primer bocado hasta la energía del último baile.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                
+                <div class="bg-charcoal border border-gray-800 p-8 rounded-sm card-hover relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gold"></div>
+                    <i class="fa-solid fa-bell-concierge text-4xl text-gold mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-2xl font-serif text-white mb-3">1. El Protocolo y Cena</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">
+                        Comenzamos con la máxima elegancia. Mesas imperiales, iluminación cálida, y nuestro galardonado <a href="banquetes.html" class="text-gold underline">Banquete a 3 Tiempos</a> servido con sincronía perfecta por capitanes y meseros de etiqueta.
                     </p>
-                    <a href="nosotros.html" class="text-gold font-bold uppercase tracking-widest text-xs hover:text-charcoal transition-colors border-b border-gold pb-1 inline-flex items-center gap-2">
-                        Conoce más de nuestra historia <i class="fa-solid fa-arrow-right"></i>
-                    </a>
                 </div>
-                <div class="md:w-1/2 grid grid-cols-2 gap-4">
-                    <img src="img/demo/pexels-kampus-8629106.jpg" alt="Chef trabajando en alta cocina" class="w-full h-56 object-cover rounded-sm grayscale-[20%] shadow-lg">
-                    <img src="img/demo/pexels-pauline-raw-131148428-10488748.jpg" alt="Mesa de banquete" class="w-full h-56 object-cover rounded-sm grayscale-[20%] mt-8 shadow-lg">
+
+                <div class="bg-charcoal border border-party-purple p-8 rounded-sm card-hover relative overflow-hidden group shadow-[0_0_15px_rgba(76,29,149,0.2)] hover:shadow-[0_0_25px_rgba(76,29,149,0.5)]">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-party-purple"></div>
+                    <i class="fa-solid fa-music text-4xl text-pink-500 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-2xl font-serif text-white mb-3">2. Producción y Fiesta</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">
+                        El ambiente se transforma. Abrimos la <a href="bebidas.html" class="text-pink-400 underline">Barra de Mixología</a> y los carritos de shots. Las luces arquitectónicas cambian de tono y la pista de baile iluminada toma el protagonismo para no parar.
+                    </p>
                 </div>
+
+                <div class="bg-charcoal border border-gray-800 p-8 rounded-sm card-hover relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gold"></div>
+                    <i class="fa-solid fa-moon text-4xl text-gold mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-2xl font-serif text-white mb-3">3. La Tornafiesta</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">
+                        El secreto de los mejores eventos en México. A las 2:00 AM, sorprendemos a los invitados con chilaquiles calientes, esquites o tacos al pastor para recargar energías y cerrar con broche de oro.
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="experiencias" class="py-24 bg-charcoal-dark text-white border-y border-gold/20">
+    <section class="py-24 bg-charcoal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col lg:flex-row gap-12 items-center mb-24">
+                <div class="lg:w-1/2 relative group">
+                    <div class="absolute inset-0 border border-gold translate-x-4 translate-y-4"></div>
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80" alt="Boda Elegante" class="relative z-10 w-full h-[400px] object-cover shadow-2xl grayscale-[20%] group-hover:grayscale-0 transition-all duration-700">
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-bold mb-2">Para los Novios</h3>
+                    <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">Bodas Majestuosas</h2>
+                    <p class="text-gray-400 font-light text-lg mb-6 leading-relaxed">
+                        Entendemos que es el día más importante. Nuestro servicio es impecable, desde la recepción con vino espumoso hasta el acomodo de la mesa principal. Coordinamos con su Wedding Planner para que la ejecución gastronómica sea perfecta.
+                    </p>
+                    <ul class="space-y-3 mb-8 text-sm text-gray-300">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-ring text-gold"></i> Degustación premium para los novios y padres.</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-ring text-gold"></i> Menús impresos personalizados en cada lugar.</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-ring text-gold"></i> Servicio de Descorche Libre sin costo adicional.</li>
+                    </ul>
+                    <a href="contacto.html" class="inline-block border border-gold text-gold hover:bg-gold hover:text-charcoal px-8 py-3 text-xs uppercase tracking-widest font-bold transition-colors">Agendar Cita Nupcial</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row-reverse gap-12 items-center">
+                <div class="lg:w-1/2 relative group">
+                    <div class="absolute inset-0 border border-party-purple -translate-x-4 translate-y-4 shadow-[0_0_20px_rgba(76,29,149,0.3)]"></div>
+                    <img src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80" alt="Fiesta de Graduación" class="relative z-10 w-full h-[400px] object-cover shadow-2xl">
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="text-pink-500 font-sans tracking-[0.2em] uppercase text-xs font-bold mb-2">Generaciones Inolvidables</h3>
+                    <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">Graduaciones Épicas</h2>
+                    <p class="text-gray-400 font-light text-lg mb-6 leading-relaxed">
+                        Una cena formal para los padres, seguida de la mejor fiesta para los graduados. Combinamos mantelería fina con un espectacular montaje de audio, iluminación láser y pistas de baile.
+                    </p>
+                    <ul class="space-y-3 mb-8 text-sm text-gray-300">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-graduation-cap text-pink-500"></i> Paquetes integrales (Banquete + Salón + DJ).</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-graduation-cap text-pink-500"></i> Barras iluminadas de coctelería y shots.</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-graduation-cap text-pink-500"></i> Fotografía, cabinas 360 y alfombra roja.</li>
+                    </ul>
+                    <a href="contacto.html" class="inline-block bg-party-purple text-white hover:bg-pink-600 px-8 py-3 text-xs uppercase tracking-widest font-bold transition-colors shadow-lg">Cotizar Graduación</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-20 bg-charcoal-dark border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <span class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-bold">Portafolio de Eventos</span>
-                <h2 class="font-serif text-4xl md:text-5xl text-white mt-4 mb-6">Una Solución Para Cada Ocasión</h2>
+                <h2 class="text-3xl font-serif text-white mb-4">Complementos para su Gran Noche</h2>
                 <div class="w-16 h-[2px] bg-gold mx-auto"></div>
-                <p class="mt-6 text-gray-400 max-w-2xl mx-auto font-light text-lg">
-                    Adaptamos nuestra infraestructura y tono de servicio para asegurar que su celebración cumpla con el estilo deseado, sin perder la formalidad que nos caracteriza.
-                </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="card-hover bg-charcoal border border-gray-800 overflow-hidden group">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80" alt="Bodas elegantes" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80 group-hover:opacity-100">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="bebidas.html" class="group block relative h-64 overflow-hidden rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-60 group-hover:opacity-40" alt="Mixología">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                        <i class="fa-solid fa-martini-glass-citrus text-gold text-3xl mb-2"></i>
+                        <h3 class="text-xl font-serif font-bold text-white">Barras de Mixología</h3>
+                        <span class="text-gold text-xs uppercase tracking-widest mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Ver opciones</span>
                     </div>
-                    <div class="p-8 text-center">
-                        <h3 class="text-2xl font-serif text-white mb-3">Bodas y Graduaciones</h3>
-                        <p class="text-gray-400 font-light text-sm mb-6">La máxima expresión de elegancia. Protocolo riguroso, banquetes a tiempos, montaje de lujo e iluminación arquitectónica para una noche perfecta.</p>
-                        <a href="bodas.html" class="inline-block border border-gold text-gold hover:bg-gold hover:text-charcoal px-6 py-2 text-xs uppercase tracking-widest font-bold transition-colors">Ver Detalles</a>
-                    </div>
-                </div>
-
-                <div class="card-hover bg-charcoal border border-gray-800 overflow-hidden group">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&q=80" alt="Eventos Infantiles" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80 group-hover:opacity-100">
-                    </div>
-                    <div class="p-8 text-center">
-                        <h3 class="text-2xl font-serif text-white mb-3">Infantiles & Baby Showers</h3>
-                        <p class="text-gray-400 font-light text-sm mb-6">Diversión garantizada con estilo. Ofrecemos taquizas, mobiliario infantil y renta de <strong>inflables seguros y estéticos</strong> para los niños.</p>
-                        <a href="infantiles.html" class="inline-block border border-gold text-gold hover:bg-gold hover:text-charcoal px-6 py-2 text-xs uppercase tracking-widest font-bold transition-colors">Ver Detalles</a>
-                    </div>
-                </div>
-
-                <div class="card-hover bg-charcoal border border-gray-800 overflow-hidden group">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="img/demo/pexels-bertellifotografia-17294699.jpg" alt="Eventos Empresariales" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80 group-hover:opacity-100">
-                    </div>
-                    <div class="p-8 text-center">
-                        <h3 class="text-2xl font-serif text-white mb-3">Eventos Corporativos</h3>
-                        <p class="text-gray-400 font-light text-sm mb-6">Desayunos ejecutivos, coffee breaks y cenas de fin de año. Refleje el prestigio de su empresa con un servicio impecable y puntual.</p>
-                        <a href="empresariales.html" class="inline-block border border-gold text-gold hover:bg-gold hover:text-charcoal px-6 py-2 text-xs uppercase tracking-widest font-bold transition-colors">Ver Detalles</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-cream">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <i class="fa-solid fa-utensils text-gold text-2xl"></i>
-                        <h2 class="text-3xl font-serif text-charcoal-dark">Menús Exquisitos</h2>
-                    </div>
-                    <p class="text-gray-600 font-light mb-8">Nuestra oferta culinaria se adapta al estilo de su evento. Ingredientes de primera calidad preparados por chefs expertos en el sitio de su celebración.</p>
-                    
-                    <div class="space-y-4">
-                        <a href="banquetes.html" class="flex items-center justify-between bg-white border border-gray-200 p-4 hover:border-gold hover:shadow-md transition-all group">
-                            <div class="flex items-center gap-4">
-                                <img src="img/demo/pexels-andrey-castillejos-355270984-15782638.jpg" alt="Banquete 3 Tiempos" class="w-12 h-12 rounded-full object-cover">
-                                <div>
-                                    <h4 class="font-bold text-charcoal group-hover:text-gold transition-colors">Banquetes a 3 Tiempos</h4>
-                                    <p class="text-xs text-gray-500">Gala y formalidad absoluta.</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-arrow-right text-gray-300 group-hover:text-gold"></i>
-                        </a>
-                        
-                        <a href="taquizas.html" class="flex items-center justify-between bg-white border border-gray-200 p-4 hover:border-gold hover:shadow-md transition-all group">
-                            <div class="flex items-center gap-4">
-                                <img src="img/demo/pexels-israwmx-24245996.jpg" alt="Taquizas Gourmet" class="w-12 h-12 rounded-full object-cover">
-                                <div>
-                                    <h4 class="font-bold text-charcoal group-hover:text-gold transition-colors">Taquizas de Guisados</h4>
-                                    <p class="text-xs text-gray-500">Sabor tradicional en cazuelas de barro.</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-arrow-right text-gray-300 group-hover:text-gold"></i>
-                        </a>
-                        
-                        <a href="parrilladas.html" class="flex items-center justify-between bg-white border border-gray-200 p-4 hover:border-gold hover:shadow-md transition-all group">
-                            <div class="flex items-center gap-4">
-                                <img src="img/demo/pexels-gabriel-zachi-2151036855-36859450.jpg" alt="Parrilladas Premium" class="w-12 h-12 rounded-full object-cover">
-                                <div>
-                                    <h4 class="font-bold text-charcoal group-hover:text-gold transition-colors">Parrilladas Premium</h4>
-                                    <p class="text-xs text-gray-500">Asados al momento para jardines.</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-arrow-right text-gray-300 group-hover:text-gold"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <i class="fa-solid fa-map-location-dot text-gold text-2xl"></i>
-                        <h2 class="text-3xl font-serif text-charcoal-dark">Dónde Trabajamos</h2>
-                    </div>
-                    <p class="text-gray-600 font-light mb-8">Llevamos la infraestructura necesaria para operar con excelencia en el espacio de su elección, sin perder un ápice de elegancia.</p>
-                    
-                    <div class="space-y-4">
-                        <a href="salones.html" class="flex items-center justify-between bg-white border border-gray-200 p-4 hover:border-gold hover:shadow-md transition-all group">
-                            <div>
-                                <h4 class="font-bold text-charcoal group-hover:text-gold transition-colors">Salones e Instalaciones</h4>
-                                <p class="text-xs text-gray-500">Diseño y acústica perfecta.</p>
-                            </div>
-                            <i class="fa-solid fa-arrow-right text-gray-300 group-hover:text-gold"></i>
-                        </a>
-                        <a href="domicilio.html" class="flex items-center justify-between bg-white border border-gray-200 p-4 hover:border-gold hover:shadow-md transition-all group">
-                            <div>
-                                <h4 class="font-bold text-charcoal group-hover:text-gold transition-colors">En Tu Casa (A Domicilio)</h4>
-                                <p class="text-xs text-gray-500">Transformamos tu cochera o jardín en un evento profesional.</p>
-                            </div>
-                            <i class="fa-solid fa-arrow-right text-gray-300 group-hover:text-gold"></i>
-                        </a>
-                        
-                        <div class="mt-8 p-6 bg-charcoal-light rounded-sm text-white relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-l-4 border-gold">
-                            <div class="absolute -right-4 -bottom-4 opacity-10">
-                                <i class="fa-solid fa-shapes text-8xl text-gold"></i>
-                            </div>
-                            <h4 class="font-serif text-xl text-gold mb-2 relative z-10">¿Buscas diversión para los niños?</h4>
-                            <p class="text-sm font-light text-gray-300 mb-4 relative z-10">Complementa tu evento infantil o familiar con nuestra selección de inflables elegantes, limpios y seguros.</p>
-                            <a href="inflables.html" class="text-xs font-bold uppercase tracking-widest text-white hover:text-gold transition-colors border-b border-gold pb-1 relative z-10 inline-flex items-center gap-2">
-                                Ver Catálogo de Inflables <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-charcoal relative overflow-hidden border-t border-gold/30">
-        <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
-        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <h2 class="font-serif text-4xl md:text-5xl text-white mb-6">Inicie la Planificación de su Evento</h2>
-            <p class="text-gray-400 mb-10 font-light text-lg max-w-2xl mx-auto">
-                No hay compromiso al solicitar una cotización. Permítanos escuchar sus ideas (Bodas, Infantiles, Empresariales) y le armaremos la propuesta perfecta para su presupuesto y locación.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://wa.me/521234567890?text=Hola,%20deseo%20iniciar%20la%20cotización%20de%20un%20evento." target="_blank" class="inline-flex items-center justify-center gap-3 bg-gold text-charcoal-dark hover:bg-gold-light px-10 py-4 uppercase tracking-widest text-sm font-bold transition-all duration-300 shadow-xl">
-                    <i class="fa-brands fa-whatsapp text-2xl"></i> Cotizar por WhatsApp
                 </a>
+
+                <a href="mobiliario.html" class="group block relative h-64 overflow-hidden rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-60 group-hover:opacity-40" alt="Mobiliario">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                        <i class="fa-solid fa-chair text-gold text-3xl mb-2"></i>
+                        <h3 class="text-xl font-serif font-bold text-white">Mobiliario de Gala</h3>
+                        <span class="text-gold text-xs uppercase tracking-widest mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Ver catálogo</span>
+                    </div>
+                </a>
+
+                <div class="group block relative h-64 overflow-hidden rounded-sm border border-gold/30">
+                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-40" alt="Tacos">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-charcoal-dark/50">
+                        <i class="fa-solid fa-fire-burner text-gold text-3xl mb-2"></i>
+                        <h3 class="text-xl font-serif font-bold text-white">Tornafiesta (Madrugada)</h3>
+                        <p class="text-xs text-gray-300 mt-2 px-6 font-light">Chilaquiles, Tacos al Pastor o Esquites para cerrar la fiesta.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-charcoal-dark pt-16 pb-8 border-t border-black">
+    <section class="py-24 bg-charcoal text-center border-t border-gold/30 relative overflow-hidden">
+        <div class="absolute inset-0 bg-party-gradient opacity-20"></div>
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+        
+        <div class="max-w-3xl mx-auto px-4 relative z-10">
+            <h2 class="font-serif text-4xl md:text-5xl text-white mb-6">Bloquee su Fecha Hoy</h2>
+            <p class="text-gray-300 font-light mb-10 text-lg">Las fechas para Bodas y Temporada de Graduaciones se agotan rápidamente. Contáctenos para revisar disponibilidad y comenzar a diseñar la noche perfecta.</p>
+            
+            <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20revisar%20disponibilidad%20para%20una%20Boda/Graduación." target="_blank" class="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-charcoal-dark px-10 py-5 uppercase tracking-widest text-sm font-bold transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.4)]">
+                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                Consultar Disponibilidad
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-black pt-16 pb-8 border-t border-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div class="md:col-span-1">
@@ -411,10 +391,9 @@
                         <span class="font-serif text-xl tracking-widest text-white uppercase">Moonstone</span>
                     </a>
                     <p class="text-gray-500 text-sm font-light leading-relaxed">
-                        Alta dirección en banquetes y organización de eventos. Desde majestuosas galas hasta vibrantes fiestas infantiles en su domicilio.
+                        Alta dirección en banquetes y organización de eventos. Diseñando momentos memorables con exigencia y pasión.
                     </p>
                 </div>
-                
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Servicios Principales</h4>
                     <ul class="space-y-3">
@@ -424,17 +403,15 @@
                         <li><a href="inflables.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Renta de Inflables</a></li>
                     </ul>
                 </div>
-
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Tipos de Eventos</h4>
                     <ul class="space-y-3">
-                        <li><a href="bodas.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Bodas y Graduaciones</a></li>
+                        <li><a href="bodas.html" class="text-gold text-sm transition-colors">Bodas y Graduaciones</a></li>
                         <li><a href="infantiles.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Infantiles y Baby Showers</a></li>
                         <li><a href="empresariales.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Eventos Empresariales</a></li>
                         <li><a href="faq.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Preguntas Frecuentes (FAQ)</a></li>
                     </ul>
                 </div>
-
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Contacto</h4>
                     <ul class="space-y-3 text-sm text-gray-500 mb-6">
@@ -442,14 +419,6 @@
                         <li><i class="fa-solid fa-envelope text-gold w-5"></i> eventos@moonstone.com</li>
                         <li><i class="fa-solid fa-location-dot text-gold w-5"></i> Servicio a Domicilio y Salones</li>
                     </ul>
-                    <div class="flex space-x-4 mt-2">
-                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:border-gold hover:text-gold transition-colors">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:border-gold hover:text-gold transition-colors">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                    </div>
                 </div>
             </div>
             
@@ -460,15 +429,12 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/521234567890?text=Hola,%20visito%20su%20página%20web%20y%20deseo%20información." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1DA851] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_10px_25px_rgba(37,211,102,0.4)] z-50 transition-transform hover:scale-110">
+    <a href="https://wa.me/521234567890?text=Hola,%20deseo%20información%20para%20Bodas/Graduaciones." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1DA851] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_10px_25px_rgba(37,211,102,0.4)] z-50 transition-transform hover:scale-110">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
     <script>
-        // Actualizar el año en el footer automáticamente
         document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Efecto Navbar (Cristal) al hacer scroll
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -481,10 +447,8 @@
             }
         });
 
-        // Lógica del menú móvil (Abrir y cerrar)
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
-
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
