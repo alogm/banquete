@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script>
         tailwind.config = {
@@ -78,6 +80,39 @@
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Personalización elegante para los controles de Swiper (Carrusel) */
+        :root {
+            --swiper-theme-color: #D4AF37;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            background-color: rgba(26, 26, 26, 0.4);
+            width: 40px !important;
+            height: 40px !important;
+            border-radius: 50%;
+            color: #D4AF37 !important;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
+        }
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            background-color: rgba(212, 175, 55, 0.8);
+            color: #1A1A1A !important;
+        }
+        .swiper-button-next::after, .swiper-button-prev::after {
+            font-size: 16px !important;
+            font-weight: bold;
+        }
+        .swiper-pagination-bullet {
+            background: #e5e7eb !important; /* Gris claro para que resalte en el fondo gris 50 */
+            opacity: 0.8;
+            border: 1px solid #1A1A1A; /* Borde oscuro para dar contraste si el fondo es claro */
+        }
+        .swiper-pagination-bullet-active {
+            background: #D4AF37 !important;
+            border: none;
+            opacity: 1;
+            transform: scale(1.2);
         }
     </style>
 </head>
@@ -227,15 +262,24 @@
         </div>
     </section>
 
-    <section class="py-16 bg-cream">
+    <section class="py-24 bg-charcoal-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
             
-            <div class="flex flex-col lg:flex-row gap-10 items-center bg-white border border-gray-200 rounded-sm overflow-hidden shadow-xl card-hover">
-                <div class="lg:w-5/12 h-80 lg:h-auto relative">
-                    <img src="img/demo/pexels-bertellifotografia-16985181.jpg" alt="Paquete Gala y Bodas" class="w-full h-full object-cover absolute inset-0">
+            <div class="flex flex-col lg:flex-row gap-10 items-stretch bg-white border border-gray-200 rounded-sm overflow-hidden shadow-xl card-hover">
+                <div class="lg:w-5/12 h-80 lg:h-auto relative min-h-[350px]">
+                    <div class="swiper swiper-fade absolute inset-0 w-full h-full bg-charcoal-dark">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide flex items-center justify-center p-2"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Boda Elegante 1" class="w-full h-full object-contain"></div>
+                            <div class="swiper-slide flex items-center justify-center p-2"><img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" alt="Mesa Imperial" class="w-full h-full object-contain"></div>
+                            <div class="swiper-slide flex items-center justify-center p-2"><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Copa Brindis" class="w-full h-full object-contain"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
                 </div>
-                <div class="lg:w-7/12 p-8 lg:p-12">
-                    <span class="inline-block bg-charcoal-dark text-gold text-[10px] font-bold uppercase tracking-widest px-3 py-1 mb-4">Bodas · XV Años · Galas</span>
+                <div class="lg:w-7/12 p-8 lg:p-12 flex flex-col justify-center">
+                    <span class="inline-block self-start bg-charcoal-dark text-gold text-[10px] font-bold uppercase tracking-widest px-3 py-1 mb-4">Bodas · XV Años · Galas</span>
                     <h3 class="text-3xl md:text-4xl font-serif text-charcoal-dark mb-4">Paquete <span class="text-gold italic font-normal">Elegance</span></h3>
                     <p class="text-gray-600 font-light mb-6">Diseñado para eventos de etiqueta rigurosa. Un servicio cronometrado, elegante y visualmente impactante para sorprender a sus invitados.</p>
                     
@@ -252,18 +296,27 @@
                         </ul>
                     </div>
                     
-                    <a href="https://wa.me/521234567890?text=Hola,%20me%20interesa%20cotizar%20el%20Paquete%20Elegance." target="_blank" class="inline-block bg-charcoal-dark text-white hover:bg-gold hover:text-charcoal px-8 py-3 text-xs uppercase tracking-widest font-bold transition-colors">
+                    <a href="https://wa.me/521234567890?text=Hola,%20me%20interesa%20cotizar%20el%20Paquete%20Elegance." target="_blank" class="self-start inline-block bg-charcoal-dark text-white hover:bg-gold hover:text-charcoal px-8 py-3 text-xs uppercase tracking-widest font-bold transition-colors">
                         Cotizar Paquete
                     </a>
                 </div>
             </div>
 
-            <div class="flex flex-col lg:flex-row-reverse gap-10 items-center bg-white border border-gray-200 rounded-sm overflow-hidden shadow-xl card-hover">
-                <div class="lg:w-5/12 h-80 lg:h-auto relative">
-                    <img src="img/demo/pexels-gabriel-zachi-2151036855-36859450.jpg" alt="Paquete Jardín" class="w-full h-full object-cover absolute inset-0">
+            <div class="flex flex-col lg:flex-row-reverse gap-10 items-stretch bg-white border border-gray-200 rounded-sm overflow-hidden shadow-xl card-hover">
+                <div class="lg:w-5/12 h-80 lg:h-auto relative min-h-[350px]">
+                    <div class="swiper swiper-fade absolute inset-0 w-full h-full bg-charcoal-dark">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide flex items-center justify-center p-2"><img src="/img/demo/parrillada.jpg" alt="Evento Jardín" class="w-full h-full object-contain"></div>
+                            <div class="swiper-slide flex items-center justify-center p-2"><img src="/img/demo/centro de mesa.jpg" alt="Mesa Exterior" class="w-full h-full object-contain"></div>
+                            <div class="swiper-slide flex items-center justify-center p-2"><img src="/img/demo/cocteles.jpg" alt="Parrillada Gourmet" class="w-full h-full object-contain"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
                 </div>
-                <div class="lg:w-7/12 p-8 lg:p-12">
-                    <span class="inline-block bg-charcoal-dark text-gold text-[10px] font-bold uppercase tracking-widest px-3 py-1 mb-4">Eventos de Día · Cumpleaños · Empresariales</span>
+                <div class="lg:w-7/12 p-8 lg:p-12 flex flex-col justify-center">
+                    <span class="inline-block self-start bg-charcoal-dark text-gold text-[10px] font-bold uppercase tracking-widest px-3 py-1 mb-4">Eventos de Día · Cumpleaños · Empresariales</span>
                     <h3 class="text-3xl md:text-4xl font-serif text-charcoal-dark mb-4">Paquete <span class="text-gold italic font-normal">Jardín Premium</span></h3>
                     <p class="text-gray-600 font-light mb-6">La combinación perfecta entre lo rústico y lo sofisticado. Ideal para eventos al aire libre, manteniendo un estándar de servicio impecable.</p>
                     
@@ -280,22 +333,31 @@
                         </ul>
                     </div>
                     
-                    <a href="https://wa.me/521234567890?text=Hola,%20me%20interesa%20cotizar%20el%20Paquete%20Jardín%20Premium." target="_blank" class="inline-block bg-charcoal-dark text-white hover:bg-gold hover:text-charcoal px-8 py-3 text-xs uppercase tracking-widest font-bold transition-colors">
+                    <a href="https://wa.me/521234567890?text=Hola,%20me%20interesa%20cotizar%20el%20Paquete%20Jardín%20Premium." target="_blank" class="self-start inline-block bg-charcoal-dark text-white hover:bg-gold hover:text-charcoal px-8 py-3 text-xs uppercase tracking-widest font-bold transition-colors">
                         Cotizar Paquete
                     </a>
                 </div>
             </div>
 
-            <div class="flex flex-col lg:flex-row gap-10 items-center bg-white border border-gray-200 rounded-sm overflow-hidden shadow-xl card-hover relative overflow-hidden">
-                <div class="absolute top-6 -left-10 bg-gold text-charcoal-dark font-bold text-[10px] tracking-widest uppercase py-1 px-12 transform -rotate-45 z-20 shadow-md">
+            <div class="flex flex-col lg:flex-row gap-10 items-stretch bg-white border border-gray-200 rounded-sm overflow-hidden shadow-xl card-hover relative">
+                <div class="absolute top-6 -left-14 w-48 flex justify-center items-center bg-gold text-charcoal-dark font-bold text-[10px] tracking-widest uppercase py-1.5 transform -rotate-45 z-20 shadow-md">
                     Más Solicitado
                 </div>
                 
-                <div class="lg:w-5/12 h-80 lg:h-auto relative">
-                    <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&q=80" alt="Paquete Infantil" class="w-full h-full object-cover absolute inset-0">
+                <div class="lg:w-5/12 h-80 lg:h-auto relative min-h-[350px]">
+                    <div class="swiper swiper-fade absolute inset-0 w-full h-full bg-charcoal-dark">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide flex items-center justify-center p-2"><img src="img/demo/nilo.jpg" alt="Mesa Postres Infantil" class="w-full h-full object-contain"></div>
+                            <div class="swiper-slide flex items-center justify-center p-2"><img src="img/demo/salchi.jpg" alt="Globos Fiesta" class="w-full h-full object-contain"></div>
+                            <div class="swiper-slide flex items-center justify-center p-2"><img src="img/demo/pizza.jpg" alt="Entretenimiento Infantil" class="w-full h-full object-contain"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
                 </div>
-                <div class="lg:w-7/12 p-8 lg:p-12 relative z-10">
-                    <span class="inline-block bg-charcoal-dark text-gold text-[10px] font-bold uppercase tracking-widest px-3 py-1 mb-4">Bautizos · Baby Showers · Fiestas Infantiles</span>
+                <div class="lg:w-7/12 p-8 lg:p-12 relative z-10 flex flex-col justify-center">
+                    <span class="inline-block self-start bg-charcoal-dark text-gold text-[10px] font-bold uppercase tracking-widest px-3 py-1 mb-4">Bautizos · Baby Showers · Fiestas Infantiles</span>
                     <h3 class="text-3xl md:text-4xl font-serif text-charcoal-dark mb-4">Paquete <span class="text-gold italic font-normal">Celebración Familiar</span></h3>
                     <p class="text-gray-600 font-light mb-6">Diversión garantizada sin perder la elegancia. Integramos alimentos para adultos y niños, junto con entretenimiento seguro y estético para los más pequeños.</p>
                     
@@ -312,7 +374,7 @@
                         </ul>
                     </div>
                     
-                    <a href="https://wa.me/521234567890?text=Hola,%20me%20interesa%20cotizar%20el%20Paquete%20Celebración%20Familiar%20(con%20inflables)." target="_blank" class="inline-block bg-charcoal-dark text-white hover:bg-gold hover:text-charcoal px-8 py-3 text-xs uppercase tracking-widest font-bold transition-colors">
+                    <a href="https://wa.me/521234567890?text=Hola,%20me%20interesa%20cotizar%20el%20Paquete%20Celebración%20Familiar%20(con%20inflables)." target="_blank" class="self-start inline-block bg-charcoal-dark text-white hover:bg-gold hover:text-charcoal px-8 py-3 text-xs uppercase tracking-widest font-bold transition-colors">
                         Cotizar Paquete
                     </a>
                 </div>
@@ -321,11 +383,11 @@
         </div>
     </section>
 
-    <section class="py-20 bg-charcoal-dark border-t border-gold/20">
+    <section class="py-20 bg-cream border-t border-gold/20">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <i class="fa-solid fa-wand-magic-sparkles text-gold text-4xl mb-6"></i>
-            <h2 class="text-3xl md:text-4xl font-serif text-white mb-6">¿Busca algo a la medida?</h2>
-            <p class="text-gray-400 font-light text-lg mb-10 max-w-2xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-serif text-charcoal-dark mb-6">¿Busca algo a la medida?</h2>
+            <p class="text-gray-800 font-light text-lg mb-10 max-w-2xl mx-auto">
                 Entendemos que cada visión es única. Puede combinar nuestros servicios de banquetería, elegir piezas específicas de mobiliario, o agregar entretenimiento extra (como inflables adicionales o DJ) para armar un paquete 100% personalizado.
             </p>
             <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20armar%20un%20paquete%20personalizado%20para%20mi%20evento." target="_blank" class="inline-flex items-center justify-center gap-3 bg-transparent border border-gold text-gold hover:bg-gold hover:text-charcoal-dark px-10 py-4 uppercase tracking-widest text-sm font-bold transition-all duration-300">
@@ -339,8 +401,8 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div class="md:col-span-1">
                     <a href="index.html" class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 rounded-full overflow-hidden border border-gold/50 bg-black">
-                            <img src="img/logo6.png" alt="Logo Moonstone" class="w-full h-full object-cover scale-[1.2]">
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center border border-gold/50 bg-black text-gold">
+                            <i class="fa-solid fa-moon"></i>
                         </div>
                         <span class="font-serif text-xl tracking-widest text-white uppercase">Moonstone</span>
                     </a>
@@ -398,7 +460,32 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+        // Iniciar Carruseles Swiper
+        document.addEventListener('DOMContentLoaded', function () {
+            var swipers = document.querySelectorAll('.swiper-fade');
+            swipers.forEach(function(swiperContainer) {
+                new Swiper(swiperContainer, {
+                    loop: true,
+                    effect: "fade", 
+                    fadeEffect: { crossFade: true },
+                    autoplay: {
+                        delay: 3500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            });
+        });
+
         // Actualizar el año en el footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
