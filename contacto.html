@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | Moonstone Banquetes</title>
+    <meta
+      name="description"
+      content="Contáctanos vía WhatsApp para atención inmediata. En Moonstone Banquetes estamos listos para diseñar el evento de sus sueños."
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: {
+                DEFAULT: "#D4AF37",
+                light: "#F3E5AB",
+                dark: "#AA8C2C",
+              },
+              charcoal: {
+                DEFAULT: "#1A1A1A",
+                light: "#2A2A2A",
+                dark: "#0F0F0F",
+              },
+              cream: "#FDFBF7",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .glass-nav {
+        background: rgba(26, 26, 26, 0.98);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+      }
+
+      .card-hover {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow:
+          0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        border-color: #d4af37;
+      }
+
+      .social-hover {
+        transition: all 0.3s ease;
+      }
+      .social-hover:hover {
+        transform: scale(1.1) translateY(-5px);
+        color: #d4af37;
+        text-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+      }
+
+      .text-gradient-gold {
+        background: linear-gradient(to right, #d4af37, #f3e5ab, #aa8c2c);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .dropdown-menu {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .has-dropdown:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        animation: fadeIn 0.2s ease-in-out forwards;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="font-sans bg-cream text-charcoal antialiased selection:bg-gold selection:text-charcoal-dark"
+  >
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 text-white bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-4 cursor-pointer">
+                    <div class="w-12 h-12 rounded-full overflow-hidden border border-gold/50 bg-black shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+                        <img src="img/logo6.png" alt="Logo Moonstone" class="w-full h-full object-cover scale-[1.2]">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-2xl font-bold tracking-widest text-white uppercase leading-none">Moonstone</span>
+                        <span class="text-gold text-[0.65rem] tracking-[0.4em] uppercase mt-1">Banquetes</span>
+                    </div>
+                </a>
+                
+                <div class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html" class="text-gold transition-colors text-xs uppercase tracking-widest font-bold border-b border-gold pb-1">Inicio</a>
+                    
+                    <div class="relative has-dropdown py-6">
+                        <a href="servicios.html" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300 flex items-center gap-1">
+                            Servicios <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-[60px] left-0 w-56 bg-charcoal border-t-2 border-gold shadow-xl py-2 z-50">
+                            <a href="paquetes.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Paquetes Integrales</a>
+                            <a href="inflables.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Inflables y Entretenimiento</a>
+                            <a href="mobiliario.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Mobiliario y Decoración</a>
+                        </div>
+                    </div>
+
+                    <div class="relative has-dropdown py-6">
+                        <a href="gastronomia.html" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300 flex items-center gap-1">
+                            Gastronomía <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-[60px] left-0 w-56 bg-charcoal border-t-2 border-gold shadow-xl py-2 z-50">
+                            <a href="banquetes.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Banquetes 3 Tiempos</a>
+                            <a href="taquizas.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Taquizas de Autor</a>
+                            <a href="parrilladas.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Parrilladas Premium</a>
+                            <a href="desayunos.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Desayunos y Brunch</a>
+                            <a href="bebidas.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Bebidas</a>
+                            <a href="tornafiesta.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Tornafiesta (Madrugada)</a>
+                        </div>
+                    </div>
+
+                    <div class="relative has-dropdown py-6">
+                        <a href="eventos.html" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300 flex items-center gap-1">
+                            Eventos <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-[60px] left-0 w-64 bg-charcoal border-t-2 border-gold shadow-xl py-2 z-50">
+                            <a href="bodas.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Bodas y Graduaciones</a>
+                            <a href="infantiles.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Infantiles y Baby Showers</a>
+                            <a href="empresariales.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Eventos Empresariales</a>
+                        </div>
+                    </div>
+
+                    <div class="relative has-dropdown py-6">
+                        <a href="locaciones.html" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300 flex items-center gap-1">
+                            Locaciones <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-[60px] left-0 w-56 bg-charcoal border-t-2 border-gold shadow-xl py-2 z-50">
+                            <a href="salones.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Salones e Instalaciones</a>
+                            <a href="jardines.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Jardines Exclusivos</a>
+                            <a href="domicilio.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">En tu Casa (A Domicilio)</a>
+                        </div>
+                    </div>
+
+                    <a href="faq.html" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300">FAQ</a>
+                    <a href="nosotros.html" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300">Quienes Somos</a>
+                    
+                    <a href="contacto.html" class="border border-gold text-gold hover:bg-gold hover:text-charcoal-dark px-5 py-2 transition duration-300 text-xs uppercase tracking-widest font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-lg"></i> Contacto
+                    </a>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-gold focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-charcoal text-white absolute w-full shadow-2xl border-t border-gold/20 h-[85vh] overflow-y-auto pb-10">
+            <div class="px-6 py-6 flex flex-col gap-2">
+                <a href="index.html" class="text-lg font-serif tracking-wide text-gold py-2 border-b border-gray-800">Inicio</a>
+                
+                <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">Servicios</p>
+                <a href="paquetes.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Paquetes Integrales</a>
+                <a href="inflables.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Inflables y Entretenimiento</a>
+                
+                <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">Gastronomía</p>
+                <a href="banquetes.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Banquetes 3 Tiempos</a>
+                <a href="taquizas.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Taquizas y Parrilladas</a>
+                <a href="desayunos.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Desayunos</a>
+                <a href="bebidas.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Bebidas</a>
+                <a href="tornafiesta.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Tornafiesta (Madrugada)</a>
+
+                <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">Eventos</p>
+                <a href="bodas.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Bodas y Graduaciones</a>
+                <a href="infantiles.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Infantiles y Baby Showers</a>
+                <a href="empresariales.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Empresariales</a>
+                
+                <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">Espacios</p>
+                <a href="salones.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Salones e Instalaciones</a>
+                <a href="domicilio.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">A Domicilio (Tu Casa)</a>
+                
+                <a href="faq.html" class="text-lg font-serif tracking-wide text-gray-300 hover:text-gold py-2 mt-4 border-b border-gray-800">Preguntas Frecuentes</a>
+                <a href="nosotros.html" class="text-lg font-serif tracking-wide text-gray-300 hover:text-gold py-2 mt-4 border-b border-gray-800">Quienes Somos</a>
+
+                <a href="contacto.html" class="bg-gold text-charcoal-dark text-center py-4 font-bold uppercase tracking-widest text-sm mt-8 flex justify-center items-center gap-2">
+                    <i class="fa-solid fa-envelope text-xl"></i> Contacto
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header
+      class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center justify-center min-h-[60vh] bg-charcoal-dark"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80"
+          alt="Servicio al cliente Moonstone"
+          class="w-full h-full object-cover grayscale-[30%] opacity-40"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-charcoal-dark via-charcoal-dark/80 to-transparent"
+        ></div>
+      </div>
+
+      <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10">
+        <div class="flex items-center justify-center gap-4 mb-4">
+          <div class="h-px w-8 bg-gold"></div>
+          <span
+            class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-semibold"
+            >Atención Personalizada</span
+          >
+          <div class="h-px w-8 bg-gold"></div>
+        </div>
+
+        <h1
+          class="text-4xl md:text-6xl font-serif text-white font-bold mb-6 drop-shadow-sm"
+        >
+          Estamos a su <br />
+          <span class="text-gradient-gold italic font-normal"
+            >Entera Disposición</span
+          >
+        </h1>
+
+        <p
+          class="text-base md:text-xl text-gray-300 font-light max-w-2xl mx-auto leading-relaxed"
+        >
+          En Moonstone Banquetes creemos que la planificación de su evento debe
+          ser tan impecable como el evento mismo. Nuestro compromiso de servicio
+          y excelencia comienza desde su primer mensaje.
+        </p>
+      </div>
+    </header>
+
+    <section
+      class="py-24 bg-cream relative z-20 -mt-10 rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.1)]"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif text-charcoal-dark mb-4">
+            Conecte con Nuestros Asesores
+          </h2>
+          <div class="w-16 h-[2px] bg-gold mx-auto"></div>
+          <p class="text-gray-600 font-light mt-6 max-w-2xl mx-auto">
+            Para brindarle la atención ágil y directa que usted merece,
+            gestionamos todas nuestras solicitudes, cotizaciones y dudas a
+            través de atención personalizada vía WhatsApp o llamada telefónica.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Tarjeta Principal (WhatsApp) -->
+          <div
+            class="md:col-span-2 bg-gold border border-gold-light rounded-sm shadow-xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 card-hover relative overflow-hidden"
+          >
+            <div class="absolute -right-10 -bottom-10 opacity-10">
+              <i class="fa-brands fa-whatsapp text-[250px] text-white"></i>
+            </div>
+
+            <div
+              class="w-24 h-24 bg-white rounded-full flex items-center justify-center flex-shrink-0 shadow-lg relative z-10"
+            >
+              <i class="fa-brands fa-whatsapp text-5xl text-[#25D366]"></i>
+            </div>
+
+            <div class="text-center md:text-left relative z-10 flex-1">
+              <h3 class="text-3xl font-serif text-charcoal-dark font-bold mb-2">
+                Atención Inmediata
+              </h3>
+              <p class="text-charcoal-dark/80 font-medium mb-6">
+                Cotizaciones, disponibilidad de fechas y asesoría directa con un
+                Event Planner asignado a su solicitud.
+              </p>
+              <a
+                href="https://wa.me/521234567890?text=Hola,%20quisiera%20iniciar%20la%20planeación%20de%20un%20evento."
+                target="_blank"
+                class="inline-block bg-charcoal-dark text-white hover:bg-black px-10 py-4 uppercase tracking-widest text-sm font-bold transition-colors shadow-md"
+              >
+                Iniciar Conversación
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta Secundaria (Info de contacto) -->
+          <div
+            class="bg-white border border-gray-200 rounded-sm shadow-lg p-8 flex flex-col justify-center card-hover"
+          >
+            <h3
+              class="text-xl font-serif text-charcoal-dark mb-6 border-b border-gray-100 pb-4"
+            >
+              Información de Contacto
+            </h3>
+
+            <ul class="space-y-6">
+              <li class="flex items-start gap-4">
+                <i
+                  class="fa-solid fa-phone text-gold text-xl mt-1 w-6 text-center"
+                ></i>
+                <div>
+                  <p
+                    class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1"
+                  >
+                    Teléfono Directo
+                  </p>
+                  <a
+                    href="tel:+525512345678"
+                    class="text-charcoal-dark font-medium hover:text-gold transition-colors"
+                    >+52 (55) 1234 5678</a
+                  >
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <i
+                  class="fa-solid fa-envelope text-gold text-xl mt-1 w-6 text-center"
+                ></i>
+                <div>
+                  <p
+                    class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1"
+                  >
+                    Correo Electrónico
+                  </p>
+                  <a
+                    href="mailto:eventos@moonstone.com"
+                    class="text-charcoal-dark font-medium hover:text-gold transition-colors"
+                    >eventos@moonstone.com</a
+                  >
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <i
+                  class="fa-solid fa-clock text-gold text-xl mt-1 w-6 text-center"
+                ></i>
+                <div>
+                  <p
+                    class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1"
+                  >
+                    Horario de Atención
+                  </p>
+                  <p class="text-charcoal-dark font-medium text-sm">
+                    Lunes a Domingo<br />9:00 AM - 8:00 PM
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Redes Sociales -->
+    <section class="py-24 bg-charcoal-dark border-y border-gold/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span
+          class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-bold"
+          >Comunidad Moonstone</span
+        >
+        <h2 class="text-3xl md:text-5xl font-serif text-white mt-4 mb-6">
+          Síganos en Redes Sociales
+        </h2>
+        <div class="w-16 h-[2px] bg-gold mx-auto mb-12"></div>
+
+        <p class="text-gray-400 font-light text-lg max-w-2xl mx-auto mb-16">
+          Descubra la magia detrás de cada montaje, videos de nuestros eventos
+          más recientes, testimonios de clientes y tendencias de decoración.
+          ¡Únase a la experiencia!
+        </p>
+
+        <div
+          class="flex flex-wrap justify-center items-center gap-12 md:gap-20"
+        >
+          <a
+            href="#"
+            target="_blank"
+            class="text-gray-400 social-hover flex flex-col items-center gap-4 group"
+          >
+            <i
+              class="fa-brands fa-facebook-f text-6xl md:text-7xl group-hover:text-[#1877F2] transition-colors"
+            ></i>
+            <span
+              class="text-xs uppercase tracking-widest font-bold opacity-0 group-hover:opacity-100 transition-opacity"
+              >Facebook</span
+            >
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            class="text-gray-400 social-hover flex flex-col items-center gap-4 group"
+          >
+            <i
+              class="fa-brands fa-instagram text-6xl md:text-7xl group-hover:text-[#E1306C] transition-colors"
+            ></i>
+            <span
+              class="text-xs uppercase tracking-widest font-bold opacity-0 group-hover:opacity-100 transition-opacity"
+              >Instagram</span
+            >
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            class="text-gray-400 social-hover flex flex-col items-center gap-4 group"
+          >
+            <i
+              class="fa-brands fa-tiktok text-6xl md:text-7xl group-hover:text-white transition-colors"
+            ></i>
+            <span
+              class="text-xs uppercase tracking-widest font-bold opacity-0 group-hover:opacity-100 transition-opacity"
+              >TikTok</span
+            >
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            class="text-gray-400 social-hover flex flex-col items-center gap-4 group"
+          >
+            <i
+              class="fa-brands fa-x-twitter text-6xl md:text-7xl group-hover:text-white transition-colors"
+            ></i>
+            <span
+              class="text-xs uppercase tracking-widest font-bold opacity-0 group-hover:opacity-100 transition-opacity"
+              >X</span
+            >
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Áreas de Servicio -->
+    <section class="py-20 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <i class="fa-solid fa-map-location-dot text-4xl text-gold mb-6"></i>
+        <h2 class="text-3xl font-serif text-charcoal-dark mb-4">
+          Áreas de Servicio
+        </h2>
+        <p class="text-gray-600 font-light text-lg leading-relaxed">
+          Brindamos servicios de alta banquetería y organización de eventos
+          principalmente en la
+          <strong>Ciudad de México (CDMX) y su Área Metropolitana</strong>.
+          Contamos con logística para cubrir eventos foráneos (Cuernavaca,
+          Querétaro, Puebla) bajo cotización especial.
+        </p>
+      </div>
+    </section>
+
+    <footer class="bg-black pt-16 pb-8 border-t border-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          <div class="md:col-span-1">
+            <a href="index.html" class="flex items-center gap-3 mb-6">
+              <div
+                class="w-10 h-10 rounded-full overflow-hidden border border-gold/50 bg-black"
+              >
+                <img
+                  src="img/logo6.png"
+                  alt="Logo Moonstone"
+                  class="w-full h-full object-cover scale-[1.2]"
+                />
+              </div>
+              <span
+                class="font-serif text-xl tracking-widest text-white uppercase"
+                >Moonstone</span
+              >
+            </a>
+            <p class="text-gray-500 text-sm font-light leading-relaxed">
+              Alta dirección en banquetes y organización de eventos. Diseñando
+              momentos memorables con exigencia y pasión.
+            </p>
+          </div>
+
+          <div>
+            <h4
+              class="text-white font-bold uppercase tracking-widest text-xs mb-6"
+            >
+              Servicios Principales
+            </h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="banquetes.html"
+                  class="text-gray-500 hover:text-gold text-sm transition-colors"
+                  >Banquetes a 3 Tiempos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="taquizas.html"
+                  class="text-gray-500 hover:text-gold text-sm transition-colors"
+                  >Taquizas y Parrilladas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mobiliario.html"
+                  class="text-gray-500 hover:text-gold text-sm transition-colors"
+                  >Montaje y Decoración</a
+                >
+              </li>
+              <li>
+                <a
+                  href="inflables.html"
+                  class="text-gray-500 hover:text-gold text-sm transition-colors"
+                  >Renta de Inflables</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              class="text-white font-bold uppercase tracking-widest text-xs mb-6"
+            >
+              Tipos de Eventos
+            </h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="bodas.html"
+                  class="text-gray-500 hover:text-gold text-sm transition-colors"
+                  >Bodas y Graduaciones</a
+                >
+              </li>
+              <li>
+                <a
+                  href="infantiles.html"
+                  class="text-gray-500 hover:text-gold text-sm transition-colors"
+                  >Infantiles y Baby Showers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="empresariales.html"
+                  class="text-gray-500 hover:text-gold text-sm transition-colors"
+                  >Eventos Empresariales</a
+                >
+              </li>
+              <li>
+                <a
+                  href="faq.html"
+                  class="text-gray-500 hover:text-gold text-sm transition-colors"
+                  >Preguntas Frecuentes (FAQ)</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              class="text-white font-bold uppercase tracking-widest text-xs mb-6"
+            >
+              Navegación
+            </h4>
+            <ul class="space-y-3 text-sm text-gray-500 mb-6">
+              <li>
+                <a href="index.html" class="hover:text-gold transition-colors"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="paquetes.html"
+                  class="hover:text-gold transition-colors"
+                  >Paquetes</a
+                >
+              </li>
+              <li>
+                <a href="salones.html" class="hover:text-gold transition-colors"
+                  >Locaciones</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 font-light tracking-wide"
+        >
+          <p>
+            &copy; <span id="year"></span> Banquetes Moonstone. Todos los
+            derechos reservados.
+          </p>
+          <p class="mt-2 md:mt-0">Elegancia, Sabor y Profesionalismo.</p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/521234567890?text=Hola,%20estoy%20en%20su%20página%20de%20contacto%20y%20deseo%20asesoría."
+      target="_blank"
+      class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1DA851] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_10px_25px_rgba(37,211,102,0.4)] z-50 transition-transform hover:scale-110"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("glass-nav");
+          navbar.classList.remove("bg-transparent", "py-4");
+          navbar.classList.add("py-2");
+        } else {
+          navbar.classList.remove("glass-nav", "py-2");
+          navbar.classList.add("bg-transparent", "py-4");
+        }
+      });
+
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

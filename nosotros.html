@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tornafiesta y Madrugada | Moonstone Banquetes</title>
-    <meta name="description" content="El cierre perfecto para su evento. Tacos al pastor, chilaquiles, esquites y antojos de madrugada para recargar energías en su boda o graduación.">
+    <title>Nosotros | Moonstone Banquetes</title>
+    <meta name="description" content="Conozca la historia, misión y valores de Moonstone Banquetes. Pasión por la excelencia en la organización de eventos y alta gastronomía.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <script>
         tailwind.config = {
@@ -66,23 +66,9 @@
         .dropdown-menu { display: none; opacity: 0; transition: opacity 0.3s ease; }
         .has-dropdown:hover .dropdown-menu { display: block; opacity: 1; animation: fadeIn 0.2s ease-in-out forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        
-        /* Animación sutil de estrellas para el fondo de madrugada */
-        .stars-bg {
-            background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 10px),
-                              radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 5px),
-                              radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 10px);
-            background-size: 550px 550px, 350px 350px, 250px 250px;
-            background-position: 0 0, 40px 60px, 130px 270px;
-            animation: twinkle 15s linear infinite;
-        }
-        @keyframes twinkle {
-            from {background-position: 0 0, 40px 60px, 130px 270px;}
-            to {background-position: -550px 550px, -310px 410px, -120px 520px;}
-        }
     </style>
 </head>
-<body class="font-sans bg-charcoal-dark text-white antialiased selection:bg-gold selection:text-charcoal-dark">
+<body class="font-sans bg-cream text-charcoal antialiased selection:bg-gold selection:text-charcoal-dark">
 
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 text-white bg-transparent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -198,182 +184,117 @@
         </div>
     </nav>
 
-    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center justify-center min-h-[75vh] bg-charcoal overflow-hidden">
-        <div class="absolute inset-0 z-0 stars-bg opacity-30"></div>
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center justify-center min-h-[60vh] bg-charcoal-dark">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80&w=1920" alt="Tacos de Madrugada" class="w-full h-full object-cover opacity-30 mix-blend-luminosity" />
-            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-dark via-charcoal-dark/80 to-transparent"></div>
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1920" alt="Experiencia Moonstone" class="w-full h-full object-cover opacity-40" />
+            <div class="absolute inset-0 bg-gradient-to-b from-charcoal-dark/90 via-charcoal-dark/70 to-cream"></div>
         </div>
 
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10">
             <div class="flex items-center justify-center gap-4 mb-4">
                 <div class="h-px w-8 bg-gold"></div>
-                <span class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-semibold">El Cierre Perfecto</span>
+                <span class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-semibold">Nuestra Esencia</span>
                 <div class="h-px w-8 bg-gold"></div>
             </div>
-            
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-white drop-shadow-sm font-bold mb-6">
-                Antojos de <br>
-                <span class="text-gradient-gold italic font-normal drop-shadow-md">Madrugada</span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-charcoal-dark drop-shadow-sm font-bold mb-6">
+                Pasión por la <br>
+                <span class="text-gradient-gold italic font-normal drop-shadow-md">Perfección</span>
             </h1>
-            
-            <p class="text-base md:text-xl text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
-                A las 2:00 AM, la elegancia da paso al sabor auténtico. Recargue la energía de sus invitados con nuestra exclusiva selección de Tornafiesta para asegurar que la pista de baile no se detenga.
+            <p class="text-base md:text-xl text-charcoal-dark font-medium max-w-2xl mx-auto leading-relaxed">
+                En Moonstone Banquetes, no solo organizamos eventos; creamos legados de elegancia y momentos que perduran para siempre.
             </p>
         </div>
     </header>
 
-    <section class="py-20 bg-charcoal-dark">
+    <section class="py-24 bg-cream">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-serif text-white mb-6">El Rescate de los Trasnochadores</h2>
-                    <p class="text-gray-400 font-light text-lg leading-relaxed mb-6">
-                        Sabemos que las mejores bodas y graduaciones se extienden hasta altas horas. Justo cuando la energía empieza a bajar, Moonstone sorprende a sus invitados con estaciones interactivas de antojitos mexicanos y confort food, servidos calientes y al momento.
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <span class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-bold">Nuestra Historia</span>
+                    <h2 class="text-3xl md:text-5xl font-serif text-charcoal-dark mt-2 mb-8">Más de una década diseñando sueños</h2>
+                    <p class="text-gray-600 font-light text-lg leading-relaxed mb-6">
+                        Moonstone nació de una visión simple pero ambiciosa: elevar el estándar del servicio de banquetes en México. Lo que comenzó como una pequeña empresa familiar, se ha transformado en una referencia de alta dirección en eventos.
                     </p>
-                    <p class="text-gray-400 font-light text-lg leading-relaxed">
-                        Nuestras estaciones de madrugada se instalan discretamente sin interrumpir la fiesta y se presentan con la misma limpieza e higiene que nuestro banquete de gala.
+                    <p class="text-gray-600 font-light text-lg leading-relaxed">
+                        Nuestra trayectoria se basa en la exigencia culinaria y la sofisticación logística. Cada boda, cada bautizo y cada evento empresarial es para nosotros un lienzo donde demostramos que la elegancia y la diversión pueden coexistir en perfecta armonía.
                     </p>
                 </div>
-                <div class="md:w-1/2 grid grid-cols-2 gap-4">
-                    <img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?auto=format&fit=crop&q=80" alt="Chilaquiles" class="w-full h-56 object-cover rounded-sm border border-gray-800 shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&q=80" alt="Tacos" class="w-full h-56 object-cover rounded-sm border border-gray-800 shadow-xl mt-8">
+                <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80" class="w-full h-80 object-cover rounded-sm shadow-xl grayscale-[20%] hover:grayscale-0 transition-all duration-700" alt="Equipo Moonstone">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80" class="w-full h-80 object-cover rounded-sm shadow-xl grayscale-[20%] hover:grayscale-0 transition-all duration-700 mt-12" alt="Detalle de evento">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-charcoal border-y border-gold/20">
+    <section class="py-24 bg-charcoal-dark border-y border-gold/20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-charcoal p-10 border border-gray-800 rounded-sm card-hover">
+                    <div class="w-12 h-12 bg-gold flex items-center justify-center rounded-full mb-6">
+                        <i class="fa-solid fa-bullseye text-charcoal-dark text-xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-serif text-gold mb-4">Nuestra Misión</h3>
+                    <p class="text-gray-400 font-light leading-relaxed text-lg">
+                        Brindar servicios de banquetes y organización de eventos de la más alta calidad, superando las expectativas de nuestros clientes a través de la excelencia gastronómica, una logística impecable y un compromiso absoluto con el detalle.
+                    </p>
+                </div>
+                <div class="bg-charcoal p-10 border border-gray-800 rounded-sm card-hover">
+                    <div class="w-12 h-12 bg-gold flex items-center justify-center rounded-full mb-6">
+                        <i class="fa-solid fa-eye text-charcoal-dark text-xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-serif text-gold mb-4">Nuestra Visión</h3>
+                    <p class="text-gray-400 font-light leading-relaxed text-lg">
+                        Consolidarnos como la empresa líder en el sector de banquetes de alta gama a nivel nacional, siendo reconocidos por nuestra innovación constante, elegancia atemporal y la capacidad de transformar cualquier espacio en una experiencia mágica.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <i class="fa-solid fa-moon text-gold text-4xl mb-4"></i>
-                <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">Estaciones de Tornafiesta</h2>
+                <h2 class="text-3xl md:text-5xl font-serif text-charcoal-dark mb-4">Nuestros Valores</h2>
                 <div class="w-16 h-[2px] bg-gold mx-auto"></div>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <div class="bg-charcoal-dark border border-gray-800 rounded-sm overflow-hidden card-hover">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?auto=format&fit=crop&q=80" alt="Estación de Chilaquiles" class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-charcoal/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-gold border border-gold/50">Favorito</div>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-serif text-white mb-3">Estación de Chilaquiles</h3>
-                        <p class="text-gray-400 text-sm font-light mb-6">El clásico infalible. Totopos crujientes bañados al momento para no perder textura.</p>
-                        <ul class="space-y-2 text-xs text-gray-500 mb-6">
-                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Salsa Verde tatemada y Roja de morita.</li>
-                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Pollo deshebrado, huevo o arrachera.</li>
-                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Crema, queso panela y cebolla morada.</li>
-                        </ul>
-                    </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+                <div>
+                    <i class="fa-solid fa-crown text-3xl text-gold mb-4"></i>
+                    <h4 class="font-bold text-charcoal-dark text-sm uppercase tracking-widest">Excelencia</h4>
                 </div>
-
-                <div class="bg-charcoal-dark border border-gray-800 rounded-sm overflow-hidden card-hover">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&q=80" alt="Trompo al Pastor" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-serif text-white mb-3">Trompo de Pastor en Vivo</h3>
-                        <p class="text-gray-400 text-sm font-light mb-6">Llevamos la auténtica taquería a su evento. Un taquero experto rebana la carne directamente del trompo.</p>
-                        <ul class="space-y-2 text-xs text-gray-500 mb-6">
-                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Carne de cerdo marinada receta de la casa.</li>
-                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Piña asada, cilantro y cebolla picada.</li>
-                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Barra de salsas taqueras tradicionales.</li>
-                        </ul>
-                    </div>
+                <div>
+                    <i class="fa-solid fa-handshake text-3xl text-gold mb-4"></i>
+                    <h4 class="font-bold text-charcoal-dark text-sm uppercase tracking-widest">Integridad</h4>
                 </div>
-
-                <div class="bg-charcoal-dark border border-gray-800 rounded-sm overflow-hidden card-hover">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?auto=format&fit=crop&q=80" alt="Barra de Esquites" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-serif text-white mb-3">Barra de Esquites</h3>
-                        <p class="text-gray-400 text-sm font-light mb-6">Un antojito ligero, calientito y perfecto para comer mientras se sigue bailando. Servidos en vasos térmicos elegantes.</p>
-                        <ul class="space-y-2 text-xs text-gray-500 mb-6">
-                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Granos de elote cocidos con epazote.</li>
-                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Mayonesa, queso rallado, limón.</li>
-                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Variedad de chiles en polvo (Tajín, piquín).</li>
-                        </ul>
-                    </div>
+                <div>
+                    <i class="fa-solid fa-magnifying-glass text-3xl text-gold mb-4"></i>
+                    <h4 class="font-bold text-charcoal-dark text-sm uppercase tracking-widest">Detalle</h4>
                 </div>
-
-                <div class="bg-charcoal-dark border border-gray-800 rounded-sm overflow-hidden card-hover">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80" alt="Mini Hamburguesas" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-serif text-white mb-3">Mini Sliders y Papas</h3>
-                        <p class="text-gray-400 text-sm font-light mb-6">Ideal para graduaciones y fiestas de XV años. Comida rápida pero con ingredientes gourmet.</p>
-                        <ul class="space-y-2 text-xs text-gray-500 mb-6">
-                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Mini hamburguesas de carne de res premium.</li>
-                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Papas a la francesa o gajos sazonados.</li>
-                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Estación de aderezos artesanales.</li>
-                        </ul>
-                    </div>
+                <div>
+                    <i class="fa-solid fa-heart text-3xl text-gold mb-4"></i>
+                    <h4 class="font-bold text-charcoal-dark text-sm uppercase tracking-widest">Pasión</h4>
                 </div>
-
-                <div class="bg-charcoal-dark border border-gray-800 rounded-sm overflow-hidden card-hover">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80" alt="Pizzas a la Leña" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-serif text-white mb-3">Pizzas Artesanales</h3>
-                        <p class="text-gray-400 text-sm font-light mb-6">Rebanadas calientes listas para llevar. Excelente para eventos juveniles y corporativos informales.</p>
-                        <ul class="space-y-2 text-xs text-gray-500 mb-6">
-                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Variedad clásica: Pepperoni, Quesos, Margarita.</li>
-                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Servidas en rebanadas individuales (Grab & Go).</li>
-                        </ul>
-                    </div>
+                <div>
+                    <i class="fa-solid fa-wand-magic-sparkles text-3xl text-gold mb-4"></i>
+                    <h4 class="font-bold text-charcoal-dark text-sm uppercase tracking-widest">Innovación</h4>
                 </div>
-
-                <div class="bg-charcoal-dark border border-gray-800 rounded-sm overflow-hidden card-hover">
-                    <div class="h-48 overflow-hidden">
-                        <img src="img/demo/churros.jpg" alt="Churros con Chocolate" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-serif text-white mb-3">Churros y Chocolate</h3>
-                        <p class="text-gray-400 text-sm font-light mb-6">Para los que prefieren cerrar la noche con algo dulce y reconfortante. Excelente para eventos en invierno o zonas frías.</p>
-                        <ul class="space-y-2 text-xs text-gray-500 mb-6">
-                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Churros azucarados preparados en el sitio.</li>
-                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Chocolate caliente espeso o café de olla.</li>
-                        </ul>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-charcoal-dark text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-serif text-gold mb-6">¿Cómo funciona el servicio de Tornafiesta?</h2>
-            <p class="text-gray-400 font-light mb-10 leading-relaxed">
-                Nuestros paquetes de tornafiesta se calculan para el <strong>60% al 70% del total de sus invitados</strong>, ya que es normal que algunas personas se retiren antes de la madrugada. El servicio incluye personal, desechables ecológicos o loza (según lo prefiera), y montaje de las estaciones en el área más cercana a la pista de baile.
-            </p>
-            <a href="https://wa.me/521234567890?text=Hola,%20me%20interesa%20agregar%20una%20Tornafiesta%20a%20mi%20evento." target="_blank" class="inline-flex items-center gap-2 border-b border-gold text-gold hover:text-white pb-1 text-sm uppercase tracking-widest font-bold transition-colors">
-                Preguntar por paquetes combinados <i class="fa-solid fa-arrow-right"></i>
-            </a>
-        </div>
-    </section>
-
-    <section class="py-24 bg-charcoal text-white text-center border-t border-gold/30">
-        <div class="max-w-3xl mx-auto px-4">
-            <h2 class="font-serif text-4xl mb-6">Que la Fiesta No Pare</h2>
-            <p class="text-gray-400 font-light mb-10 text-lg">Agregue el servicio de Tornafiesta a su banquete principal y garantice que sus invitados se vayan con el mejor sabor de boca posible.</p>
-            <a href="https://wa.me/521234567890?text=Hola,%20deseo%20cotizar%20el%20servicio%20de%20Tornafiesta/Madrugada." target="_blank" class="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-charcoal-dark px-10 py-4 uppercase tracking-widest text-sm font-bold transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.4)]">
-                <i class="fa-brands fa-whatsapp text-2xl"></i>
-                Cotizar Menú de Madrugada
-            </a>
         </div>
     </section>
 
     <footer class="bg-black pt-16 pb-8 border-t border-gray-900 text-white">
-        <div class="text-center text-xs text-gray-600 font-light tracking-wide mt-12 border-t border-gray-800 pt-8">
-            <p>&copy; <span id="year"></span> Banquetes Moonstone. Todos los derechos reservados.</p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-xs text-gray-600 font-light tracking-wide">
+                <p>&copy; <span id="year"></span> Banquetes Moonstone. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
+
+    <a href="https://wa.me/521234567890" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1DA851] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-xl z-50">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
@@ -388,12 +309,9 @@
                 navbar.classList.add('bg-transparent', 'py-4');
             }
         });
-
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
     </script>
 </body>
 </html>

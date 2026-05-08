@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bodas y Graduaciones | Moonstone Banquetes</title>
-    <meta name="description" content="Organización premium de bodas y graduaciones. Protocolo elegante, banquetes de gala y la mejor producción para una fiesta inolvidable.">
+    <title>Preguntas Frecuentes | Moonstone Banquetes</title>
+    <meta name="description" content="Resolvemos sus dudas sobre nuestros servicios de banquetes, organización de eventos, mobiliario y locaciones.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -29,12 +29,7 @@
                             light: '#2A2A2A',
                             dark: '#0F0F0F'
                         },
-                        cream: '#FDFBF7',
-                        /* Colores Fiesteros/Elegantes (Luces de noche) */
-                        party: {
-                            purple: '#4C1D95', /* Púrpura profundo */
-                            magenta: '#9D174D', /* Magenta elegante */
-                        }
+                        cream: '#FDFBF7'
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -51,26 +46,9 @@
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             border-bottom: 1px solid rgba(212, 175, 55, 0.15);
         }
-        
-        .card-hover {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            /* Sombra que combina dorado y tonos de fiesta */
-            box-shadow: 0 20px 30px -5px rgba(212, 175, 55, 0.2);
-            border-color: #D4AF37;
-        }
 
         .text-gradient-gold {
             background: linear-gradient(to right, #D4AF37, #F3E5AB, #AA8C2C);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        .text-gradient-party {
-            background: linear-gradient(to right, #F3E5AB, #D4AF37, #f472b6);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -80,20 +58,21 @@
         .has-dropdown:hover .dropdown-menu { display: block; opacity: 1; animation: fadeIn 0.2s ease-in-out forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* Gradiente animado para la sección de fiesta */
-        .bg-party-gradient {
-            background: linear-gradient(-45deg, #0F0F0F, #2A2A2A, #4C1D95, #1A1A1A);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
+        /* Ocultar la flecha por defecto de <details> en navegadores webkit */
+        details > summary::-webkit-details-marker {
+            display: none;
         }
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        /* Rotación suave para el ícono del acordeón */
+        details[open] summary ~ * {
+            animation: slideDown 0.3s ease-in-out;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
-<body class="font-sans bg-charcoal text-white antialiased selection:bg-gold selection:text-charcoal-dark">
+<body class="font-sans bg-cream text-charcoal antialiased selection:bg-gold selection:text-charcoal-dark">
 
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 text-white bg-transparent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -209,176 +188,201 @@
         </div>
     </nav>
 
-    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center justify-center min-h-[85vh] bg-party-gradient">
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1920" alt="Fiesta elegante" class="w-full h-full object-cover opacity-40 mix-blend-overlay" />
-            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-dark via-transparent to-charcoal-dark"></div>
-        </div>
-
-        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-10">
-            <div class="flex items-center justify-center gap-4 mb-6">
-                <i class="fa-solid fa-champagne-glasses text-gold text-lg"></i>
-                <span class="text-white font-sans tracking-[0.3em] uppercase text-xs md:text-sm font-bold drop-shadow-md">La Noche de tus Sueños</span>
-                <i class="fa-solid fa-champagne-glasses text-gold text-lg"></i>
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center justify-center min-h-[60vh] bg-charcoal-dark">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10">
+            <div class="flex items-center justify-center gap-4 mb-4">
+                <div class="h-px w-8 bg-gold"></div>
+                <span class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-semibold">Estamos para Servirle</span>
+                <div class="h-px w-8 bg-gold"></div>
             </div>
             
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white font-bold mb-6 leading-tight drop-shadow-2xl">
-                Bodas & <br>
-                <span class="text-gradient-party italic font-normal">Graduaciones</span>
+            <h1 class="text-4xl md:text-6xl font-serif text-white font-bold mb-6 drop-shadow-sm">
+                Preguntas <span class="text-gradient-gold italic font-normal">Frecuentes</span>
             </h1>
             
-            <p class="text-base md:text-xl text-gray-300 mb-12 font-light max-w-3xl mx-auto leading-relaxed drop-shadow-md">
-                El balance perfecto: Un protocolo y banquete de rigurosa etiqueta, seguido de una producción y fiesta espectacular que nadie olvidará.
+            <p class="text-base md:text-xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
+                Transparencia total en nuestro servicio. Hemos recopilado las dudas más comunes de nuestros clientes para ayudarle en la planificación de su evento.
             </p>
-            
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="#experiencia" class="bg-gold hover:bg-gold-light text-charcoal-dark px-8 py-4 transition duration-300 uppercase tracking-widest text-xs font-bold shadow-[0_0_20px_rgba(212,175,55,0.5)]">
-                    Descubrir la Experiencia
-                </a>
-                <a href="https://wa.me/521234567890?text=Hola,%20me%20caso/me%20gradúo%20y%20quiero%20cotizar%20mi%20evento." target="_blank" class="bg-transparent border border-white hover:border-gold hover:text-gold text-white px-8 py-4 transition duration-300 uppercase tracking-widest text-xs font-bold flex justify-center items-center gap-2 backdrop-blur-sm">
-                    <i class="fa-brands fa-whatsapp text-lg"></i> Apartar Fecha
-                </a>
-            </div>
         </div>
     </header>
 
-    <section id="experiencia" class="py-24 bg-charcoal-dark border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-3xl md:text-5xl font-serif text-white mb-6">La Coreografía <span class="text-gold italic">Perfecta</span></h2>
-                <div class="w-20 h-[2px] bg-gold mx-auto mb-8"></div>
-                <p class="text-gray-400 font-light text-lg max-w-2xl mx-auto">Diseñamos la estructura de su evento para llevar a sus invitados en un viaje: desde la sofisticación del primer bocado hasta la energía del último baile.</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+    <section class="py-20 bg-cream">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Categoría 1: Reservaciones y Logística -->
+            <div class="mb-16">
+                <div class="flex items-center gap-4 mb-8">
+                    <i class="fa-solid fa-calendar-check text-gold text-2xl"></i>
+                    <h2 class="text-3xl font-serif text-charcoal-dark">Reservaciones y Logística</h2>
+                </div>
                 
-                <div class="bg-charcoal border border-gray-800 p-8 rounded-sm card-hover relative overflow-hidden group">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gold"></div>
-                    <i class="fa-solid fa-bell-concierge text-4xl text-gold mb-6 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="text-2xl font-serif text-white mb-3">1. El Protocolo y Cena</h3>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">
-                        Comenzamos con la máxima elegancia. Mesas imperiales, iluminación cálida, y nuestro galardonado <a href="banquetes.html" class="text-gold underline">Banquete a 3 Tiempos</a> servido con sincronía perfecta por capitanes y meseros de etiqueta.
-                    </p>
-                </div>
+                <div class="space-y-4">
+                    <details class="group bg-white p-6 rounded-sm shadow-sm border border-gray-100 cursor-pointer open:ring-1 open:ring-gold/30 transition-all">
+                        <summary class="flex justify-between items-center font-medium list-none text-charcoal-dark text-lg hover:text-gold transition-colors outline-none">
+                            <span>¿Con cuánto tiempo de anticipación debo reservar mi evento?</span>
+                            <span class="transition group-open:rotate-180 text-gold">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 mt-4 font-light leading-relaxed border-t border-gray-100 pt-4">
+                            Para bodas, galas y eventos en salones de alta demanda, sugerimos reservar con al menos <strong>6 a 12 meses</strong> de anticipación. Para eventos a domicilio, infantiles o empresariales más pequeños, <strong>1 a 2 meses</strong> es generalmente suficiente. No obstante, le invitamos a contactarnos para revisar disponibilidad de última hora.
+                        </div>
+                    </details>
 
-                <div class="bg-charcoal border border-party-purple p-8 rounded-sm card-hover relative overflow-hidden group shadow-[0_0_15px_rgba(76,29,149,0.2)] hover:shadow-[0_0_25px_rgba(76,29,149,0.5)]">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-party-purple"></div>
-                    <i class="fa-solid fa-music text-4xl text-pink-500 mb-6 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="text-2xl font-serif text-white mb-3">2. Producción y Fiesta</h3>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">
-                        El ambiente se transforma. Abrimos la <a href="bebidas.html" class="text-pink-400 underline">Barra de Mixología</a> y los carritos de shots. Las luces arquitectónicas cambian de tono y la pista de baile iluminada toma el protagonismo para no parar.
-                    </p>
-                </div>
+                    <details class="group bg-white p-6 rounded-sm shadow-sm border border-gray-100 cursor-pointer open:ring-1 open:ring-gold/30 transition-all">
+                        <summary class="flex justify-between items-center font-medium list-none text-charcoal-dark text-lg hover:text-gold transition-colors outline-none">
+                            <span>¿En qué zonas prestan servicio?</span>
+                            <span class="transition group-open:rotate-180 text-gold">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 mt-4 font-light leading-relaxed border-t border-gray-100 pt-4">
+                            Principalmente brindamos nuestros servicios en toda la <strong>Ciudad de México (CDMX) y su Área Metropolitana</strong>. Para eventos fuera de esta zona (como Cuernavaca, Querétaro o Puebla), podemos desplazar nuestra infraestructura aplicando un cargo correspondiente por logística y viáticos.
+                        </div>
+                    </details>
 
-                <div class="bg-charcoal border border-gray-800 p-8 rounded-sm card-hover relative overflow-hidden group">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gold"></div>
-                    <i class="fa-solid fa-moon text-4xl text-gold mb-6 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="text-2xl font-serif text-white mb-3">3. La Tornafiesta</h3>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">
-                        El secreto de los mejores eventos en México. A las 2:00 AM, sorprendemos a los invitados con chilaquiles calientes, esquites o tacos al pastor para recargar energías y cerrar con broche de oro.
-                    </p>
+                    <details class="group bg-white p-6 rounded-sm shadow-sm border border-gray-100 cursor-pointer open:ring-1 open:ring-gold/30 transition-all">
+                        <summary class="flex justify-between items-center font-medium list-none text-charcoal-dark text-lg hover:text-gold transition-colors outline-none">
+                            <span>¿Qué métodos de pago aceptan? ¿Ofrecen facturación?</span>
+                            <span class="transition group-open:rotate-180 text-gold">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 mt-4 font-light leading-relaxed border-t border-gray-100 pt-4">
+                            Aceptamos transferencias interbancarias, tarjetas de crédito/débito y efectivo. Todo el proceso se formaliza bajo contrato. Por supuesto, <strong>ofrecemos facturación electrónica (CFDI)</strong> para todos nuestros servicios, siendo una opción ideal para eventos empresariales y corporativos.
+                        </div>
+                    </details>
                 </div>
-
             </div>
+
+            <!-- Categoría 2: Gastronomía -->
+            <div class="mb-16">
+                <div class="flex items-center gap-4 mb-8">
+                    <i class="fa-solid fa-utensils text-gold text-2xl"></i>
+                    <h2 class="text-3xl font-serif text-charcoal-dark">Gastronomía y Menús</h2>
+                </div>
+                
+                <div class="space-y-4">
+                    <details class="group bg-white p-6 rounded-sm shadow-sm border border-gray-100 cursor-pointer open:ring-1 open:ring-gold/30 transition-all">
+                        <summary class="flex justify-between items-center font-medium list-none text-charcoal-dark text-lg hover:text-gold transition-colors outline-none">
+                            <span>¿Realizan degustaciones previas al evento?</span>
+                            <span class="transition group-open:rotate-180 text-gold">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 mt-4 font-light leading-relaxed border-t border-gray-100 pt-4">
+                            Sí. Para los <a href="banquetes.html" class="text-gold hover:underline">banquetes a 3 tiempos</a> y paquetes integrales (bodas y galas), ofrecemos una degustación para 2 a 4 personas una vez apartado el evento. Si desea la degustación antes de firmar contrato, tiene un costo que se bonificará al total de su cuenta si decide contratarnos.
+                        </div>
+                    </details>
+
+                    <details class="group bg-white p-6 rounded-sm shadow-sm border border-gray-100 cursor-pointer open:ring-1 open:ring-gold/30 transition-all">
+                        <summary class="flex justify-between items-center font-medium list-none text-charcoal-dark text-lg hover:text-gold transition-colors outline-none">
+                            <span>Tengo invitados veganos o con alergias, ¿pueden adaptar el menú?</span>
+                            <span class="transition group-open:rotate-180 text-gold">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 mt-4 font-light leading-relaxed border-t border-gray-100 pt-4">
+                            Absolutamente. Nuestros chefs ejecutivos están preparados para diseñar alternativas para cualquier dieta especial (Vegana, Vegetariana, Sin Gluten, Alergias específicas o estilo Kosher). Solo le pedimos confirmar el número de invitados con estas necesidades al menos 15 días antes del evento.
+                        </div>
+                    </details>
+
+                    <details class="group bg-white p-6 rounded-sm shadow-sm border border-gray-100 cursor-pointer open:ring-1 open:ring-gold/30 transition-all">
+                        <summary class="flex justify-between items-center font-medium list-none text-charcoal-dark text-lg hover:text-gold transition-colors outline-none">
+                            <span>¿El hielo y mezcladores están incluidos si yo pongo el alcohol?</span>
+                            <span class="transition group-open:rotate-180 text-gold">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 mt-4 font-light leading-relaxed border-t border-gray-100 pt-4">
+                            Sí, al contratar nuestro servicio de <strong>Descorche Libre</strong>, nosotros proveemos hielo sin límite, mezcladores (refrescos, jugos, agua mineral), cristalería fina y, por supuesto, bartenders profesionales durante todas las horas que dure su evento.
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Categoría 3: Locaciones y A Domicilio -->
+            <div class="mb-16">
+                <div class="flex items-center gap-4 mb-8">
+                    <i class="fa-solid fa-house-chimney text-gold text-2xl"></i>
+                    <h2 class="text-3xl font-serif text-charcoal-dark">Espacios y Eventos a Domicilio</h2>
+                </div>
+                
+                <div class="space-y-4">
+                    <details class="group bg-white p-6 rounded-sm shadow-sm border border-gray-100 cursor-pointer open:ring-1 open:ring-gold/30 transition-all">
+                        <summary class="flex justify-between items-center font-medium list-none text-charcoal-dark text-lg hover:text-gold transition-colors outline-none">
+                            <span>¿Si mi evento es a domicilio, limpian al terminar?</span>
+                            <span class="transition group-open:rotate-180 text-gold">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 mt-4 font-light leading-relaxed border-t border-gray-100 pt-4">
+                            ¡Es una de nuestras mayores promesas! Si contrata el servicio <a href="domicilio.html" class="text-gold hover:underline">A Domicilio</a>, nuestro personal se encargará del desmontaje y de dejar su jardín, cochera o salón exactamente como lo encontramos: <strong>100% limpio y ordenado</strong>.
+                        </div>
+                    </details>
+
+                    <details class="group bg-white p-6 rounded-sm shadow-sm border border-gray-100 cursor-pointer open:ring-1 open:ring-gold/30 transition-all">
+                        <summary class="flex justify-between items-center font-medium list-none text-charcoal-dark text-lg hover:text-gold transition-colors outline-none">
+                            <span>Tengo un salón contratado, ¿ustedes pueden llevar solo la comida?</span>
+                            <span class="transition group-open:rotate-180 text-gold">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 mt-4 font-light leading-relaxed border-t border-gray-100 pt-4">
+                            Sí. Aunque recomendamos nuestros <a href="paquetes.html" class="text-gold hover:underline">Paquetes Integrales</a>, si usted ya cuenta con un recinto, podemos fungir únicamente como su proveedor de catering, aportando nuestra cocina, meseros y cristalería al salón de su elección.
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Categoría 4: Inflables y Entretenimiento -->
+            <div>
+                <div class="flex items-center gap-4 mb-8">
+                    <i class="fa-solid fa-shapes text-gold text-2xl"></i>
+                    <h2 class="text-3xl font-serif text-charcoal-dark">Inflables y Mobiliario</h2>
+                </div>
+                
+                <div class="space-y-4">
+                    <details class="group bg-white p-6 rounded-sm shadow-sm border border-gray-100 cursor-pointer open:ring-1 open:ring-gold/30 transition-all">
+                        <summary class="flex justify-between items-center font-medium list-none text-charcoal-dark text-lg hover:text-gold transition-colors outline-none">
+                            <span>¿Sus inflables son seguros e higiénicos?</span>
+                            <span class="transition group-open:rotate-180 text-gold">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 mt-4 font-light leading-relaxed border-t border-gray-100 pt-4">
+                            Nuestra máxima prioridad es la seguridad infantil. Todos nuestros <a href="inflables.html" class="text-gold hover:underline">inflables y juegos</a> están hechos con materiales de uso rudo y anclaje profesional. Además, pasan por un riguroso proceso de desinfección y limpieza profunda antes de instalarse en su evento.
+                        </div>
+                    </details>
+
+                    <details class="group bg-white p-6 rounded-sm shadow-sm border border-gray-100 cursor-pointer open:ring-1 open:ring-gold/30 transition-all">
+                        <summary class="flex justify-between items-center font-medium list-none text-charcoal-dark text-lg hover:text-gold transition-colors outline-none">
+                            <span>¿Puedo rentar sillas o mesas sin contratar banquete?</span>
+                            <span class="transition group-open:rotate-180 text-gold">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 mt-4 font-light leading-relaxed border-t border-gray-100 pt-4">
+                            Depende de la fecha y la disponibilidad. Normalmente damos prioridad a nuestros clientes de banquete o paquetes integrales para el uso de nuestro mobiliario de lujo. Sin embargo, puede contactarnos para revisar la disponibilidad de renta individual para su fecha.
+                        </div>
+                    </details>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <section class="py-24 bg-charcoal">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="flex flex-col lg:flex-row gap-12 items-center mb-24">
-                <div class="lg:w-1/2 relative group">
-                    <div class="absolute inset-0 border border-gold translate-x-4 translate-y-4"></div>
-                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80" alt="Boda Elegante" class="relative z-10 w-full h-[400px] object-cover shadow-2xl grayscale-[20%] group-hover:grayscale-0 transition-all duration-700">
-                </div>
-                <div class="lg:w-1/2">
-                    <h3 class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-bold mb-2">Para los Novios</h3>
-                    <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">Bodas Majestuosas</h2>
-                    <p class="text-gray-400 font-light text-lg mb-6 leading-relaxed">
-                        Entendemos que es el día más importante. Nuestro servicio es impecable, desde la recepción con vino espumoso hasta el acomodo de la mesa principal. Coordinamos con su Wedding Planner para que la ejecución gastronómica sea perfecta.
-                    </p>
-                    <ul class="space-y-3 mb-8 text-sm text-gray-300">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-ring text-gold"></i> Degustación premium para los novios y padres.</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-ring text-gold"></i> Menús impresos personalizados en cada lugar.</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-ring text-gold"></i> Servicio de Descorche Libre sin costo adicional.</li>
-                    </ul>
-                    <a href="contacto.html" class="inline-block border border-gold text-gold hover:bg-gold hover:text-charcoal px-8 py-3 text-xs uppercase tracking-widest font-bold transition-colors">Agendar Cita Nupcial</a>
-                </div>
-            </div>
-
-            <div class="flex flex-col lg:flex-row-reverse gap-12 items-center">
-                <div class="lg:w-1/2 relative group">
-                    <div class="absolute inset-0 border border-party-purple -translate-x-4 translate-y-4 shadow-[0_0_20px_rgba(76,29,149,0.3)]"></div>
-                    <img src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80" alt="Fiesta de Graduación" class="relative z-10 w-full h-[400px] object-cover shadow-2xl">
-                </div>
-                <div class="lg:w-1/2">
-                    <h3 class="text-pink-500 font-sans tracking-[0.2em] uppercase text-xs font-bold mb-2">Generaciones Inolvidables</h3>
-                    <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">Graduaciones Épicas</h2>
-                    <p class="text-gray-400 font-light text-lg mb-6 leading-relaxed">
-                        Una cena formal para los padres, seguida de la mejor fiesta para los graduados. Combinamos mantelería fina con un espectacular montaje de audio, iluminación láser y pistas de baile.
-                    </p>
-                    <ul class="space-y-3 mb-8 text-sm text-gray-300">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-graduation-cap text-pink-500"></i> Paquetes integrales (Banquete + Salón + DJ).</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-graduation-cap text-pink-500"></i> Barras iluminadas de coctelería y shots.</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-graduation-cap text-pink-500"></i> Fotografía, cabinas 360 y alfombra roja.</li>
-                    </ul>
-                    <a href="contacto.html" class="inline-block bg-party-purple text-white hover:bg-pink-600 px-8 py-3 text-xs uppercase tracking-widest font-bold transition-colors shadow-lg">Cotizar Graduación</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="py-20 bg-charcoal-dark border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-serif text-white mb-4">Complementos para su Gran Noche</h2>
-                <div class="w-16 h-[2px] bg-gold mx-auto"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="bebidas.html" class="group block relative h-64 overflow-hidden rounded-sm">
-                    <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-60 group-hover:opacity-40" alt="Mixología">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                        <i class="fa-solid fa-martini-glass-citrus text-gold text-3xl mb-2"></i>
-                        <h3 class="text-xl font-serif font-bold text-white">Barras de Mixología</h3>
-                        <span class="text-gold text-xs uppercase tracking-widest mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Ver opciones</span>
-                    </div>
+    <section class="py-24 bg-charcoal-dark text-center border-t border-gold/30">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="font-serif text-4xl mb-6 text-white">¿Aún tiene dudas?</h2>
+            <p class="text-gray-400 font-light mb-10 text-lg">Nuestro equipo de asesores está listo para escuchar las necesidades de su evento y resolver cualquier pregunta puntual que no se encuentre en esta lista.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/521234567890?text=Hola,%20tengo%20algunas%20dudas%20sobre%20sus%20servicios." target="_blank" class="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-charcoal-dark px-10 py-4 uppercase tracking-widest text-sm font-bold transition-all duration-300 shadow-xl">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Chat Inmediato
                 </a>
-
-                <a href="mobiliario.html" class="group block relative h-64 overflow-hidden rounded-sm">
-                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-60 group-hover:opacity-40" alt="Mobiliario">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                        <i class="fa-solid fa-chair text-gold text-3xl mb-2"></i>
-                        <h3 class="text-xl font-serif font-bold text-white">Mobiliario de Gala</h3>
-                        <span class="text-gold text-xs uppercase tracking-widest mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Ver catálogo</span>
-                    </div>
-                </a>
-
-                <div class="group block relative h-64 overflow-hidden rounded-sm border border-gold/30">
-                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-40" alt="Tacos">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-charcoal-dark/50">
-                        <i class="fa-solid fa-fire-burner text-gold text-3xl mb-2"></i>
-                        <h3 class="text-xl font-serif font-bold text-white">Tornafiesta (Madrugada)</h3>
-                        <p class="text-xs text-gray-300 mt-2 px-6 font-light">Chilaquiles, Tacos al Pastor o Esquites para cerrar la fiesta.</p>
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-charcoal text-center border-t border-gold/30 relative overflow-hidden">
-        <div class="absolute inset-0 bg-party-gradient opacity-20"></div>
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
-        
-        <div class="max-w-3xl mx-auto px-4 relative z-10">
-            <h2 class="font-serif text-4xl md:text-5xl text-white mb-6">Bloquee su Fecha Hoy</h2>
-            <p class="text-gray-300 font-light mb-10 text-lg">Las fechas para Bodas y Temporada de Graduaciones se agotan rápidamente. Contáctenos para revisar disponibilidad y comenzar a diseñar la noche perfecta.</p>
-            
-            <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20revisar%20disponibilidad%20para%20una%20Boda/Graduación." target="_blank" class="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-charcoal-dark px-10 py-5 uppercase tracking-widest text-sm font-bold transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.4)]">
-                <i class="fa-brands fa-whatsapp text-2xl"></i>
-                Consultar Disponibilidad
-            </a>
         </div>
     </section>
 
@@ -396,6 +400,7 @@
                         Alta dirección en banquetes y organización de eventos. Diseñando momentos memorables con exigencia y pasión.
                     </p>
                 </div>
+                
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Servicios Principales</h4>
                     <ul class="space-y-3">
@@ -405,15 +410,17 @@
                         <li><a href="inflables.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Renta de Inflables</a></li>
                     </ul>
                 </div>
+
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Tipos de Eventos</h4>
                     <ul class="space-y-3">
-                        <li><a href="bodas.html" class="text-gold text-sm transition-colors">Bodas y Graduaciones</a></li>
+                        <li><a href="bodas.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Bodas y Graduaciones</a></li>
                         <li><a href="infantiles.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Infantiles y Baby Showers</a></li>
                         <li><a href="empresariales.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Eventos Empresariales</a></li>
-                        <li><a href="faq.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Preguntas Frecuentes (FAQ)</a></li>
+                        <li><a href="faq.html" class="text-gold text-sm transition-colors">Preguntas Frecuentes (FAQ)</a></li>
                     </ul>
                 </div>
+
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Contacto</h4>
                     <ul class="space-y-3 text-sm text-gray-500 mb-6">
@@ -426,17 +433,18 @@
             
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 font-light tracking-wide">
                 <p>&copy; <span id="year"></span> Banquetes Moonstone. Todos los derechos reservados.</p>
-                <p class="mt-2 md:mt-0">Elegancia, Sabor y Diversión.</p>
+                <p class="mt-2 md:mt-0">Elegancia, Sabor y Profesionalismo.</p>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/521234567890?text=Hola,%20deseo%20información%20para%20Bodas/Graduaciones." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1DA851] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_10px_25px_rgba(37,211,102,0.4)] z-50 transition-transform hover:scale-110">
+    <a href="https://wa.me/521234567890?text=Hola,%20tengo%20una%20duda%20sobre%20sus%20servicios." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1DA851] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_10px_25px_rgba(37,211,102,0.4)] z-50 transition-transform hover:scale-110">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -451,6 +459,7 @@
 
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
+
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
