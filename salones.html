@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salones y Jardines | Moonstone Banquetes</title>
-    <meta name="description" content="Descubra nuestros exclusivos salones y jardines para eventos. Infraestructura de primer nivel, acústica perfecta y diseño de lujo para bodas y galas.">
+    <title>Salones Interiores | Moonstone Banquetes</title>
+    <meta name="description" content="Descubra nuestros exclusivos salones para eventos en CDMX. Infraestructura de primer nivel, acústica perfecta y diseño de lujo para bodas y corporativos.">
     
-    <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script>
@@ -66,6 +66,9 @@
         .dropdown-menu { display: none; opacity: 0; transition: opacity 0.3s ease; }
         .has-dropdown:hover .dropdown-menu { display: block; opacity: 1; animation: fadeIn 0.2s ease-in-out forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .swiper-button-next, .swiper-button-prev { color: #D4AF37 !important; transform: scale(0.6); }
+        .swiper-pagination-bullet-active { background: #D4AF37 !important; }
     </style>
 </head>
 <body class="font-sans bg-cream text-charcoal antialiased selection:bg-gold selection:text-charcoal-dark">
@@ -135,7 +138,6 @@
                     </div>
 
                     <a href="faq.html" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300">FAQ</a>
-                    <a href="nosotros.html" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300">Quienes Somos</a>
                     
                     <a href="contacto.html" class="border border-gold text-gold hover:bg-gold hover:text-charcoal-dark px-5 py-2 transition duration-300 text-xs uppercase tracking-widest font-semibold flex items-center gap-2">
                         <i class="fa-solid fa-envelope text-lg"></i> Contacto
@@ -157,7 +159,6 @@
                 <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">Servicios</p>
                 <a href="paquetes.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Paquetes Integrales</a>
                 <a href="inflables.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Inflables y Entretenimiento</a>
-                <a href="mobiliario.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Mobiliario</a>
                 
                 <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">Gastronomía</p>
                 <a href="banquetes.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Banquetes 3 Tiempos</a>
@@ -173,10 +174,10 @@
                 
                 <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">Espacios</p>
                 <a href="salones.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Salones e Instalaciones</a>
+                <a href="jardines.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Jardines Exclusivos</a>
                 <a href="domicilio.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">A Domicilio (Tu Casa)</a>
                 
                 <a href="faq.html" class="text-lg font-serif tracking-wide text-gray-300 hover:text-gold py-2 mt-4 border-b border-gray-800">Preguntas Frecuentes</a>
-                <a href="nosotros.html" class="text-lg font-serif tracking-wide text-gray-300 hover:text-gold py-2 mt-4 border-b border-gray-800">Quienes Somos</a>
 
                 <a href="contacto.html" class="bg-gold text-charcoal-dark text-center py-4 font-bold uppercase tracking-widest text-sm mt-8 flex justify-center items-center gap-2">
                     <i class="fa-solid fa-envelope text-xl"></i> Contacto
@@ -187,7 +188,7 @@
 
     <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center justify-center min-h-[75vh]">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1920" alt="Salón Elegante" class="w-full h-full object-cover" />
+            <img src="img/demo/pexels-kampus-8629106.jpg" alt="Salón Elegante" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-b from-charcoal-dark/90 via-charcoal-dark/60 to-cream"></div>
         </div>
 
@@ -199,20 +200,20 @@
             </div>
             
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-charcoal-dark drop-shadow-sm font-bold mb-6">
-                Salones y <br>
-                <span class="text-gradient-gold italic font-normal drop-shadow-md">Jardines Exclusivos</span>
+                Salones <br>
+                <span class="text-gradient-gold italic font-normal drop-shadow-md">Interiores</span>
             </h1>
             
             <p class="text-base md:text-xl text-charcoal-dark font-bold max-w-2xl mx-auto leading-relaxed">
-                Arquitectura, naturaleza y diseño convergen para ofrecerle los escenarios más deslumbrantes. Espacios diseñados para que su evento brille con luz propia.
+                Espacios cerrados que ofrecen control total sobre la iluminación, el clima y la atmósfera, garantizando el éxito de su evento.
             </p>
 
             <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#salones" class="inline-flex items-center justify-center gap-3 bg-charcoal-dark text-white hover:bg-gold hover:text-charcoal-dark px-8 py-4 uppercase tracking-widest text-sm font-bold transition-all duration-300 shadow-xl">
-                    Salones Interiores <i class="fa-solid fa-building"></i>
+                <a href="#catalogo" class="inline-flex items-center justify-center gap-3 bg-charcoal-dark text-white hover:bg-gold hover:text-charcoal-dark px-8 py-4 uppercase tracking-widest text-sm font-bold transition-all duration-300 shadow-xl">
+                    Ver Catálogo <i class="fa-solid fa-building"></i>
                 </a>
-                <a href="#jardines" class="inline-flex items-center justify-center gap-3 bg-transparent border border-charcoal-dark text-charcoal-dark hover:bg-charcoal-dark hover:text-gold px-8 py-4 uppercase tracking-widest text-sm font-bold transition-all duration-300 shadow-xl backdrop-blur-sm">
-                    Jardines y Terrazas <i class="fa-solid fa-leaf"></i>
+                <a href="jardines.html" class="inline-flex items-center justify-center gap-3 bg-transparent border border-charcoal-dark text-charcoal-dark hover:bg-charcoal-dark hover:text-gold px-8 py-4 uppercase tracking-widest text-sm font-bold transition-all duration-300 shadow-xl backdrop-blur-sm">
+                    Ver Jardines <i class="fa-solid fa-leaf"></i>
                 </a>
             </div>
         </div>
@@ -254,77 +255,115 @@
         </div>
     </section>
 
-    <!-- SECCIÓN 1: SALONES INTERIORES -->
-    <section id="salones" class="py-24 bg-charcoal-dark text-cream border-t border-gold/20 relative">
+    <!-- CATÁLOGO DE SALONES INTERIORES -->
+    <section id="catalogo" class="py-24 bg-charcoal-dark text-cream border-t border-gold/20 relative">
         <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
                 <i class="fa-solid fa-building text-gold text-3xl mb-4"></i>
-                <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">Salones Interiores</h2>
+                <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">Nuestros Salones</h2>
                 <div class="w-16 h-[2px] bg-gold mx-auto mb-6"></div>
-                <p class="text-gray-400 font-light text-lg max-w-2xl mx-auto">Espacios cerrados que ofrecen control total sobre la iluminación, el clima y la atmósfera, garantizando el éxito de su evento sin importar el pronóstico del tiempo.</p>
+                <p class="text-gray-400 font-light text-lg max-w-2xl mx-auto">Conozca nuestra selección de recintos en la Ciudad de México, perfectos para bodas de gala, convenciones y eventos privados.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 
-                <!-- Opción Salón 1 -->
-                <div class="bg-charcoal border border-gray-800 rounded-sm overflow-hidden group card-hover shadow-2xl flex flex-col md:flex-row">
-                    <div class="h-64 md:h-auto md:w-2/5 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?auto=format&fit=crop&q=80" alt="Salón Gran Turismo" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                <!-- Salón Casino -->
+                <div class="bg-forest-dark border border-sage/30 rounded-sm overflow-hidden group card-hover shadow-2xl flex flex-col xl:flex-row">
+                <div class="h-64 xl:h-auto xl:w-2/5 flex-shrink-0 relative">
+                    <div class="swiper salonSwiper h-full w-full">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/Salon_Casino_Benito_Juarez1.jpg" class="w-full h-full object-cover"></div>
+                            <div class="swiper-slide"><img src="img/Salon_Casino_Benito_Juarez2.jpg" class="w-full h-full object-cover"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
-                    <div class="p-8 flex-1 flex flex-col justify-center">
-                        <h3 class="text-2xl font-serif text-gold mb-2">Gran Turismo</h3>
-                        <p class="text-gray-400 font-bold text-xs uppercase tracking-widest mb-4"><i class="fa-solid fa-users text-gold mr-2"></i> 200 - 800 personas</p>
+                    </div>
+        
+                    <div class="p-8 flex-1 flex flex-col justify-center xl:w-3/5">
+                        <h3 class="text-2xl font-serif text-gold mb-2">Salón Casino</h3>
+                        <p class="text-gray-400 font-bold text-xs uppercase tracking-widest mb-1"><i class="fa-solid fa-map-location-dot text-gold mr-2"></i> Benito Juárez, CDMX</p>
+                        <p class="text-gray-400 font-bold text-xs uppercase tracking-widest mb-4"><i class="fa-solid fa-users text-gold mr-2"></i> 200 a 500 max</p>
                         <p class="text-gray-300 text-sm font-light leading-relaxed mb-6">
-                            Majestuosos espacios libres de columnas, con techos de doble altura y candiles de cristal. El escenario predilecto para bodas de gala masivas y convenciones corporativas.
+                            Elegante salón ideal para bodas, eventos corporativos y celebraciones sociales con gran capacidad y diseño moderno.
                         </p>
-                        <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20disponibilidad%20para%20un%20Salón%20Gran%20Turismo." target="_blank" class="text-gold hover:text-white text-xs uppercase tracking-widest font-bold transition-colors inline-flex items-center gap-2 border-b border-gold pb-1 self-start">Consultar Fecha <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20disponibilidad%20para%20el%20Salón%20Casino." target="_blank" class="text-gold hover:text-white text-xs uppercase tracking-widest font-bold transition-colors inline-flex items-center gap-2 border-b border-gold pb-1 self-start">Consultar Fecha <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Opción Salón 2 -->
-                <div class="bg-charcoal border border-gray-800 rounded-sm overflow-hidden group card-hover shadow-2xl flex flex-col md:flex-row">
-                    <div class="h-64 md:h-auto md:w-2/5 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1561501878-aabd62634533?auto=format&fit=crop&q=80" alt="Salón Panorámico" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                <!-- Salón Panorámico -->
+                <div class="bg-forest-dark border border-sage/30 rounded-sm overflow-hidden group card-hover shadow-2xl flex flex-col xl:flex-row">
+                <div class="h-64 xl:h-auto xl:w-2/5 flex-shrink-0 relative">
+                    <div class="swiper salonSwiper h-full w-full">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/salon_panoramico_benito_juarez1.jpg" class="w-full h-full object-cover"></div>
+                            <div class="swiper-slide"><img src="img/salon_panoramico_benito_juarez2.jpg" class="w-full h-full object-cover"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
-                    <div class="p-8 flex-1 flex flex-col justify-center">
-                        <h3 class="text-2xl font-serif text-gold mb-2">Boutique Panorámico</h3>
-                        <p class="text-gray-400 font-bold text-xs uppercase tracking-widest mb-4"><i class="fa-solid fa-users text-gold mr-2"></i> 50 - 150 personas</p>
+                    </div>
+
+                    <div class="p-8 flex-1 flex flex-col justify-center xl:w-3/5">
+                        <h3 class="text-2xl font-serif text-gold mb-2">Salón Panorámico</h3>
+                        <p class="text-gray-400 font-bold text-xs uppercase tracking-widest mb-1"><i class="fa-solid fa-map-location-dot text-gold mr-2"></i> Benito Juárez, CDMX</p>
+                        <p class="text-gray-400 font-bold text-xs uppercase tracking-widest mb-4"><i class="fa-solid fa-users text-gold mr-2"></i> 50 a 300 max</p>
                         <p class="text-gray-300 text-sm font-light leading-relaxed mb-6">
-                            Ambientes íntimos rodeados de ventanales de piso a techo con vistas espectaculares a la ciudad. La elección ideal para bautizos, cenas de ensayo y desayunos ejecutivos.
+                            Un espacio versátil con vistas espectaculares, perfecto para eventos de tamaño mediano que buscan una atmósfera única.
                         </p>
-                        <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20disponibilidad%20para%20un%20Salón%20Panorámico." target="_blank" class="text-gold hover:text-white text-xs uppercase tracking-widest font-bold transition-colors inline-flex items-center gap-2 border-b border-gold pb-1 self-start">Consultar Fecha <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20disponibilidad%20para%20el%20Salón%20Panorámico." target="_blank" class="text-gold hover:text-white text-xs uppercase tracking-widest font-bold transition-colors inline-flex items-center gap-2 border-b border-gold pb-1 self-start">Consultar Fecha <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Opción Salón 3 -->
-                <div class="bg-charcoal border border-gray-800 rounded-sm overflow-hidden group card-hover shadow-2xl flex flex-col md:flex-row">
-                    <div class="h-64 md:h-auto md:w-2/5 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80" alt="Salón Contemporáneo" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                <!-- Salón Lobby -->
+                <div class="bg-forest-dark border border-sage/30 rounded-sm overflow-hidden group card-hover shadow-2xl flex flex-col xl:flex-row">
+                <div class="h-64 xl:h-auto xl:w-2/5 flex-shrink-0 relative">
+                    <div class="swiper salonSwiper h-full w-full">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/Salon_Lobby_Benito_Juarez1.jpg" class="w-full h-full object-cover"></div>
+                            <div class="swiper-slide"><img src="img/Salon_Lobby_Benito_Juarez2.jpg" class="w-full h-full object-cover"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
-                    <div class="p-8 flex-1 flex flex-col justify-center">
-                        <h3 class="text-2xl font-serif text-gold mb-2">Minimalista & LED</h3>
-                        <p class="text-gray-400 font-bold text-xs uppercase tracking-widest mb-4"><i class="fa-solid fa-users text-gold mr-2"></i> 100 - 300 personas</p>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-center xl:w-3/5">
+                        <h3 class="text-2xl font-serif text-gold mb-2">Salón Lobby</h3>
+                        <p class="text-gray-400 font-bold text-xs uppercase tracking-widest mb-1"><i class="fa-solid fa-map-location-dot text-gold mr-2"></i> Benito Juárez, CDMX</p>
+                        <p class="text-gray-400 font-bold text-xs uppercase tracking-widest mb-4"><i class="fa-solid fa-users text-gold mr-2"></i> 100 a 200 max</p>
                         <p class="text-gray-300 text-sm font-light leading-relaxed mb-6">
-                            Arquitectura moderna con acabados en mármol, madera y sistemas de iluminación arquitectónica LED integrados, perfectos para graduaciones y lanzamientos de marca.
+                            Elegante salón ideal para reuniones, eventos sociales y celebraciones con un ambiente moderno y cómodo.
                         </p>
-                        <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20disponibilidad%20para%20un%20Salón%20Minimalista." target="_blank" class="text-gold hover:text-white text-xs uppercase tracking-widest font-bold transition-colors inline-flex items-center gap-2 border-b border-gold pb-1 self-start">Consultar Fecha <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20disponibilidad%20para%20el%20Salón%20Lobby." target="_blank" class="text-gold hover:text-white text-xs uppercase tracking-widest font-bold transition-colors inline-flex items-center gap-2 border-b border-gold pb-1 self-start">Consultar Fecha <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Opción Salón 4 -->
-                <div class="bg-charcoal border border-gray-800 rounded-sm overflow-hidden group card-hover shadow-2xl flex flex-col md:flex-row">
-                    <div class="h-64 md:h-auto md:w-2/5 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80" alt="Salón Clásico Imperial" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                <!-- Salón Mixcoac -->
+                <div class="bg-forest-dark border border-sage/30 rounded-sm overflow-hidden group card-hover shadow-2xl flex flex-col xl:flex-row">
+                <div class="h-64 xl:h-auto xl:w-2/5 flex-shrink-0 relative">
+                    <div class="swiper salonSwiper h-full w-full">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/salon_mixcoac1.jpg" class="w-full h-full object-cover"></div>
+                            <div class="swiper-slide"><img src="img/salon_mixcoac2.jpg" class="w-full h-full object-cover"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
-                    <div class="p-8 flex-1 flex flex-col justify-center">
-                        <h3 class="text-2xl font-serif text-gold mb-2">Clásico Imperial</h3>
-                        <p class="text-gray-400 font-bold text-xs uppercase tracking-widest mb-4"><i class="fa-solid fa-users text-gold mr-2"></i> 150 - 400 personas</p>
+                    </div>
+                        <div class="p-8 flex-1 flex flex-col justify-center xl:w-3/5">
+                        <h3 class="text-2xl font-serif text-gold mb-2">Salón Mixcoac</h3>
+                        <p class="text-gray-400 font-bold text-xs uppercase tracking-widest mb-1"><i class="fa-solid fa-map-location-dot text-gold mr-2"></i> Benito Juárez, CDMX</p>
+                        <p class="text-gray-400 font-bold text-xs uppercase tracking-widest mb-4"><i class="fa-solid fa-users text-gold mr-2"></i> 50 a 150 max</p>
                         <p class="text-gray-300 text-sm font-light leading-relaxed mb-6">
-                            Recintos de corte tradicional con molduras detalladas, alfombras premium y una acústica teatral impecable. Diseñado para bodas y celebraciones clásicas de alta etiqueta.
+                            Un recinto íntimo y elegante, ideal para celebraciones más pequeñas, desayunos ejecutivos y fiestas familiares.
                         </p>
-                        <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20disponibilidad%20para%20un%20Salón%20Clásico." target="_blank" class="text-gold hover:text-white text-xs uppercase tracking-widest font-bold transition-colors inline-flex items-center gap-2 border-b border-gold pb-1 self-start">Consultar Fecha <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20disponibilidad%20para%20el%20Salón%20Mixcoac." target="_blank" class="text-gold hover:text-white text-xs uppercase tracking-widest font-bold transition-colors inline-flex items-center gap-2 border-b border-gold pb-1 self-start">Consultar Fecha <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -332,83 +371,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN 2: JARDINES Y EXTERIORES -->
-    <section id="jardines" class="py-24 bg-white text-charcoal border-t border-gold/20 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <i class="fa-solid fa-leaf text-gold text-3xl mb-4"></i>
-                <h2 class="text-4xl md:text-5xl font-serif text-charcoal-dark mb-6">Jardines y Exteriores</h2>
-                <div class="w-16 h-[2px] bg-gold mx-auto mb-6"></div>
-                <p class="text-gray-600 font-light text-lg max-w-2xl mx-auto">La belleza de la naturaleza combinada con la sofisticación de un montaje premium. Frescura y libertad para celebraciones de día y de noche.</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                
-                <!-- Opción Jardín 1 -->
-                <div class="bg-cream border border-gray-200 rounded-sm overflow-hidden group card-hover shadow-xl flex flex-col md:flex-row">
-                    <div class="h-64 md:h-auto md:w-2/5 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&q=80" alt="Haciendas Coloniales" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-90 group-hover:opacity-100">
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col justify-center">
-                        <h3 class="text-2xl font-serif text-charcoal-dark mb-2">Haciendas Coloniales</h3>
-                        <p class="text-gray-500 font-bold text-xs uppercase tracking-widest mb-4"><i class="fa-solid fa-users text-gold mr-2"></i> 100 - 500 personas</p>
-                        <p class="text-gray-600 text-sm font-light leading-relaxed mb-6">
-                            Espacios con inmenso valor histórico. Ofrecen amplios patios centrales empedrados, arcos de piedra y fuentes coloniales que brindan un romanticismo incomparable.
-                        </p>
-                        <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20disponibilidad%20para%20una%20Hacienda." target="_blank" class="text-gold hover:text-charcoal-dark text-xs uppercase tracking-widest font-bold transition-colors inline-flex items-center gap-2 border-b border-gold pb-1 self-start">Consultar Fecha <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Opción Jardín 2 -->
-                <div class="bg-cream border border-gray-200 rounded-sm overflow-hidden group card-hover shadow-xl flex flex-col md:flex-row">
-                    <div class="h-64 md:h-auto md:w-2/5 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&q=80" alt="Jardín Botánico" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-90 group-hover:opacity-100">
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col justify-center">
-                        <h3 class="text-2xl font-serif text-charcoal-dark mb-2">Jardines Botánicos</h3>
-                        <p class="text-gray-500 font-bold text-xs uppercase tracking-widest mb-4"><i class="fa-solid fa-users text-gold mr-2"></i> 100 - 600 personas</p>
-                        <p class="text-gray-600 text-sm font-light leading-relaxed mb-6">
-                            Rodeados de naturaleza exuberante y árboles centenarios. Al caer la noche, la iluminación cálida entre el follaje crea una atmósfera mágica e irrepetible.
-                        </p>
-                        <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20disponibilidad%20para%20un%20Jardín%20Botánico." target="_blank" class="text-gold hover:text-charcoal-dark text-xs uppercase tracking-widest font-bold transition-colors inline-flex items-center gap-2 border-b border-gold pb-1 self-start">Consultar Fecha <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Opción Jardín 3 -->
-                <div class="bg-cream border border-gray-200 rounded-sm overflow-hidden group card-hover shadow-xl flex flex-col md:flex-row">
-                    <div class="h-64 md:h-auto md:w-2/5 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80" alt="Terraza Rooftop" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-90 group-hover:opacity-100">
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col justify-center">
-                        <h3 class="text-2xl font-serif text-charcoal-dark mb-2">Terrazas SkyView / Rooftop</h3>
-                        <p class="text-gray-500 font-bold text-xs uppercase tracking-widest mb-4"><i class="fa-solid fa-users text-gold mr-2"></i> 50 - 200 personas</p>
-                        <p class="text-gray-600 text-sm font-light leading-relaxed mb-6">
-                            Espacios al aire libre en las alturas. Perfectas para cócteles al atardecer, eventos de networking, y celebraciones modernas con el skyline de la ciudad de fondo.
-                        </p>
-                        <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20disponibilidad%20para%20una%20Terraza%20Rooftop." target="_blank" class="text-gold hover:text-charcoal-dark text-xs uppercase tracking-widest font-bold transition-colors inline-flex items-center gap-2 border-b border-gold pb-1 self-start">Consultar Fecha <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Opción Jardín 4 -->
-                <div class="bg-cream border border-gray-200 rounded-sm overflow-hidden group card-hover shadow-xl flex flex-col md:flex-row">
-                    <div class="h-64 md:h-auto md:w-2/5 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&q=80" alt="Carpas de Lujo" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-90 group-hover:opacity-100">
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col justify-center">
-                        <h3 class="text-2xl font-serif text-charcoal-dark mb-2">Pabellones y Carpas</h3>
-                        <p class="text-gray-500 font-bold text-xs uppercase tracking-widest mb-4"><i class="fa-solid fa-users text-gold mr-2"></i> 200 - 1000+ personas</p>
-                        <p class="text-gray-600 text-sm font-light leading-relaxed mb-6">
-                            Combinamos lo mejor de ambos mundos. Estructuras transparentes o carpas arquitectónicas instaladas en vastas áreas verdes para proteger su evento sin perder la vista natural.
-                        </p>
-                        <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20disponibilidad%20para%20un%20Pabellón/Carpa." target="_blank" class="text-gold hover:text-charcoal-dark text-xs uppercase tracking-widest font-bold transition-colors inline-flex items-center gap-2 border-b border-gold pb-1 self-start">Consultar Fecha <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-charcoal-dark text-white border-t border-gold/20">
+    <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-16">
                 <div class="lg:w-1/2 relative group">
@@ -416,28 +379,28 @@
                     <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80" alt="Decoración de Salón" class="relative z-10 w-full h-[500px] object-cover shadow-xl grayscale-[15%]">
                 </div>
                 
-                <div class="lg:w-1/2 mt-8 lg:mt-0">
+                <div class="lg:w-1/2">
                     <h3 class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-bold mb-2">Diseño y Ambientación</h3>
-                    <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">Su Visión, Nuestra Realidad</h2>
-                    <p class="text-gray-400 font-light text-lg mb-6 leading-relaxed">
-                        Nuestros salones y jardines son lienzos en blanco listos para transformarse. A través de nuestra división de <a href="mobiliario.html" class="text-gold font-semibold underline">Mobiliario y Decoración</a>, personalizamos cada detalle: desde el tono de la iluminación arquitectónica hasta la configuración de la pista de baile.
+                    <h2 class="text-4xl md:text-5xl font-serif text-charcoal-dark mb-6">Su Visión, Nuestra Realidad</h2>
+                    <p class="text-gray-600 font-light text-lg mb-6 leading-relaxed">
+                        Nuestros salones son lienzos en blanco listos para transformarse. A través de nuestra división de <a href="mobiliario.html" class="text-gold font-semibold underline">Mobiliario y Decoración</a>, personalizamos cada detalle: desde el tono de la iluminación arquitectónica hasta la configuración de la pista de baile.
                     </p>
-                    <ul class="space-y-4 mb-10 text-sm text-gray-300">
+                    <ul class="space-y-4 mb-10 text-sm text-gray-600">
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold text-lg"></i> Plantas arquitectónicas a medida (Layouts 2D/3D).</li>
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold text-lg"></i> Instalaciones aéreas para follaje y candiles.</li>
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold text-lg"></i> Pistas de baile de madera, cristal o LED.</li>
                     </ul>
-                    <a href="contacto.html" class="inline-block bg-gold text-charcoal-dark hover:bg-white hover:text-charcoal-dark px-8 py-4 text-xs uppercase tracking-widest font-bold transition-colors shadow-lg">Solicitar Cita de Diseño</a>
+                    <a href="contacto.html" class="inline-block bg-charcoal-dark text-white hover:bg-gold hover:text-charcoal-dark px-8 py-4 text-xs uppercase tracking-widest font-bold transition-colors shadow-lg">Solicitar Cita de Diseño</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-cream text-center border-t border-gold/30 relative overflow-hidden">
+    <section class="py-24 bg-charcoal text-center border-t border-gold/30 relative overflow-hidden">
         <div class="max-w-3xl mx-auto px-4 relative z-10">
-            <h2 class="font-serif text-4xl mb-6 text-charcoal-dark">Agende un Recorrido</h2>
-            <p class="text-gray-600 font-light mb-10 text-lg">La mejor manera de elegir el recinto ideal es vivirlo. Contáctenos para verificar fechas, cotizar el número de invitados y programar una visita guiada a nuestras instalaciones.</p>
-            <a href="https://wa.me/521234567890?text=Hola,%20me%20gustaría%20agendar%20un%20recorrido%20para%20ver%20sus%20salones%20y%20jardines." target="_blank" class="inline-flex items-center justify-center gap-3 bg-charcoal-dark hover:bg-gold text-white hover:text-charcoal-dark px-10 py-5 uppercase tracking-widest text-sm font-bold transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.4)]">
+            <h2 class="font-serif text-4xl mb-6 text-white">Agende un Recorrido</h2>
+            <p class="text-gray-400 font-light mb-10 text-lg">La mejor manera de elegir el recinto ideal es vivirlo. Contáctenos para verificar fechas, cotizar el número de invitados y programar una visita guiada a nuestras instalaciones.</p>
+            <a href="https://wa.me/521234567890?text=Hola,%20me%20gustaría%20agendar%20un%20recorrido%20para%20ver%20sus%20salones." target="_blank" class="inline-flex items-center justify-center gap-3 bg-gold hover:bg-gold-light text-charcoal-dark px-10 py-5 uppercase tracking-widest text-sm font-bold transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.4)]">
                 <i class="fa-brands fa-whatsapp text-2xl"></i>
                 Agendar Visita
             </a>
@@ -496,10 +459,23 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/521234567890?text=Hola,%20deseo%20información%20sobre%20sus%20salones%20y%20jardines." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1DA851] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_10px_25px_rgba(37,211,102,0.4)] z-50 transition-transform hover:scale-110">
+    <a href="https://wa.me/521234567890?text=Hola,%20deseo%20información%20sobre%20sus%20salones." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1DA851] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_10px_25px_rgba(37,211,102,0.4)] z-50 transition-transform hover:scale-110">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
     <script type="module" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const swipers = document.querySelectorAll('.salonSwiper');
+            swipers.forEach(swiper => {
+                new Swiper(swiper, {
+                    loop: true,
+                    pagination: { el: '.swiper-pagination', clickable: true },
+                    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                });
+            });
+        });
+    </script>
 </body>
 </html>

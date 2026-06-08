@@ -7,79 +7,15 @@
     <meta name="description" content="Servicio integral de banquetes, decoración, inflables y organización de eventos en salones, jardines y a domicilio.">
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: {
-                            DEFAULT: '#D4AF37',
-                            light: '#F3E5AB',
-                            dark: '#AA8C2C',
-                        },
-                        charcoal: {
-                            DEFAULT: '#1A1A1A',
-                            light: '#2A2A2A',
-                            dark: '#0F0F0F'
-                        },
-                        cream: '#FDFBF7'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        /* Estilos de navegación y efectos */
-        .glass-nav {
-            background: rgba(26, 26, 26, 0.98);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-        }
-        
-        .card-hover {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            border-color: #D4AF37;
-        }
-
-        .text-gradient-gold {
-            background: linear-gradient(to right, #D4AF37, #F3E5AB, #AA8C2C);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        /* Submenús desplegables en Desktop */
-        .dropdown-menu {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .has-dropdown:hover .dropdown-menu {
-            display: block;
-            opacity: 1;
-            animation: fadeIn 0.2s ease-in-out forwards;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
+    
 </head>
 <body class="font-sans bg-cream text-charcoal antialiased selection:bg-gold selection:text-charcoal-dark">
 
