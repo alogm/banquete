@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicio a Domicilio | Moonstone Banquetes</title>
-    <meta name="description" content="Llevamos la experiencia Moonstone a la comodidad de tu hogar. Catering, mobiliario, inflables y limpieza total para eventos en casa.">
+    <title>Parrilladas Premium | Moonstone Banquetes</title>
+    <meta name="description" content="Servicio de parrilladas premium a domicilio. Cortes selectos, vegetales a las brasas y experiencia gastronómica de autor para sus eventos.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -12,24 +12,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Librerías de iconos y Carrusel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        gold: {
-                            DEFAULT: '#D4AF37',
-                            light: '#F3E5AB',
-                            dark: '#AA8C2C',
-                        },
-                        charcoal: {
-                            DEFAULT: '#1A1A1A',
-                            light: '#2A2A2A',
-                            dark: '#0F0F0F'
-                        },
-                        cream: '#FDFBF7'
+                        gold: { DEFAULT: '#D4AF37', light: '#F3E5AB', dark: '#AA8C2C' },
+                        charcoal: { DEFAULT: '#1A1A1A', light: '#2A2A2A', dark: '#0F0F0F' },
+                        cream: '#FDFBF7',
+                        fire: { DEFAULT: '#E11D48', dark: '#9F1239' } /* Acento para brasas */
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -41,34 +36,22 @@
     </script>
 
     <style>
-        .glass-nav {
-            background: rgba(26, 26, 26, 0.98);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-        }
+        .glass-nav { background: rgba(26, 26, 26, 0.98); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(212, 175, 55, 0.15); }
+        .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); border-color: #D4AF37; }
+        .text-gradient-fire { background: linear-gradient(to right, #D4AF37, #E11D48); -webkit-background-clip: text; background-clip: text; color: transparent; }
         
-        .card-hover {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            border-color: #D4AF37;
-        }
-
-        .text-gradient-gold {
-            background: linear-gradient(to right, #D4AF37, #F3E5AB, #AA8C2C);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
         .dropdown-menu { display: none; opacity: 0; transition: opacity 0.3s ease; }
         .has-dropdown:hover .dropdown-menu { display: block; opacity: 1; animation: fadeIn 0.2s ease-in-out forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Estilos del Carrusel */
+        .swiper-button-next, .swiper-button-prev { color: #D4AF37 !important; transform: scale(0.6); background: rgba(26,26,26,0.5); border-radius: 50%; width: 50px; height: 50px; }
+        .swiper-pagination-bullet-active { background: #D4AF37 !important; }
+        .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
     </style>
 </head>
-<body class="font-sans bg-cream text-charcoal antialiased selection:bg-gold selection:text-charcoal-dark">
+<body class="font-sans bg-cream text-charcoal antialiased selection:bg-fire selection:text-white">
 
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 text-white bg-transparent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -188,94 +171,125 @@
 
     <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center justify-center min-h-[75vh]">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?auto=format&fit=crop&q=80&w=1920" alt="Evento en el jardín de casa" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-b from-charcoal-dark/90 via-charcoal-dark/70 to-cream"></div>
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=1920" alt="Parrillada Premium" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-b from-charcoal-dark/90 via-charcoal-dark/60 to-cream"></div>
         </div>
 
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10">
             <div class="flex items-center justify-center gap-4 mb-4">
-                <div class="h-px w-8 bg-gold"></div>
-                <span class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-semibold">Intimidad y Confort</span>
-                <div class="h-px w-8 bg-gold"></div>
+                <div class="h-px w-8 bg-fire"></div>
+                <span class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-semibold">El Ritual del Fuego</span>
+                <div class="h-px w-8 bg-fire"></div>
             </div>
             
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-charcoal-dark drop-shadow-sm font-bold mb-6">
-                Tu Casa, <br>
-                <span class="text-gradient-gold italic font-normal drop-shadow-md">El Mejor Escenario</span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-white font-bold mb-6 drop-shadow-lg">
+                Parrilladas <br>
+                <span class="text-gradient-fire italic font-normal">Premium</span>
             </h1>
             
-            <p class="text-base md:text-xl text-charcoal-dark font-bold max-w-2xl mx-auto leading-relaxed">
-                Transformamos tu jardín, cochera o sala de estar en un recinto de lujo. Disfruta de la excelencia de Moonstone sin tener que salir de casa.
+            <p class="text-base md:text-xl text-gray-200 font-light max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+                Llevamos la maestría de un asador de alta gama a su jardín. Cortes seleccionados, cocción lenta y el aroma inconfundible de la parrilla artesanal.
             </p>
 
             <div class="mt-10">
-                <a href="#servicios-casa" class="inline-flex items-center gap-3 bg-charcoal-dark text-white hover:bg-gold hover:text-charcoal-dark px-8 py-4 uppercase tracking-widest text-sm font-bold transition-all duration-300 shadow-xl">
-                    Descubrir Opciones <i class="fa-solid fa-arrow-down"></i>
+                <a href="#menu-brasas" class="inline-flex items-center gap-3 bg-fire hover:bg-fire-dark text-white px-8 py-4 uppercase tracking-widest text-sm font-bold transition-all duration-300 shadow-xl rounded-sm">
+                    Ver Menú de Brasas <i class="fa-solid fa-fire"></i>
                 </a>
             </div>
         </div>
     </header>
 
-    <section id="servicios-casa" class="py-24 bg-cream">
+    <section id="menu-brasas" class="py-24 bg-cream">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <span class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-bold">Todo lo que necesitas</span>
-                <h2 class="text-3xl md:text-4xl font-serif text-charcoal-dark mt-2 mb-4">Llevamos la Fiesta a Ti</h2>
-                <div class="w-16 h-[2px] bg-gold mx-auto"></div>
-                <p class="text-gray-600 font-light mt-6 max-w-2xl mx-auto">No importa si es una reunión íntima de 20 personas o una gran celebración en tu jardín. Proveemos absolutamente todo para que tú seas un invitado más.</p>
+                <i class="fa-solid fa-fire-burner text-fire text-3xl mb-4"></i>
+                <h2 class="text-3xl md:text-5xl font-serif text-charcoal-dark mb-4">Nuestro Menú de Brasas</h2>
+                <div class="w-16 h-[2px] bg-fire mx-auto mb-6"></div>
+                <p class="text-gray-600 font-light text-lg max-w-2xl mx-auto">Una selección curada de proteínas y acompañamientos cocinados al calor de la leña y el carbón.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-10">
                 
-                <div class="bg-white border border-gray-100 rounded-sm overflow-hidden group card-hover shadow-lg">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="img/demo/israwmx-24245996.jpg" alt="Taquizas y Catering" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-90">
-                    </div>
-                    <div class="p-6 text-center">
-                        <div class="w-12 h-12 bg-charcoal-dark text-gold rounded-full flex items-center justify-center mx-auto -mt-12 relative z-10 border-4 border-white mb-4">
-                            <i class="fa-solid fa-fire-burner"></i>
+                <!-- Tarjeta 1: Cortes de Res -->
+                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group card-hover shadow-xl flex flex-col xl:flex-row">
+                    <div class="h-64 xl:h-auto xl:w-2/5 flex-shrink-0 relative overflow-hidden">
+                        <div class="swiper parrilladaSwiper h-full w-full">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&q=80" alt="Cortes de carne" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1544025162-8a66580e550e?auto=format&fit=crop&q=80" alt="Carne a la parrilla" class="w-full h-full object-cover"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
-                        <h3 class="text-xl font-serif text-charcoal-dark mb-2">Gastronomía</h3>
-                        <p class="text-gray-500 text-sm font-light mb-4">Taquizas en cazuelas de barro, asadores para parrilladas en tu jardín o desayunos tipo buffet montados en tu comedor.</p>
+                    </div>
+                    <div class="p-8 flex flex-col justify-center xl:w-3/5">
+                        <h3 class="text-2xl font-serif text-charcoal-dark mb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-cow text-gold"></i> Cortes Premium
+                        </h3>
+                        <ul class="text-sm text-gray-600 space-y-4 mb-6 font-light leading-relaxed">
+                            <li><strong class="text-charcoal font-semibold">Rib Eye Reserva:</strong> Corte de alta infiltración, jugoso y con sabor intenso.</li>
+                            <li><strong class="text-charcoal font-semibold">Picaña al Sal de Mar:</strong> Sellada a la perfección con costra crujiente.</li>
+                            <li><strong class="text-charcoal font-semibold">Tomahawk:</strong> Espectacular corte con hueso para sorprender a los invitados.</li>
+                            <li><strong class="text-charcoal font-semibold">Arrachera Marinada:</strong> Suave, jugosa y con la receta secreta de la casa.</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="bg-white border border-gray-100 rounded-sm overflow-hidden group card-hover shadow-lg">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80" alt="Mobiliario a domicilio" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-90">
-                    </div>
-                    <div class="p-6 text-center">
-                        <div class="w-12 h-12 bg-charcoal-dark text-gold rounded-full flex items-center justify-center mx-auto -mt-12 relative z-10 border-4 border-white mb-4">
-                            <i class="fa-solid fa-chair"></i>
+                <!-- Tarjeta 2: Aves y Mariscos -->
+                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group card-hover shadow-xl flex flex-col xl:flex-row">
+                    <div class="h-64 xl:h-auto xl:w-2/5 flex-shrink-0 relative overflow-hidden">
+                        <div class="swiper parrilladaSwiper h-full w-full">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&q=80" alt="Mariscos a la parrilla" class="w-full h-full object-cover"></div>
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1598514982205-f36b96d1e8dd?auto=format&fit=crop&q=80" alt="Aves al grill" class="w-full h-full object-cover"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
-                        <h3 class="text-xl font-serif text-charcoal-dark mb-2">Montaje y Carpas</h3>
-                        <p class="text-gray-500 text-sm font-light mb-4">Carpas elegantes para proteger del sol o lluvia, mesas, sillas, mantelería y salas lounge para optimizar tus espacios.</p>
+                    </div>
+                    <div class="p-8 flex flex-col justify-center xl:w-3/5">
+                        <h3 class="text-2xl font-serif text-charcoal-dark mb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-fish text-blue-600"></i> Delicias del Mar & Aves
+                        </h3>
+                        <ul class="text-sm text-gray-600 space-y-4 mb-6 font-light leading-relaxed">
+                            <li><strong class="text-charcoal font-semibold">Pulpo Zarandeado:</strong> Cocido a las brasas con pimentón ahumado.</li>
+                            <li><strong class="text-charcoal font-semibold">Salmón al Cedro:</strong> Filete jugoso perfumado con tabla de cedro.</li>
+                            <li><strong class="text-charcoal font-semibold">Pollo al Romero:</strong> Pechugas y muslos marinados en hierbas frescas.</li>
+                            <li><strong class="text-charcoal font-semibold">Brochetas Mixtas:</strong> Combinación perfecta de proteínas y vegetales.</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="bg-white border border-gray-100 rounded-sm overflow-hidden group card-hover shadow-lg">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="img/demo/castillo infl.jpg" alt="Inflables en jardín" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-90">
-                    </div>
-                    <div class="p-6 text-center">
-                        <div class="w-12 h-12 bg-charcoal-dark text-gold rounded-full flex items-center justify-center mx-auto -mt-12 relative z-10 border-4 border-white mb-4">
-                            <i class="fa-solid fa-masks-theater"></i>
+                <!-- Tarjeta 3: Guarniciones -->
+                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden group card-hover shadow-xl flex flex-col xl:flex-row xl:col-span-2">
+                    <div class="h-64 xl:h-auto xl:w-1/3 flex-shrink-0 relative overflow-hidden">
+                        <div class="swiper parrilladaSwiper h-full w-full">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&q=80" alt="Vegetales al grill" class="w-full h-full object-cover"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
-                        <h3 class="text-xl font-serif text-charcoal-dark mb-2">Shows e Inflables</h3>
-                        <p class="text-gray-500 text-sm font-light mb-4">Transformamos tu patio con nuestros hermosos castillos blancos (inflables estéticos), áreas de bebés y shows infantiles.</p>
                     </div>
-                </div>
-
-                <div class="bg-white border border-gray-100 rounded-sm overflow-hidden group card-hover shadow-lg">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80" alt="Mixología en casa" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-90">
-                    </div>
-                    <div class="p-6 text-center">
-                        <div class="w-12 h-12 bg-charcoal-dark text-gold rounded-full flex items-center justify-center mx-auto -mt-12 relative z-10 border-4 border-white mb-4">
-                            <i class="fa-solid fa-martini-glass-citrus"></i>
+                    <div class="p-8 flex flex-col justify-center xl:w-2/3">
+                        <h3 class="text-2xl font-serif text-charcoal-dark mb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-leaf text-green-600"></i> Guarniciones & Complementos
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <ul class="text-sm text-gray-600 space-y-3 font-light leading-relaxed">
+                                <li><strong class="text-charcoal font-semibold">Papas al Rescoldo:</strong> Envueltas en aluminio con mantequilla de ajo.</li>
+                                <li><strong class="text-charcoal font-semibold">Portobellos Rellenos:</strong> Queso provolone, espinacas y nuez.</li>
+                                <li><strong class="text-charcoal font-semibold">Espárragos Trigueros:</strong> Salteados al grill con aceite de oliva.</li>
+                            </ul>
+                            <ul class="text-sm text-gray-600 space-y-3 font-light leading-relaxed border-l-0 md:border-l border-gray-200 md:pl-6">
+                                <li><strong class="text-charcoal font-semibold">Barra de Salsas:</strong> Molcajeteadas, chimichurri, guacamole fresco.</li>
+                                <li><strong class="text-charcoal font-semibold">Quesos Fundidos:</strong> Chistorra, chorizo argentino o champiñones.</li>
+                                <li><strong class="text-charcoal font-semibold">Tortillas a Mano:</strong> Recién hechas en el comal para acompañar.</li>
+                            </ul>
                         </div>
-                        <h3 class="text-xl font-serif text-charcoal-dark mb-2">Barras de Bebidas</h3>
-                        <p class="text-gray-500 text-sm font-light mb-4">Llevamos una barra iluminada a tu terraza con bartenders profesionales preparando coctelería de autor y carajillos.</p>
                     </div>
                 </div>
 
@@ -283,73 +297,31 @@
         </div>
     </section>
 
-    <section class="py-24 bg-charcoal-dark border-y border-gold/20 relative">
-        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                <div class="lg:w-1/2">
-                    <h3 class="text-gold font-sans tracking-[0.2em] uppercase text-xs font-bold mb-2">Cero Estrés</h3>
-                    <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">El Proceso Moonstone</h2>
-                    <p class="text-gray-400 font-light text-lg mb-8 leading-relaxed">
-                        Hacer una fiesta en casa suele ser agotador para el anfitrión. Nuestro objetivo es que usted no mueva un solo dedo antes, durante, ni después del evento.
-                    </p>
-                    
-                    <div class="space-y-8">
-                        <div class="flex gap-4">
-                            <div class="flex flex-col items-center">
-                                <div class="w-8 h-8 rounded-full bg-gold text-charcoal flex items-center justify-center font-bold text-sm z-10">1</div>
-                                <div class="w-px h-full bg-gray-800 my-2"></div>
-                            </div>
-                            <div class="pb-2">
-                                <h4 class="text-xl font-serif text-white mb-1">Visita Técnica</h4>
-                                <p class="text-sm text-gray-500 font-light">Acudimos a su domicilio para medir los espacios, revisar accesos y sugerir el mejor layout (distribución) para las mesas y carpas.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex gap-4">
-                            <div class="flex flex-col items-center">
-                                <div class="w-8 h-8 rounded-full bg-gold text-charcoal flex items-center justify-center font-bold text-sm z-10">2</div>
-                                <div class="w-px h-full bg-gray-800 my-2"></div>
-                            </div>
-                            <div class="pb-2">
-                                <h4 class="text-xl font-serif text-white mb-1">Montaje Previo</h4>
-                                <p class="text-sm text-gray-500 font-light">Dependiendo del tamaño, instalamos la carpa y el mobiliario pesado un día antes para evitar contratiempos.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex gap-4">
-                            <div class="flex flex-col items-center">
-                                <div class="w-8 h-8 rounded-full bg-gold text-charcoal flex items-center justify-center font-bold text-sm z-10">3</div>
-                                <div class="w-px h-full bg-transparent my-2"></div>
-                            </div>
-                            <div class="pb-2">
-                                <h4 class="text-xl font-serif text-white mb-1">Limpieza Total</h4>
-                                <p class="text-sm text-gray-500 font-light">Al finalizar, nuestro personal de limpieza y desmontaje recoge absolutamente todo. <strong class="text-gold font-normal">Dejamos su casa impecable</strong>, como si nunca hubiera habido una fiesta.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:w-1/2 relative group">
-                    <div class="absolute inset-0 border-2 border-gold translate-x-4 translate-y-4"></div>
-                    <img src="https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?auto=format&fit=crop&q=80" alt="Evento en casa" class="relative z-10 w-full h-[500px] object-cover shadow-xl grayscale-[10%]">
-                </div>
+    <section class="py-24 bg-charcoal-dark text-white relative border-t border-gold/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-16 relative z-10">
+            <div class="md:w-1/2 relative group">
+                <div class="absolute inset-0 border-2 border-fire translate-x-4 -translate-y-4"></div>
+                <img src="https://images.unsplash.com/photo-1529193591184-b1d58069670d?auto=format&fit=crop&q=80" class="relative z-10 w-full h-[500px] object-cover shadow-2xl grayscale-[15%]" alt="Chef a la parrilla">
+            </div>
+            
+            <div class="md:w-1/2">
+                <h3 class="text-fire font-sans tracking-[0.2em] uppercase text-xs font-bold mb-2">Una Experiencia Sensorial</h3>
+                <h2 class="text-4xl md:text-5xl font-serif mb-6 text-gold">El Chef en su Evento</h2>
+                <p class="text-gray-400 font-light text-lg mb-6 leading-relaxed">
+                    Nuestras parrilladas no son solo comida, son una experiencia visual y auditiva. Montamos una estación de parrilla profesional directamente en su jardín, terraza o recinto.
+                </p>
+                <ul class="space-y-4 mb-8 text-sm text-gray-300 font-light">
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-fire text-fire mt-1"></i> <span>Interacción directa: sus invitados ven cómo se preparan sus cortes al momento.</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-fire text-fire mt-1"></i> <span>Aromas que abren el apetito y crean un ambiente festivo y cálido.</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-fire text-fire mt-1"></i> <span>Cortes servidos exactamente en el término deseado por cada comensal.</span></li>
+                </ul>
+                <a href="https://wa.me/521234567890?text=Hola,%20quisiera%20cotizar%20una%20parrillada%20a%20domicilio." target="_blank" class="inline-block bg-fire text-white hover:bg-white hover:text-fire px-8 py-4 font-bold uppercase tracking-widest text-xs transition-all shadow-lg">Cotizar Parrillada</a>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-white text-center border-t border-gold/30">
-        <div class="max-w-3xl mx-auto px-4">
-            <h2 class="font-serif text-4xl mb-6 text-charcoal-dark">Organiza tu Fiesta Sin Salir de Casa</h2>
-            <p class="text-gray-600 font-light mb-10 text-lg">Envíanos un mensaje con tu código postal, la fecha de tu evento y el número aproximado de invitados para enviarte opciones que se ajusten a tus espacios.</p>
-            <a href="https://wa.me/521234567890?text=Hola,%20deseo%20cotizar%20un%20evento%20a%20domicilio." target="_blank" class="inline-flex items-center justify-center gap-3 bg-charcoal-dark hover:bg-gold text-white hover:text-charcoal-dark px-10 py-5 uppercase tracking-widest text-sm font-bold transition-all duration-300 shadow-xl">
-                <i class="fa-brands fa-whatsapp text-2xl"></i>
-                Cotizar Evento en Casa
-            </a>
-        </div>
-    </section>
-
-    <footer class="bg-black pt-16 pb-8 border-t border-gray-900">
+    <!-- Footer -->
+    <footer class="bg-black pt-16 pb-8 border-t border-gray-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div class="md:col-span-1">
@@ -360,7 +332,7 @@
                         <span class="font-serif text-xl tracking-widest text-white uppercase">Moonstone</span>
                     </a>
                     <p class="text-gray-500 text-sm font-light leading-relaxed">
-                        Alta dirección en banquetes y organización de eventos. Diseñando momentos memorables con exigencia y pasión en el lugar de tu preferencia.
+                        Alta dirección en banquetes y organización de eventos. Elevando la gastronomía de brasas a su máxima expresión.
                     </p>
                 </div>
                 
@@ -368,8 +340,8 @@
                     <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Servicios Principales</h4>
                     <ul class="space-y-3">
                         <li><a href="banquetes.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Banquetes a 3 Tiempos</a></li>
-                        <li><a href="taquizas.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Taquizas y Parrilladas</a></li>
-                        <li><a href="mobiliario.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Montaje y Decoración</a></li>
+                        <li><a href="taquizas.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Taquizas de Autor</a></li>
+                        <li><a href="mobiliario.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Mobiliario y Decoración</a></li>
                         <li><a href="inflables.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Renta de Inflables</a></li>
                     </ul>
                 </div>
@@ -378,9 +350,9 @@
                     <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Tipos de Eventos</h4>
                     <ul class="space-y-3">
                         <li><a href="bodas.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Bodas y Graduaciones</a></li>
-                        <li><a href="infantiles.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Infantiles y Baby Showers</a></li>
+                        <li><a href="infantiles.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Infantiles y Familiares</a></li>
                         <li><a href="empresariales.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Eventos Empresariales</a></li>
-                        <li><a href="faq.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Preguntas Frecuentes (FAQ)</a></li>
+                        <li><a href="faq.html" class="text-gray-500 hover:text-gold text-sm transition-colors">Preguntas Frecuentes</a></li>
                     </ul>
                 </div>
 
@@ -389,22 +361,60 @@
                     <ul class="space-y-3 text-sm text-gray-500 mb-6">
                         <li><i class="fa-solid fa-phone text-gold w-5"></i> +52 (55) 1234 5678</li>
                         <li><i class="fa-solid fa-envelope text-gold w-5"></i> eventos@moonstone.com</li>
-                        <li><i class="fa-solid fa-location-dot text-gold w-5"></i> Servicio a Domicilio y Salones</li>
+                        <li><i class="fa-solid fa-location-dot text-gold w-5"></i> A Domicilio y Locaciones</li>
                     </ul>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 font-light tracking-wide">
                 <p>&copy; <span id="year"></span> Banquetes Moonstone. Todos los derechos reservados.</p>
-                <p class="mt-2 md:mt-0">Elegancia, Sabor y Profesionalismo.</p>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/521234567890?text=Hola,%20deseo%20información%20sobre%20eventos%20a%20domicilio." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1DA851] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_10px_25px_rgba(37,211,102,0.4)] z-50 transition-transform hover:scale-110">
+    <!-- Botón WhatsApp Flotante -->
+    <a href="https://wa.me/521234567890?text=Hola,%20deseo%20información%20sobre%20parrilladas." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1DA851] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_10px_25px_rgba(37,211,102,0.4)] z-50 transition-transform hover:scale-110">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script type="module" src="script.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Actualizar año del footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Efecto Navbar
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-nav');
+                navbar.classList.remove('bg-transparent', 'py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('glass-nav', 'py-2');
+                navbar.classList.add('bg-transparent', 'py-4');
+            }
+        });
+
+        // Menú Móvil
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Inicializar Carruseles
+        document.addEventListener('DOMContentLoaded', function () {
+            const swipers = document.querySelectorAll('.parrilladaSwiper');
+            swipers.forEach(swiper => {
+                new Swiper(swiper, {
+                    loop: true,
+                    pagination: { el: '.swiper-pagination', clickable: true },
+                    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                    autoplay: { delay: 4000, disableOnInteraction: false }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
