@@ -18,91 +18,19 @@
     <meta property="og:url" content="https://tudominio.com/jardines.html">
     <meta property="og:type" content="website">
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Configuración de Tailwind -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: {
-                            DEFAULT: '#D4AF37',
-                            light: '#F3E5AB',
-                            dark: '#AA8C2C',
-                        },
-                        charcoal: {
-                            DEFAULT: '#1A1A1A',
-                            light: '#2A2A2A',
-                            dark: '#0F0F0F'
-                        },
-                        cream: '#FDFBF7',
-                        /* Nuevos colores para la sección de Jardines */
-                        forest: {
-                            DEFAULT: '#23372B', /* Verde bosque elegante */
-                            light: '#3A5A46',
-                            dark: '#121F18',
-                        },
-                        sage: {
-                            DEFAULT: '#879784', /* Verde salvia pacífico */
-                            light: '#E2EBE0',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        /* Navegación mantiene su tono oscuro para no perder identidad de marca */
-        .glass-nav {
-            background: rgba(26, 26, 26, 0.98);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-        }
-        
-        .card-hover {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            border-color: #D4AF37;
-        }
-
-        .text-gradient-gold {
-            background: linear-gradient(to right, #D4AF37, #F3E5AB, #AA8C2C);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        /* Gradiente especial de naturaleza */
-        .text-gradient-nature {
-            background: linear-gradient(to right, #D4AF37, #879784, #3A5A46);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .dropdown-menu { display: none; opacity: 0; transition: opacity 0.3s ease; }
-        .has-dropdown:hover .dropdown-menu { display: block; opacity: 1; animation: fadeIn 0.2s ease-in-out forwards; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-        .swiper-button-next, .swiper-button-prev { color: #D4AF37 !important; transform: scale(0.6); }
-        .swiper-pagination-bullet-active { background: #D4AF37 !important; }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
 </head>
+
 <body class="font-sans bg-cream text-charcoal antialiased selection:bg-gold selection:text-forest-dark">
 
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 text-white bg-transparent">
@@ -635,19 +563,8 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script type="module" src="script.js"></script>
+    <script type="module" src="script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const swipers = document.querySelectorAll('.salonSwiper');
-            swipers.forEach(swiper => {
-                new Swiper(swiper, {
-                    loop: true,
-                    pagination: { el: '.swiper-pagination', clickable: true },
-                    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-                });
-            });
-        });
-    </script>
+
 </body>
 </html>

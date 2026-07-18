@@ -24,15 +24,166 @@
 /* Submenús desplegables en Desktop */
 .dropdown-menu {
     display: none;
+    position: absolute; /* Asegúrate de que esto esté aquí */
+    top: 100%; /* Se posiciona justo debajo del botón padre */
+    left: 0;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    visibility: hidden; /* Oculta físicamente */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+
 .has-dropdown:hover .dropdown-menu {
     display: block;
     opacity: 1;
+    visibility: visible; /* Muestra físicamente */
     animation: fadeIn 0.2s ease-in-out forwards;
 }
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Estilos específicos de Bodas/Eventos --- */
+
+.text-gradient-party {
+    background: linear-gradient(to right, #F3E5AB, #D4AF37, #f472b6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Gradiente animado para la sección de fiesta */
+.bg-party-gradient {
+    background: linear-gradient(-45deg, #0F0F0F, #2A2A2A, #4C1D95, #1A1A1A);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- Estilos específicos de Contacto --- */
+
+.social-hover {
+    transition: all 0.3s ease;
+}
+.social-hover:hover {
+    transform: scale(1.1) translateY(-5px);
+    color: #d4af37;
+    text-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* --- Estilos específicos de Menú y Desayunos --- */
+
+.menu-dots {
+    flex-grow: 1;
+    border-bottom: 1px dotted #ccc;
+    margin: 0 15px;
+    position: relative;
+    top: -6px;
+}
+
+/* --- Estilos específicos para Acordeones (FAQ) --- */
+
+/* Ocultar la flecha por defecto de <details> en navegadores webkit */
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Rotación suave para el contenido del acordeón */
+details[open] summary ~ * {
+    animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Estilos específicos de Eventos Infantiles --- */
+
+.text-gradient-baby {
+    background: linear-gradient(to right, #F3E5AB, #f472b6, #38bdf8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* --- Estilos específicos para Inflables y Diversión --- */
+
+.bounce-hover {
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.bounce-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* --- Estilos específicos de Jardines y Locaciones --- */
+
+.text-gradient-nature {
+    background: linear-gradient(to right, #D4AF37, #879784, #3A5A46);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Ajustes para Swiper */
+.swiper-button-next, .swiper-button-prev { 
+    color: #D4AF37 !important; 
+    transform: scale(0.6); 
+}
+.swiper-pagination-bullet-active { 
+    background: #D4AF37 !important; 
+}
+
+/* --- Estilos específicos de Parrilladas --- */
+
+.text-gradient-fire { 
+    background: linear-gradient(to right, #D4AF37, #E11D48); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent; 
+}
+
+/* Ajustes específicos para el Carrusel de Parrilladas */
+.swiper-button-next, .swiper-button-prev { 
+    color: #D4AF37 !important; 
+    transform: scale(0.6); 
+    background: rgba(26,26,26,0.5); 
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+}
+.swiper-pagination-bullet-active { 
+    background: #D4AF37 !important; 
+}
+.swiper-slide img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+/* --- Estilos específicos de Tornafiesta --- */
+
+.stars-bg {
+    background-image:
+      radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 10px),
+      radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px),
+      radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 10px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    animation: twinkle 15s linear infinite;
+}
+
+@keyframes twinkle {
+    from {
+      background-position: 0 0, 40px 60px, 130px 270px;
+    }
+    to {
+      background-position: -550px 550px, -310px 410px, -120px 520px;
+    }
 }

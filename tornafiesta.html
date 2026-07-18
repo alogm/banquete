@@ -30,130 +30,20 @@
     <meta property="og:url" content="https://tudominio.com/tornafiesta.html" />
     <meta property="og:type" content="website" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <script src="js/tailwind-config.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
 
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              gold: {
-                DEFAULT: "#D4AF37",
-                light: "#F3E5AB",
-                dark: "#AA8C2C",
-              },
-              charcoal: {
-                DEFAULT: "#1A1A1A",
-                light: "#2A2A2A",
-                dark: "#0F0F0F",
-              },
-              cream: "#FDFBF7",
-            },
-            fontFamily: {
-              sans: ["Inter", "sans-serif"],
-              serif: ["Playfair Display", "serif"],
-            },
-          },
-        },
-      };
-    </script>
-
-    <style>
-      .glass-nav {
-        background: rgba(26, 26, 26, 0.98);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-      }
-
-      .card-hover {
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .card-hover:hover {
-        transform: translateY(-5px);
-        box-shadow:
-          0 20px 25px -5px rgba(0, 0, 0, 0.1),
-          0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        border-color: #d4af37;
-      }
-
-      .text-gradient-gold {
-        background: linear-gradient(to right, #d4af37, #f3e5ab, #aa8c2c);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-
-      .dropdown-menu {
-        display: none;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-      .has-dropdown:hover .dropdown-menu {
-        display: block;
-        opacity: 1;
-        animation: fadeIn 0.2s ease-in-out forwards;
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Animación sutil de estrellas para el fondo de madrugada */
-      .stars-bg {
-        background-image:
-          radial-gradient(
-            white,
-            rgba(255, 255, 255, 0.2) 2px,
-            transparent 10px
-          ),
-          radial-gradient(
-            white,
-            rgba(255, 255, 255, 0.15) 1px,
-            transparent 5px
-          ),
-          radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 10px);
-        background-size:
-          550px 550px,
-          350px 350px,
-          250px 250px;
-        background-position:
-          0 0,
-          40px 60px,
-          130px 270px;
-        animation: twinkle 15s linear infinite;
-      }
-      @keyframes twinkle {
-        from {
-          background-position:
-            0 0,
-            40px 60px,
-            130px 270px;
-        }
-        to {
-          background-position:
-            -550px 550px,
-            -310px 410px,
-            -120px 520px;
-        }
-      }
-    </style>
   </head>
+
   <body
     class="font-sans bg-charcoal-dark text-white antialiased selection:bg-gold selection:text-charcoal-dark"
   >
@@ -975,6 +865,6 @@
       </div>
     </footer>
 
-    <script type="module" src="script.js"></script>
+    <script type="module" src="script.js" defer></script>
   </body>
 </html>
