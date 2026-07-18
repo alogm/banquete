@@ -47,325 +47,123 @@
   <body
     class="font-sans bg-charcoal-dark text-white antialiased selection:bg-gold selection:text-charcoal-dark"
   >
-    <nav
-      id="navbar"
-      class="fixed w-full z-50 transition-all duration-300 py-4 text-white bg-transparent"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <a
-            href="index.html"
-            class="flex-shrink-0 flex items-center gap-4 cursor-pointer"
-          >
-            <div
-              class="w-12 h-12 rounded-full overflow-hidden border border-gold/50 bg-black shadow-[0_0_15px_rgba(212,175,55,0.2)]"
-            >
-              <img
-                src="img/logo6.webp"
-                alt="Logo Moonstone"
-                class="w-full h-full object-cover scale-[1.2]"
-              />
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 text-white bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-4 cursor-pointer">
+                    <div class="w-12 h-12 rounded-full overflow-hidden border border-gold/50 bg-black shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+                        <img src="img/logo6.webp" alt="Logo Moonstone" class="w-full h-full object-cover scale-[1.2]">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-2xl font-bold tracking-widest text-white uppercase leading-none">Moonstone</span>
+                        <span class="text-gold text-[0.65rem] tracking-[0.4em] uppercase mt-1">Banquetes</span>
+                    </div>
+                </a>
+                
+                <div class="hidden lg:flex space-x-6 items-center">
+                    <a href="index.html" class="text-gold transition-colors text-xs uppercase tracking-widest font-bold border-b border-gold pb-1">Inicio</a>
+                    
+                    <div class="relative has-dropdown py-6">
+                        <a href="#" aria-haspopup="true" aria-expanded="false" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300 flex items-center gap-1">
+                            Servicios <i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-[60px] left-0 w-56 bg-charcoal border-t-2 border-gold shadow-xl py-2 z-50">
+                            <a href="paquetes.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Paquetes Integrales</a>
+                            <a href="inflables.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Inflables y Entretenimiento</a>
+                            <a href="mobiliario.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Mobiliario y Decoración</a>
+                        </div>
+                    </div>
+
+                    <div class="relative has-dropdown py-6">
+                        <a href="#" aria-haspopup="true" aria-expanded="false" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300 flex items-center gap-1">
+                            Gastronomía <i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-[60px] left-0 w-56 bg-charcoal border-t-2 border-gold shadow-xl py-2 z-50">
+                            <a href="banquetes.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Banquetes 3 Tiempos</a>
+                            <a href="taquizas.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Taquizas de Autor</a>
+                            <a href="parrilladas.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Parrilladas Premium</a>
+                            <a href="desayunos.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Desayunos y Brunch</a>
+                            <a href="bebidas.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Bebidas</a>
+                            <a href="tornafiesta.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Tornafiesta (Madrugada)</a>
+                        </div>
+                    </div>
+
+                    <div class="relative has-dropdown py-6">
+                        <a href="#" aria-haspopup="true" aria-expanded="false" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300 flex items-center gap-1">
+                            Eventos <i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-[60px] left-0 w-64 bg-charcoal border-t-2 border-gold shadow-xl py-2 z-50">
+                            <a href="bodas.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Bodas y Graduaciones</a>
+                            <a href="infantiles.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Infantiles y Baby Showers</a>
+                            <a href="empresariales.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Eventos Empresariales</a>
+                        </div>
+                    </div>
+
+                    <div class="relative has-dropdown py-6">
+                        <a href="#" aria-haspopup="true" aria-expanded="false" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300 flex items-center gap-1">
+                            Locaciones <i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-[60px] left-0 w-56 bg-charcoal border-t-2 border-gold shadow-xl py-2 z-50">
+                            <a href="salones.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Salones e Instalaciones</a>
+                            <a href="jardines.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">Jardines Exclusivos</a>
+                            <a href="terrazas.html" class="block px-4 py-3 text-sm text-gold hover:bg-charcoal-light transition">Terrazas y Rooftops</a>
+                            <a href="domicilio.html" class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition">En tu Casa (A Domicilio)</a>
+                        </div>
+                    </div>
+
+                    <a href="faq.html" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300">FAQ</a>
+                    <a href="nosotros.html" class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300">Quienes Somos</a>
+                    
+                    <a href="contacto.html" class="border border-gold text-gold hover:bg-gold hover:text-charcoal-dark px-5 py-2 transition duration-300 text-xs uppercase tracking-widest font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-lg"></i> Contacto
+                    </a>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-gold focus:outline-none" aria-label="Abrir menú de navegación" aria-expanded="false">
+                        <i class="fa-solid fa-bars text-2xl" aria-hidden="true"></i>
+                    </button>
+                </div>
             </div>
-            <div class="flex flex-col">
-              <span
-                class="font-serif text-2xl font-bold tracking-widest text-white uppercase leading-none"
-                >Moonstone</span
-              >
-              <span
-                class="text-gold text-[0.65rem] tracking-[0.4em] uppercase mt-1"
-                >Banquetes</span
-              >
-            </div>
-          </a>
-
-          <div class="hidden lg:flex space-x-6 items-center">
-            <a
-              href="index.html"
-              class="text-gold transition-colors text-xs uppercase tracking-widest font-bold border-b border-gold pb-1"
-              >Inicio</a
-            >
-
-            <div class="relative has-dropdown py-6">
-              <a
-                href="#"
-                class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300 flex items-center gap-1"
-              >
-                Servicios <i class="fa-solid fa-chevron-down text-[10px]"></i>
-              </a>
-              <div
-                class="dropdown-menu absolute top-[60px] left-0 w-56 bg-charcoal border-t-2 border-gold shadow-xl py-2 z-50"
-              >
-                <a
-                  href="paquetes.html"
-                  class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition"
-                  >Paquetes Integrales</a
-                >
-                <a
-                  href="inflables.html"
-                  class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition"
-                  >Inflables y Entretenimiento</a
-                >
-                <a
-                  href="mobiliario.html"
-                  class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition"
-                  >Mobiliario y Decoración</a
-                >
-              </div>
-            </div>
-
-            <div class="relative has-dropdown py-6">
-              <a
-                href="#"
-                class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300 flex items-center gap-1"
-              >
-                Gastronomía <i class="fa-solid fa-chevron-down text-[10px]"></i>
-              </a>
-              <div
-                class="dropdown-menu absolute top-[60px] left-0 w-56 bg-charcoal border-t-2 border-gold shadow-xl py-2 z-50"
-              >
-                <a
-                  href="banquetes.html"
-                  class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition"
-                  >Banquetes 3 Tiempos</a
-                >
-                <a
-                  href="taquizas.html"
-                  class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition"
-                  >Taquizas de Autor</a
-                >
-                <a
-                  href="parrilladas.html"
-                  class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition"
-                  >Parrilladas Premium</a
-                >
-                <a
-                  href="desayunos.html"
-                  class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition"
-                  >Desayunos y Brunch</a
-                >
-                <a
-                  href="bebidas.html"
-                  class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition"
-                  >Bebidas</a
-                >
-                <a
-                  href="tornafiesta.html"
-                  class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition"
-                  >Tornafiesta (Madrugada)</a
-                >
-              </div>
-            </div>
-
-            <div class="relative has-dropdown py-6">
-              <a
-                href="#"
-                class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300 flex items-center gap-1"
-              >
-                Eventos <i class="fa-solid fa-chevron-down text-[10px]"></i>
-              </a>
-              <div
-                class="dropdown-menu absolute top-[60px] left-0 w-64 bg-charcoal border-t-2 border-gold shadow-xl py-2 z-50"
-              >
-                <a
-                  href="bodas.html"
-                  class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition"
-                  >Bodas y Graduaciones</a
-                >
-                <a
-                  href="infantiles.html"
-                  class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition"
-                  >Infantiles y Baby Showers</a
-                >
-                <a
-                  href="empresariales.html"
-                  class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition"
-                  >Eventos Empresariales</a
-                >
-              </div>
-            </div>
-
-            <div class="relative has-dropdown py-6">
-              <a
-                href="#"
-                class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300 flex items-center gap-1"
-              >
-                Locaciones <i class="fa-solid fa-chevron-down text-[10px]"></i>
-              </a>
-              <div
-                class="dropdown-menu absolute top-[60px] left-0 w-56 bg-charcoal border-t-2 border-gold shadow-xl py-2 z-50"
-              >
-                <a
-                  href="salones.html"
-                  class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition"
-                  >Salones e Instalaciones</a
-                >
-                <a
-                  href="jardines.html"
-                  class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition"
-                  >Jardines Exclusivos</a
-                >
-                <a
-                  href="terrazas.html"
-                  class="block px-4 py-3 text-sm text-gold hover:bg-charcoal-light transition"
-                  >Terrazas y Rooftops</a
-                >
-                <a
-                  href="domicilio.html"
-                  class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-charcoal-light transition"
-                  >En tu Casa (A Domicilio)</a
-                >
-              </div>
-            </div>
-
-            <a
-              href="faq.html"
-              class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300"
-              >FAQ</a
-            >
-            <a
-              href="nosotros.html"
-              class="hover:text-gold transition-colors text-xs uppercase tracking-widest font-medium text-gray-300"
-              >Quienes Somos</a
-            >
-
-            <a
-              href="contacto.html"
-              class="border border-gold text-gold hover:bg-gold hover:text-charcoal-dark px-5 py-2 transition duration-300 text-xs uppercase tracking-widest font-semibold flex items-center gap-2"
-            >
-              <i class="fa-solid fa-envelope text-lg"></i> Contacto
-            </a>
-          </div>
-
-          <div class="lg:hidden flex items-center">
-                <button id="mobile-menu-btn" class="text-white hover:text-gold focus:outline-none" aria-label="Abrir menú de navegación" aria-expanded="false">
-                    <i class="fa-solid fa-bars text-2xl" aria-hidden="true"></i>
-                </button>
-          </div>
         </div>
-      </div>
 
-      <div
-        id="mobile-menu"
-        class="hidden lg:hidden bg-charcoal text-white absolute w-full shadow-2xl border-t border-gold/20 h-[85vh] overflow-y-auto pb-10"
-      >
-        <div class="px-6 py-6 flex flex-col gap-2">
-          <a
-            href="index.html"
-            class="text-lg font-serif tracking-wide text-gold py-2 border-b border-gray-800"
-            >Inicio</a
-          >
+        <div id="mobile-menu" class="hidden lg:hidden bg-charcoal text-white absolute w-full shadow-2xl border-t border-gold/20 h-[85vh] overflow-y-auto pb-10">
+            <div class="px-6 py-6 flex flex-col gap-2">
+                <a href="index.html" class="text-lg font-serif tracking-wide text-gold py-2 border-b border-gray-800">Inicio</a>
+                
+                <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">Servicios</p>
+                <a href="paquetes.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Paquetes Integrales</a>
+                <a href="inflables.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Inflables y Entretenimiento</a>
+                <a href="mobiliario.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Mobiliario</a>
+                
+                <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">Gastronomía</p>
+                <a href="banquetes.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Banquetes 3 Tiempos</a>
+                <a href="taquizas.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Taquizas y Parrilladas</a>
+                <a href="parrilladas.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Parrilladas Premium</a>
+                <a href="desayunos.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Desayunos</a>
+                <a href="bebidas.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Bebidas</a>
+                <a href="tornafiesta.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Tornafiesta (Madrugada)</a>
 
-          <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">
-            Servicios
-          </p>
-          <a
-            href="paquetes.html"
-            class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50"
-            >Paquetes Integrales</a
-          >
-          <a
-            href="inflables.html"
-            class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50"
-            >Inflables y Entretenimiento</a
-          >
-          <a
-            href="mobiliario.html"
-            class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50"
-            >Mobiliario</a
-          >
+                <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">Eventos</p>
+                <a href="bodas.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Bodas y Graduaciones</a>
+                <a href="infantiles.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Infantiles y Baby Showers</a>
+                <a href="empresariales.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Empresariales</a>
+                  
+                <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">Locaciones</p>
+                <a href="salones.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Salones e Instalaciones</a>
+                <a href="jardines.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Jardines Exclusivos</a>
+                <a href="terrazas.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Terrazas y Rooftops</a>
+                <a href="domicilio.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">En tu Casa (A Domicilio)</a>
 
-          <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">
-            Gastronomía
-          </p>
-          <a
-            href="banquetes.html"
-            class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50"
-            >Banquetes 3 Tiempos</a
-          >
-          <a
-            href="taquizas.html"
-            class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50"
-            >Taquizas y Parrilladas</a
-          >
-          <a href="parrilladas.html" class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50">Parrilladas Premium</a>
-          <a
-            href="desayunos.html"
-            class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50"
-            >Desayunos</a
-          >
-          <a
-            href="bebidas.html"
-            class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50"
-            >Bebidas</a
-          >
-          <a
-            href="tornafiesta.html"
-            class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50"
-            >Tornafiesta (Madrugada)</a
-          >
+                <a href="faq.html" class="text-lg font-serif tracking-wide text-gray-300 hover:text-gold py-2 mt-4 border-b border-gray-800">Preguntas Frecuentes</a>
+                <a href="nosotros.html" class="text-lg font-serif tracking-wide text-gray-300 hover:text-gold py-2 mt-4 border-b border-gray-800">Quienes Somos</a>
 
-          <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">
-            Eventos
-          </p>
-          <a
-            href="bodas.html"
-            class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50"
-            >Bodas y Graduaciones</a
-          >
-          <a
-            href="infantiles.html"
-            class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50"
-            >Infantiles y Baby Showers</a
-          >
-          <a
-            href="empresariales.html"
-            class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50"
-            >Empresariales</a
-          >
-
-          <p class="text-gold text-xs tracking-widest uppercase mt-4 mb-1">
-            Locaciones
-          </p>
-          <a
-            href="salones.html"
-            class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50"
-            >Salones e Instalaciones</a
-          >
-          <a
-            href="jardines.html"
-            class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50"
-            >Jardines Exclusivos</a
-          >
-          <a
-            href="terrazas.html"
-            class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50"
-            >Terrazas y Rooftops</a
-          >
-          <a
-            href="domicilio.html"
-            class="pl-4 text-sm tracking-wide text-gray-300 hover:text-gold py-2 border-b border-gray-800/50"
-            >En tu Casa (A Domicilio)</a
-          >
-
-          <a
-            href="faq.html"
-            class="text-lg font-serif tracking-wide text-gray-300 hover:text-gold py-2 mt-4 border-b border-gray-800"
-            >Preguntas Frecuentes</a
-          >
-          <a
-            href="nosotros.html"
-            class="text-lg font-serif tracking-wide text-gray-300 hover:text-gold py-2 mt-4 border-b border-gray-800"
-            >Quienes Somos</a
-          >
-
-          <a
-            href="contacto.html"
-            class="bg-gold text-charcoal-dark text-center py-4 font-bold uppercase tracking-widest text-sm mt-8 flex justify-center items-center gap-2"
-          >
-            <i class="fa-solid fa-envelope text-xl"></i> Contacto
-          </a>
+                <a href="contacto.html" class="bg-gold text-charcoal-dark text-center py-4 font-bold uppercase tracking-widest text-sm mt-8 flex justify-center items-center gap-2">
+                    <i class="fa-solid fa-envelope text-xl"></i> Contacto
+                </a>
+            </div>
         </div>
-      </div>
     </nav>
 
     <header
